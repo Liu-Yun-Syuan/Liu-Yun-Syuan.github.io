@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-10-29T13:07:20.812Z</updated>
+  <updated>2023-10-29T13:13:41.704Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2023/10/29/github-pages/"/>
     <id>http://example.com/2023/10/29/github-pages/</id>
     <published>2023-10-29T10:19:00.000Z</published>
-    <updated>2023-10-29T13:07:20.812Z</updated>
+    <updated>2023-10-29T13:13:41.704Z</updated>
     
     
       
@@ -38,15 +38,15 @@
     
     <category term="software" scheme="http://example.com/tags/software/"/>
     
+    <category term="full-end" scheme="http://example.com/tags/full-end/"/>
+    
     <category term="back-end" scheme="http://example.com/tags/back-end/"/>
     
-    <category term="full-end" scheme="http://example.com/tags/full-end/"/>
+    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
     
     <category term="Git" scheme="http://example.com/tags/Git/"/>
     
     <category term="GitHub" scheme="http://example.com/tags/GitHub/"/>
-    
-    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
     
   </entry>
   
