@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-10-29T13:22:53.252Z</updated>
+  <updated>2023-10-29T13:38:31.809Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2023/10/29/github-pages/"/>
     <id>http://example.com/2023/10/29/github-pages/</id>
     <published>2023-10-29T10:19:00.000Z</published>
-    <updated>2023-10-29T13:22:53.252Z</updated>
+    <updated>2023-10-29T13:38:31.809Z</updated>
     
     
       
@@ -38,17 +38,17 @@
     
     <category term="software" scheme="http://example.com/tags/software/"/>
     
-    <category term="back-end" scheme="http://example.com/tags/back-end/"/>
-    
     <category term="full-end" scheme="http://example.com/tags/full-end/"/>
     
-    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
+    <category term="github-pages" scheme="http://example.com/tags/github-pages/"/>
+    
+    <category term="back-end" scheme="http://example.com/tags/back-end/"/>
     
     <category term="git" scheme="http://example.com/tags/git/"/>
     
-    <category term="gitHub" scheme="http://example.com/tags/gitHub/"/>
+    <category term="github" scheme="http://example.com/tags/github/"/>
     
-    <category term="gitHub Pages" scheme="http://example.com/tags/gitHub-Pages/"/>
+    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
     
   </entry>
   
