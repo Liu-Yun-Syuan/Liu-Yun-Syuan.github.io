@@ -11,8 +11,8 @@
   
   <title>
     
-      Hello World 
-      
+      Tag 
+       : GitHub
       
       |
     
@@ -111,131 +111,48 @@
 
 
       <div class="flex-container">
-        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
-<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+        <!-- 标签详情页，展示某个标签下的文章列表，url形式：https://yoursite/tags/某个标签/ -->
 
-
-  <!-- LaTex Display -->
-
+<div class="container tag-details">
+  <div class="content-title">
+    <h2>
+      <span>GitHub</span>
+    </h2>
+  </div>
   
-    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
-  
-  <script>
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-      }
-    }
-  </script>
-
-
-
-
-
-  <!-- clipboard -->
-
-  
-    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
-  
-  
-<script src="/js/codeCopy.js"></script>
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
-  <div class="container post-details" id="post-details">
-    <div class="post-content">
-      <div class="post-title">Hello World</div>
-      <div class="post-attach">
-        <span class="post-pubtime">
-          <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
-          2023-10-29 10:00:11
-        </span>
-        
+    <div class="post-list">
+      <div class="post-item" title="個人部落格架設-3 | GitHub Pages 網域分支 🛠️">
+        <span class="time-m-d">2023-10-29</span>
+        <a href="/2023/10/29/github-pages-branch/">
+          <span>個人部落格架設-3 | GitHub Pages 網域分支 🛠️</span>
+        </a>
       </div>
-      <div class="markdown-body">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      </div>
-      
-        <div class="prev-or-next">
-          <div class="post-foot-next">
-            
-          </div>
-          <div class="post-attach">
-            <span class="post-pubtime">
-              <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
-              2023-10-29 10:00:11
-            </span>
-            
-          </div>
-          <div class="post-foot-prev">
-            
-              <a href="/2023/10/29/hexo/" target="_self">
-                <span>下一頁</span>
-                <i class="iconfont icon-chevronright"></i>
-              </a>
-            
-          </div>
-        </div>
-      
     </div>
-    
-  <div id="btn-catalog" class="btn-catalog">
-    <i class="iconfont icon-catalog"></i>
-  </div>
-  <div class="post-catalog hidden" id="catalog">
-    <div class="title">目錄</div>
-    <div class="catalog-content">
-      
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
-      
-    </div>
-  </div>
-
   
-<script src="/js/catalog.js"></script>
-
-
-
-
-    
-      <div class="comments-container">
-        
-
-
-
-
-
-
-
+    <div class="post-list">
+      <div class="post-item" title="個人部落格架設-2 | Hexo 管理 markdown 🛠️">
+        <span class="time-m-d">2023-10-29</span>
+        <a href="/2023/10/29/hexo/">
+          <span>個人部落格架設-2 | Hexo 管理 markdown 🛠️</span>
+        </a>
       </div>
+    </div>
+  
+    <div class="post-list">
+      <div class="post-item" title="個人部落格架設-1 | GitHub Pages 架設個人部落格 🛠️">
+        <span class="time-m-d">2023-10-29</span>
+        <a href="/2023/10/29/github-pages/">
+          <span>個人部落格架設-1 | GitHub Pages 架設個人部落格 🛠️</span>
+        </a>
+      </div>
+    </div>
+  
+  <nav class="post-navigation">
     
-  </div>
-
+    <span class="page-num">1 / 1</span>
+    
+  </nav>
+</div>
 
         
 <div class="footer">
@@ -496,24 +413,6 @@
 
 
         
-  
-    <div class="share-icon tools-bar-item">
-      <a href="javascript: void(0)" id="share-icon">
-        <i class="iconfont iconshare"></i>
-      </a>
-      <div class="share-content hidden">
-        
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + Hello%20World + '&url=' + http%3A%2F%2Fexample.com%2F2023%2F10%2F29%2Fhello-world%2F + '" target="_blank" title="Twitter">
-            <i class="iconfont icon-twitter"></i>
-          </a>
-        
-        
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2023/10/29/hello-world/" target="_blank" title="Facebook">
-            <i class="iconfont icon-facebooksquare"></i>
-          </a>
-        
-      </div>
-    </div>
   
   
 <script src="/js/shares.js"></script>

@@ -4,19 +4,17 @@
   
     
     <entry>
-      <title>hexo</title>
-      <link href="/2023/10/29/hexo/"/>
-      <url>/2023/10/29/hexo/</url>
+      <title>個人部落格架設-5 | cloudflare 網域安全標示 🛠️</title>
+      <link href="/2023/10/29/cloudflare-host/"/>
+      <url>/2023/10/29/cloudflare-host/</url>
       
-        <content type="html"><![CDATA[<h1 id="用-GitHub-Pages-架設個人部落格"><a href="#用-GitHub-Pages-架設個人部落格" class="headerlink" title="用 GitHub Pages 架設個人部落格"></a>用 GitHub Pages 架設個人部落格</h1><p>簡單架設靜態網站。「靜態網站」和「動態網站」的差異？<br><a href="https://www.youtube.com/watch?v=PsXWbI2Mqu0&list=PLX5Mjj7M-ojmiOJQDUNNyPRY1xlajVEYD&index=1&ab_channel=%E5%91%A8%E4%B8%89Tech">教學系列影片</a><br><a href="https://liu-yun-syuan.github.io/">我的個人 github pages 預設空間</a><br><a href="https://kaochenlong.com/">高見龍個人 Blog</a></p><ul><li>優點：<ul><li>留下版本紀錄</li><li>個人資料庫</li><li>個人化版面設計</li><li>可以個人化網域 (需支付網域費用，513up&#x2F;年)</li></ul></li><li>缺點：<ul><li>必須學習 Github</li><li>可能要學習 markdown 或是 html</li><li>可能要花費個人網域費用</li></ul></li></ul><h2 id="GitHub-Pges-建立-user-name-github-io-的-repo"><a href="#GitHub-Pges-建立-user-name-github-io-的-repo" class="headerlink" title="GitHub Pges 建立 user-name.github.io 的 repo"></a>GitHub Pges 建立 <code>user-name.github.io</code> 的 repo</h2><p>如果不介意網域名稱，其實在這個此章節的內容，就可以成功建立個人化網站了。</p><ul><li><a href="https://www.youtube.com/watch?v=lzEZI9wzPYU">把做好的網頁秀在網路上</a>，作為展示用途</li></ul><h3 id="組織-GitHub-Repo"><a href="#組織-GitHub-Repo" class="headerlink" title="組織 GitHub Repo"></a>組織 GitHub Repo</h3><p>因為只有 GitHub 使用者名稱的專案，會自動形成網頁，所以其中的檔案會越來越繁雜。為了方便管理，建議每個專案分別建立，接著讓 GitHub Pages 的資料庫自動同步其他專案。</p><h2 id="使用文章管理輔助工具，用-markdown-更新文章"><a href="#使用文章管理輔助工具，用-markdown-更新文章" class="headerlink" title="使用文章管理輔助工具，用 markdown 更新文章"></a>使用文章管理輔助工具，用 markdown 更新文章</h2><p>可以使用 markdown 語法快速撰寫文章，節省從頭製作每個頁面的時間。<br>管理的工具有非常多種，而我最後選擇的是 Hexo，因為他是我找到唯一技術文件有簡體中文版本的文章管理輔助工具。<br><a href="https://typecho.org/">Typecho</a>，Wordpress<br><a href="https://www.youtube.com/watch?v=7YDuIhDR16w&list=PLIN0r_kqXu-7_S4sg1gDkzdkCLzWXoPBf&ab_channel=%E6%88%91%E4%B8%8D%E6%98%AF%E5%92%95%E5%92%95%E9%B8%BD">文章管理輔助工具比較</a></p><ul><li><a href="https://jekyllrb.com/">Jekyll</a>：搭配 Ruby<ul><li><a href="https://www.youtube.com/watch?v=5z7_qp0CWBY">教學影片–Jekyll on Windows - And Github Pages Hosting</a></li></ul></li><li><a href="http://octopress.org/">Octopress</a></li><li><a href="https://gohugo.io/">Hugo</a>：搭配 Go<ul><li><a href="https://www.youtube.com/watch?v=s1O-8zhPQmU">教學影片–Building a custom site with Hugo on GitHub</a></li><li>推薦主題：<ul><li><a href="https://themes.gohugo.io/themes/lotusdocs/">Lotus Docs</a></li><li><a href="https://themes.gohugo.io/themes/hugo-theme-relearn/">Relearn</a></li></ul></li></ul></li><li><a href="https://hexo.io/zh-tw/index.html">Hexo</a><ul><li>推薦主題：<ul><li><a href="https://github.com/zchengsite/hexo-theme-oranges">Oranges</a></li><li><a href="https://github.com/fluid-dev/hexo-theme-fluid">Fluid</a></li><li><a href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a></li><li><a href="https://github.com/HyunSeob/hexo-theme-overdose">Overdose</a></li><li><a href="https://github.com/iTimeTraveler/hexo-theme-hiero">Hiero</a></li><li><a href="https://github.com/iTimeTraveler/hexo-theme-hipaper">Hipaper</a></li></ul></li></ul></li></ul><h2 id="使用個人網域"><a href="#使用個人網域" class="headerlink" title="使用個人網域"></a>使用個人網域</h2><p>使用的網路服務</p><ul><li>個人網域</li><li>部署</li></ul><h3 id="個人網域購買"><a href="#個人網域購買" class="headerlink" title="個人網域購買"></a>個人網域購買</h3><p>我在<a href="https://www.gandi.net/zh-Hant/domain/tld/com">gandi</a>選擇最普遍也最經濟實惠的 <code>.com</code> 網域，或是也可以視個人需求購買其他網域名稱。網域結尾的種類很多，價格也都不同，詳情請查看 gandi 的<a href="https://www.gandi.net/zh-Hant/discounts">促銷活動</a>。</p><h3 id="部署安全網路"><a href="#部署安全網路" class="headerlink" title="部署安全網路"></a>部署安全網路</h3><hr><p>參考資料：</p><ul><li><a href="https://viiisit.com/20230712-custom-domain/">Custom Domain - 從零到有，成功建置 viiisit.com!</a></li><li><a href="https://gitbook.tw/chapters/github/using-github-pages">使用 GitHub 免費製作個人網站</a>，高見龍</li><li><a href="https://medium.com/%E9%80%B2%E6%93%8A%E7%9A%84-git-git-git/%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B-%E7%94%A8github-pages-%E4%B8%8A%E5%82%B3%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99-fa2ae83e6276">從零開始: 用 github pages 上傳靜態網站</a></li></ul>]]></content>
+        <content type="html"><![CDATA[<h3 id="部署安全網路"><a href="#部署安全網路" class="headerlink" title="部署安全網路"></a>部署安全網路</h3>]]></content>
       
       
       
         <tags>
             
             <tag> software </tag>
-            
-            <tag> front-end </tag>
             
             <tag> back-end </tag>
             
@@ -29,13 +27,104 @@
     
     
     <entry>
-      <title>Hello World</title>
-      <link href="/2023/10/29/hello-world/"/>
-      <url>/2023/10/29/hello-world/</url>
+      <title>個人部落格架設-4 | Gandi 購買並部署個人網域 🛠️</title>
+      <link href="/2023/10/29/gandi-buy-domain/"/>
+      <url>/2023/10/29/gandi-buy-domain/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="使用個人網域"><a href="#使用個人網域" class="headerlink" title="使用個人網域"></a>使用個人網域</h2><p>使用的網路服務</p><ul><li>個人網域</li><li>部署</li></ul><h3 id="個人網域購買"><a href="#個人網域購買" class="headerlink" title="個人網域購買"></a>個人網域購買</h3><p>我在<a href="https://www.gandi.net/zh-Hant/domain/tld/com">gandi</a>選擇最普遍也最經濟實惠的 <code>.com</code> 網域，或是也可以視個人需求購買其他網域名稱。網域結尾的種類很多，價格也都不同，詳情請查看 gandi 的<a href="https://www.gandi.net/zh-Hant/discounts">促銷活動</a>。</p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> software </tag>
+            
+            <tag> full-end </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>個人部落格架設-3 | GitHub Pages 網域分支 🛠️</title>
+      <link href="/2023/10/29/github-pages-branch/"/>
+      <url>/2023/10/29/github-pages-branch/</url>
+      
+        <content type="html"><![CDATA[<h3 id="組織-GitHub-Repo：建立-branch"><a href="#組織-GitHub-Repo：建立-branch" class="headerlink" title="組織 GitHub Repo：建立 branch"></a>組織 GitHub Repo：建立 branch</h3><p>因為只有 GitHub 使用者名稱的專案，會自動形成網頁，所以其中的檔案會越來越繁雜。為了方便管理，建議每個專案分別建立，接著讓 GitHub Pages 的資料庫自動同步其他專案。<br>不是主要分之(main 或 master)，就在 branch 的值填寫 <code>gh-pages</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repo:</span><br><span class="line">    branch: gh-pages</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> software </tag>
+            
+            <tag> Git </tag>
+            
+            <tag> GitHub </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>個人部落格架設-2 | Hexo 管理 markdown 🛠️</title>
+      <link href="/2023/10/29/hexo/"/>
+      <url>/2023/10/29/hexo/</url>
+      
+        <content type="html"><![CDATA[<h1 id="用-Hexo-管理-markdown-文章"><a href="#用-Hexo-管理-markdown-文章" class="headerlink" title="用 Hexo 管理 markdown 文章"></a>用 Hexo 管理 markdown 文章</h1><p>可以使用 markdown 語法快速撰寫文章，節省從頭製作每個頁面的時間。</p><h2 id="挑選文章管理輔助工具，用-markdown-更新文章"><a href="#挑選文章管理輔助工具，用-markdown-更新文章" class="headerlink" title="挑選文章管理輔助工具，用 markdown 更新文章"></a>挑選文章管理輔助工具，用 markdown 更新文章</h2><p>管理的工具有非常多種，而我最後選擇的是 Hexo，因為他是我找到唯一技術文件有簡體中文版本的文章管理輔助工具。<br><a href="https://typecho.org/">Typecho</a>，Wordpress<br><a href="https://www.youtube.com/watch?v=7YDuIhDR16w&list=PLIN0r_kqXu-7_S4sg1gDkzdkCLzWXoPBf&ab_channel=%E6%88%91%E4%B8%8D%E6%98%AF%E5%92%95%E5%92%95%E9%B8%BD">文章管理輔助工具比較</a></p><ul><li><a href="https://jekyllrb.com/">Jekyll</a>：搭配 Ruby<ul><li><a href="https://www.youtube.com/watch?v=5z7_qp0CWBY">教學影片–Jekyll on Windows - And Github Pages Hosting</a></li></ul></li><li><a href="http://octopress.org/">Octopress</a></li><li><a href="https://gohugo.io/">Hugo</a>：搭配 Go<ul><li><a href="https://www.youtube.com/watch?v=s1O-8zhPQmU">教學影片–Building a custom site with Hugo on GitHub</a></li><li>推薦主題：<ul><li><a href="https://themes.gohugo.io/themes/lotusdocs/">Lotus Docs</a></li><li><a href="https://themes.gohugo.io/themes/hugo-theme-relearn/">Relearn</a></li></ul></li></ul></li><li><a href="https://hexo.io/zh-tw/index.html">Hexo</a></li></ul><table><thead><tr><th>編號</th><th>連結</th></tr></thead><tbody><tr><td>1</td><td><a href="https://github.com/zchengsite/hexo-theme-oranges">Oranges</a></td></tr><tr><td>2</td><td><a href="https://github.com/fluid-dev/hexo-theme-fluid">Fluid</a></td></tr><tr><td>3</td><td><a href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a></td></tr><tr><td>4</td><td><a href="https://github.com/HyunSeob/hexo-theme-overdose">Overdose</a></td></tr><tr><td>5</td><td><a href="https://github.com/iTimeTraveler/hexo-theme-hiero">Hiero</a></td></tr><tr><td>6</td><td><a href="https://github.com/iTimeTraveler/hexo-theme-hipaper">Hipaper</a></td></tr></tbody></table><h3 id="使用-Hexo-管理與維護"><a href="#使用-Hexo-管理與維護" class="headerlink" title="使用 Hexo 管理與維護"></a>使用 Hexo 管理與維護</h3><p>每次的更新流程：</p><ol><li><code>hexo clean</code>：</li><li><code>hexo g</code>：genorese</li><li><code>hexo s</code>：server</li><li><code>hexo d</code>：deploy</li></ol><h3 id="個人化-Hexo-網站主題"><a href="#個人化-Hexo-網站主題" class="headerlink" title="個人化 Hexo 網站主題"></a>個人化 Hexo 網站主題</h3><hr><p>參考資料：</p><ul><li><a href="https://viiisit.com/20230712-custom-domain/">Custom Domain - 從零到有，成功建置 viiisit.com!</a></li><li><a href="https://www.youtube.com/watch?v=PsXWbI2Mqu0&list=PLX5Mjj7M-ojmiOJQDUNNyPRY1xlajVEYD&index=1&ab_channel=%E5%91%A8%E4%B8%89Tech">Hexo 影片教學系列</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> software </tag>
+            
+            <tag> back-end </tag>
+            
+            <tag> full-end </tag>
+            
+            <tag> Git </tag>
+            
+            <tag> GitHub </tag>
+            
+            <tag> front-end </tag>
+            
+            <tag> markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>個人部落格架設-1 | GitHub Pages 架設個人部落格 🛠️</title>
+      <link href="/2023/10/29/github-pages/"/>
+      <url>/2023/10/29/github-pages/</url>
+      
+        <content type="html"><![CDATA[<h1 id="用-GitHub-Pages-架設個人部落格"><a href="#用-GitHub-Pages-架設個人部落格" class="headerlink" title="用 GitHub Pages 架設個人部落格"></a>用 GitHub Pages 架設個人部落格</h1><p>簡單架設靜態網站。「靜態網站」和「動態網站」的差異？<br><a href="https://liu-yun-syuan.github.io/">我的個人 github pages 預設空間</a><br><a href="https://www.youtube.com/watch?v=erKYtw4Rfhk&ab_channel=CodeSheep%E7%A8%8B%E5%BA%8F%E7%BE%8A">手把手教你从 0 开始搭建自己的个人博客</a></p><ul><li>優點：<ul><li>留下版本紀錄</li><li>個人資料庫</li><li>個人化版面設計</li><li>可以個人化網域 (需支付網域費用，513up&#x2F;年)</li></ul></li><li>缺點：<ul><li>必須學習 Github</li><li>可能要學習 markdown 或是 html</li><li>可能要花費個人網域費用</li></ul></li></ul><h2 id="建立-user-name-github-io-的-repo"><a href="#建立-user-name-github-io-的-repo" class="headerlink" title="建立 user-name.github.io 的 repo"></a>建立 <code>user-name.github.io</code> 的 repo</h2><p>repo 是什麼？<br>如果不介意網域名稱，其實在這個此章節的內容，就可以成功建立個人化網站了。</p><ul><li><a href="https://www.youtube.com/watch?v=lzEZI9wzPYU">把做好的網頁秀在網路上</a>，作為展示用途</li></ul><hr><p>參考資料：</p><ul><li><a href="https://gitbook.tw/chapters/github/using-github-pages">使用 GitHub 免費製作個人網站</a>，高見龍</li><li><a href="https://medium.com/%E9%80%B2%E6%93%8A%E7%9A%84-git-git-git/%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B-%E7%94%A8github-pages-%E4%B8%8A%E5%82%B3%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99-fa2ae83e6276">從零開始: 用 github pages 上傳靜態網站</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> software </tag>
+            
+            <tag> back-end </tag>
+            
+            <tag> full-end </tag>
+            
+            <tag> Git </tag>
+            
+            <tag> GitHub </tag>
+            
+            <tag> front-end </tag>
+            
+        </tags>
       
     </entry>
     
