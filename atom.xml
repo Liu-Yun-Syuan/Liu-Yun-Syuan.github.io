@@ -38,11 +38,11 @@
     
     <category term="software" scheme="http://example.com/tags/software/"/>
     
-    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
-    
     <category term="back-end" scheme="http://example.com/tags/back-end/"/>
     
     <category term="full-end" scheme="http://example.com/tags/full-end/"/>
+    
+    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
     
     <category term="git" scheme="http://example.com/tags/git/"/>
     
