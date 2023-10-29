@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" color-mode="light">
+<html lang="zh-TW" color-mode="light">
 
   <head>
   <meta charset="utf-8">
@@ -58,7 +58,8 @@
       document.documentElement.setAttribute('color-mode', colorMode)
     }
   </script>
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
 
 
   <body>
@@ -68,7 +69,7 @@
     <a href="/">
       <!-- 头像取消懒加载，添加no-lazy -->
       
-        <img src="/images/avatar.png" alt="">
+        <img no-lazy src="/images/avatar.png" alt="">
       
     </a>
     <div class="nickname"><a href="/">Oranges</a></div>
@@ -82,6 +83,10 @@
       
         <li class="nav-item" data-path="/archives/">
           <a href="/archives/">Archives</a>
+        </li>
+      
+        <li class="nav-item" data-path="/categories/">
+          <a href="/categories/">Categories</a>
         </li>
       
         <li class="nav-item" data-path="/tags/">
@@ -154,12 +159,12 @@
       <div class="post-title">hexo</div>
       <div class="post-attach">
         <span class="post-pubtime">
-          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2023-10-29 10:51:50
+          <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
+          2023-10-29 15:09:24
         </span>
         
               <span class="post-tags">
-                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                <i class="iconfont icon-tags mr-10" title="標籤"></i>
                 
                 <span class="span--tag mr-8">
                   <a href="/tags/software/" title="software">
@@ -260,18 +265,18 @@
             
               <a href="/2023/10/29/hello-world/" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
-                <span>Prev</span>
+                <span>上一頁</span>
               </a>
             
           </div>
           <div class="post-attach">
             <span class="post-pubtime">
-              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2023-10-29 10:51:50
+              <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
+              2023-10-29 15:09:24
             </span>
             
                   <span class="post-tags">
-                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    <i class="iconfont icon-tags mr-10" title="標籤"></i>
                     
                     <span class="span--tag mr-8">
                       <a href="/tags/software/" title="software">
@@ -311,7 +316,7 @@
     <i class="iconfont icon-catalog"></i>
   </div>
   <div class="post-catalog hidden" id="catalog">
-    <div class="title">Contents</div>
+    <div class="title">目錄</div>
     <div class="catalog-content">
       
         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8-GitHub-Pages-%E6%9E%B6%E8%A8%AD%E5%80%8B%E4%BA%BA%E9%83%A8%E8%90%BD%E6%A0%BC"><span class="toc-text">用 GitHub Pages 架設個人部落格</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GitHub-Pges-%E5%BB%BA%E7%AB%8B-user-name-github-io-%E7%9A%84-repo"><span class="toc-text">GitHub Pges 建立 user-name.github.io 的 repo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B5%84%E7%B9%94-GitHub-Repo"><span class="toc-text">組織 GitHub Repo</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%87%E7%AB%A0%E7%AE%A1%E7%90%86%E8%BC%94%E5%8A%A9%E5%B7%A5%E5%85%B7%EF%BC%8C%E7%94%A8-markdown-%E6%9B%B4%E6%96%B0%E6%96%87%E7%AB%A0"><span class="toc-text">使用文章管理輔助工具，用 markdown 更新文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%80%8B%E4%BA%BA%E7%B6%B2%E5%9F%9F"><span class="toc-text">使用個人網域</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%80%8B%E4%BA%BA%E7%B6%B2%E5%9F%9F%E8%B3%BC%E8%B2%B7"><span class="toc-text">個人網域購買</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%AE%89%E5%85%A8%E7%B6%B2%E8%B7%AF"><span class="toc-text">部署安全網路</span></a></li></ol></li></ol></li></ol>
@@ -348,6 +353,12 @@
         <li>
           <a title="github" target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">
             <i class="iconfont icon-github"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="rss" href="/atom.xml">
+            <i class="iconfont icon-rss"></i>
           </a>
         </li>
       
@@ -401,7 +412,7 @@
           </a>
         </span>
         
-          <input type="text" class="search-input" id="search-input" placeholder="Search...">
+          <input type="text" class="search-input" id="search-input" placeholder="搜索...">
         
         <span class="search-close-icon" id="search-close-icon">
           <a href="javascript: void(0)">
@@ -453,7 +464,7 @@
       'use strict';
       var $input = document.getElementById(search_id);
       var $resultContent = document.getElementById(content_id);
-      $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>首次搜尋，正在載入索引文件，請稍後...<span></ul>";
       $.ajax({
         // 0x01. load xml file
         url: path,
@@ -549,7 +560,7 @@
             });
             str += "</ul>";
             if (str.indexOf('<li>') === -1) {
-              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>No result<span></ul>";
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>沒有找到内容，請嘗試更換檢索詞。<span></ul>";
             }
             $resultContent.innerHTML = str;
           });
@@ -557,9 +568,9 @@
         error: function(xhr, status, error) {
           $resultContent.innerHTML = ""
           if (xhr.status === 404) {
-            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>未找到search.xml文件，具體請參考：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
           } else {
-            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>請求失敗，嘗試重新刷新頁面或稍後重試。<span></ul>";
           }
         }
       });
@@ -619,5 +630,18 @@
 
       </div>
     </div>
-  </body>
+  
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 </html>
