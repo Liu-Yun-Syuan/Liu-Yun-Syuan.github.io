@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-10-29T10:49:30.511Z</updated>
+  <updated>2023-10-29T12:57:10.941Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,137 +17,19 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>個人部落格架設-5 | cloudflare 網域安全標示 🛠️</title>
-    <link href="http://example.com/2023/10/29/cloudflare-host/"/>
-    <id>http://example.com/2023/10/29/cloudflare-host/</id>
-    <published>2023-10-29T10:21:42.000Z</published>
-    <updated>2023-10-29T10:49:30.511Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;部署安全網路&quot;&gt;&lt;a href=&quot;#部署安全網路&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="software" scheme="http://example.com/tags/software/"/>
-    
-    <category term="back-end" scheme="http://example.com/tags/back-end/"/>
-    
-    <category term="full-end" scheme="http://example.com/tags/full-end/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>個人部落格架設-4 | Gandi 購買並部署個人網域 🛠️</title>
-    <link href="http://example.com/2023/10/29/gandi-buy-domain/"/>
-    <id>http://example.com/2023/10/29/gandi-buy-domain/</id>
-    <published>2023-10-29T10:20:27.000Z</published>
-    <updated>2023-10-29T10:49:34.571Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;使用個人網域&quot;&gt;&lt;a href=&quot;#使用個人網域&quot; class=&quot;headerlink&quot; title=&quot;使用個人網域&quot;&gt;&lt;/a&gt;使用個人網域&lt;/h2&gt;&lt;p&gt;使用的網路服務&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;個人網域&lt;/li&gt;
-&lt;li&gt;部署&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3</summary>
-        
-      
-    
-    
-    
-    
-    <category term="software" scheme="http://example.com/tags/software/"/>
-    
-    <category term="full-end" scheme="http://example.com/tags/full-end/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>個人部落格架設-3 | GitHub Pages 網域分支 🛠️</title>
-    <link href="http://example.com/2023/10/29/github-pages-branch/"/>
-    <id>http://example.com/2023/10/29/github-pages-branch/</id>
-    <published>2023-10-29T10:20:20.000Z</published>
-    <updated>2023-10-29T10:50:29.962Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;組織-GitHub-Repo：建立-branch&quot;&gt;&lt;a href=&quot;#組織-GitHub-Repo：建立-branch&quot; class=&quot;headerlink&quot; title=&quot;組織 GitHub Repo：建立 branch&quot;&gt;&lt;/a&gt;組織 GitHub</summary>
-        
-      
-    
-    
-    
-    
-    <category term="software" scheme="http://example.com/tags/software/"/>
-    
-    <category term="Git" scheme="http://example.com/tags/Git/"/>
-    
-    <category term="GitHub" scheme="http://example.com/tags/GitHub/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>個人部落格架設-2 | Hexo 管理 markdown 🛠️</title>
-    <link href="http://example.com/2023/10/29/hexo/"/>
-    <id>http://example.com/2023/10/29/hexo/</id>
-    <published>2023-10-29T10:20:16.000Z</published>
-    <updated>2023-10-29T10:49:48.370Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;用-Hexo-管理-markdown-文章&quot;&gt;&lt;a href=&quot;#用-Hexo-管理-markdown-文章&quot; class=&quot;headerlink&quot; title=&quot;用 Hexo 管理 markdown 文章&quot;&gt;&lt;/a&gt;用 Hexo 管理 markdown</summary>
-        
-      
-    
-    
-    
-    
-    <category term="software" scheme="http://example.com/tags/software/"/>
-    
-    <category term="back-end" scheme="http://example.com/tags/back-end/"/>
-    
-    <category term="full-end" scheme="http://example.com/tags/full-end/"/>
-    
-    <category term="Git" scheme="http://example.com/tags/Git/"/>
-    
-    <category term="GitHub" scheme="http://example.com/tags/GitHub/"/>
-    
-    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
-    
-    <category term="markdown" scheme="http://example.com/tags/markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>個人部落格架設-1 | GitHub Pages 架設個人部落格 🛠️</title>
+    <title>個人部落格架設-1 | GitHub Pages 架設個人部落格</title>
     <link href="http://example.com/2023/10/29/github-pages/"/>
     <id>http://example.com/2023/10/29/github-pages/</id>
     <published>2023-10-29T10:19:00.000Z</published>
-    <updated>2023-10-29T10:49:43.414Z</updated>
+    <updated>2023-10-29T12:57:10.941Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;用-GitHub-Pages-架設個人部落格&quot;&gt;&lt;a href=&quot;#用-GitHub-Pages-架設個人部落格&quot; class=&quot;headerlink&quot; title=&quot;用 GitHub Pages 架設個人部落格&quot;&gt;&lt;/a&gt;用 GitHub Pages</summary>
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;在高見龍老師的建議下，開始以 Blog</summary>
         
       
     
