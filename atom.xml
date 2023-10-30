@@ -36,8 +36,6 @@
     
     
     
-    <category term="front-end" scheme="https://liu-yun-syuan.github.io/blog/tags/front-end/"/>
-    
     <category term="software" scheme="https://liu-yun-syuan.github.io/blog/tags/software/"/>
     
     <category term="back-end" scheme="https://liu-yun-syuan.github.io/blog/tags/back-end/"/>
@@ -49,6 +47,8 @@
     <category term="git" scheme="https://liu-yun-syuan.github.io/blog/tags/git/"/>
     
     <category term="github" scheme="https://liu-yun-syuan.github.io/blog/tags/github/"/>
+    
+    <category term="front-end" scheme="https://liu-yun-syuan.github.io/blog/tags/front-end/"/>
     
   </entry>
   
