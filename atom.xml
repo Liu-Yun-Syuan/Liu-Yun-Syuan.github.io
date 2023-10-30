@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Yun-Syuan, Liu site</title>
-  <icon>http://example.com/icon.png</icon>
+  <icon>https://github.com/Liu-Yun-Syuan/blog/icon.png</icon>
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://github.com/Liu-Yun-Syuan/blog/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://github.com/Liu-Yun-Syuan/blog/"/>
   <updated>2023-10-30T00:05:52.641Z</updated>
-  <id>http://example.com/</id>
+  <id>https://github.com/Liu-Yun-Syuan/blog/</id>
   
   <author>
     <name>Yun-Syuan, Liu</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>個人部落格架設-1 | GitHub Pages 建立個人網域</title>
-    <link href="http://example.com/2023/10/29/github-pages/"/>
-    <id>http://example.com/2023/10/29/github-pages/</id>
+    <link href="https://github.com/Liu-Yun-Syuan/blog/2023/10/29/github-pages/"/>
+    <id>https://github.com/Liu-Yun-Syuan/blog/2023/10/29/github-pages/</id>
     <published>2023-10-29T10:19:00.000Z</published>
     <updated>2023-10-30T00:05:52.641Z</updated>
     
@@ -36,19 +36,19 @@
     
     
     
-    <category term="software" scheme="http://example.com/tags/software/"/>
+    <category term="front-end" scheme="https://github.com/Liu-Yun-Syuan/blog/tags/front-end/"/>
     
-    <category term="back-end" scheme="http://example.com/tags/back-end/"/>
+    <category term="software" scheme="https://github.com/Liu-Yun-Syuan/blog/tags/software/"/>
     
-    <category term="full-end" scheme="http://example.com/tags/full-end/"/>
+    <category term="back-end" scheme="https://github.com/Liu-Yun-Syuan/blog/tags/back-end/"/>
     
-    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
+    <category term="full-end" scheme="https://github.com/Liu-Yun-Syuan/blog/tags/full-end/"/>
     
-    <category term="git" scheme="http://example.com/tags/git/"/>
+    <category term="git" scheme="https://github.com/Liu-Yun-Syuan/blog/tags/git/"/>
     
-    <category term="github" scheme="http://example.com/tags/github/"/>
+    <category term="github" scheme="https://github.com/Liu-Yun-Syuan/blog/tags/github/"/>
     
-    <category term="github-pages" scheme="http://example.com/tags/github-pages/"/>
+    <category term="github-pages" scheme="https://github.com/Liu-Yun-Syuan/blog/tags/github-pages/"/>
     
   </entry>
   
