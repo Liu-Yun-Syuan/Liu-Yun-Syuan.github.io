@@ -44,9 +44,9 @@
     
     <category term="full-end" scheme="http://example.com/tags/full-end/"/>
     
-    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
-    
     <category term="github-pages" scheme="http://example.com/tags/github-pages/"/>
+    
+    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
     
     <category term="git" scheme="http://example.com/tags/git/"/>
     
