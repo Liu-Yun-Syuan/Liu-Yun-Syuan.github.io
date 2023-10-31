@@ -8,25 +8,31 @@
       <link href="/2023/10/29/github-pages/"/>
       <url>/2023/10/29/github-pages/</url>
       
-        <content type="html"><![CDATA[<blockquote><p>在高見龍老師的建議下，開始以 Blog 記錄學習過程。<br>加強學習記憶，讓自己離成功更進一步。</p></blockquote><p>架設個人網站，能夠完全掌握個人流量，以及確保資料的保存。相較於一般的部落格平台，可以避免因為平台維護而損失流量，或是因為平台關閉而遺失資料。而且架設基本的個人「靜態網站」，只需要短短 10 分鐘。在靜態網站下，每個觀看者所看到的網頁都是相同的，是固定的網頁內容。不像「動態網站」，會因為使用者的差異，而呈現個人化的顯示資料，例如：推薦商品、廣告、未讀文章等等。</p><table><thead><tr><th>優點</th><th>缺點</th></tr></thead><tbody><tr><td>個人資料庫</td><td>必須學習 Git, GitHub</td></tr><tr><td>個人化版面設計</td><td>必須學習 HTML, CSS, JS</td></tr><tr><td>可以個人化網域<br>(需支付網域費用，513up&#x2F;年)</td><td>可能要花費個人網域費用</td></tr></tbody></table><h1 id="建立-user-name-github-io-的-repo"><a href="#建立-user-name-github-io-的-repo" class="headerlink" title="建立 user-name.github.io 的 repo"></a>建立 <code>user-name.github.io</code> 的 repo</h1><p>GitHub 是基於 Git 工具而設立的網路服務，其中 repo (repository) 就是儲存資料的倉庫。在一個 GitHub 中可以建立多個 repo，分別儲存不同的專案，並且依照個人習慣隨意命名。不過我們這次使用的是 GitHub 特別提供的 GitHub Pages 服務，在符合 GitHub Pages 的命名規則下才能順利運作。因此用於建立個人網域的專案名稱，必須是 <code>user-name.github.io</code>——以 GitHub 帳號起頭，並且以 <code>.github.io</code> 結尾。由此，個人網站的網域空間就已建立完畢，可以開始編寫個人網站的程式碼了。(個人網站網址即 <code>https://user-name.github.io</code>)</p><h1 id="影片完整教學"><a href="#影片完整教學" class="headerlink" title="影片完整教學"></a>影片完整教學</h1><p><a href="https://www.youtube.com/watch?v=erKYtw4Rfhk&ab_channel=CodeSheep%E7%A8%8B%E5%BA%8F%E7%BE%8A">手把手教你从 0 开始搭建自己的个人博客</a>，程序羊</p><iframe width="560" height="315" src="https://www.youtube.com/embed/erKYtw4Rfhk?si=HS8ni444vEcNHFnH&amp;start=886" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><hr><p>參考資料：</p><ul><li><a href="https://gitbook.tw/chapters/github/using-github-pages">使用 GitHub 免費製作個人網站</a>，高見龍</li><li><a href="https://medium.com/%E9%80%B2%E6%93%8A%E7%9A%84-git-git-git/%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B-%E7%94%A8github-pages-%E4%B8%8A%E5%82%B3%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99-fa2ae83e6276">從零開始: 用 github pages 上傳靜態網站</a>，sexyoung</li><li><a href="https://pages.github.com/">GitHub Pages</a></li></ul>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>在高見龍老師的建議下，開始以 Blog 記錄學習過程。<br>加強學習記憶，讓自己離成功更進一步。</p></blockquote><p>架設個人網站，能夠完全掌握個人流量，以及確保資料的保存。相較於一般的部落格平台，可以避免因為平台維護而損失流量，或是因為平台關閉而遺失資料。而且架設基本的個人「靜態網站」，只需要短短 10 分鐘。在靜態網站下，每個觀看者所看到的網頁都是相同的，是固定的網頁內容。不像「動態網站」，會因為使用者的差異，而呈現個人化的顯示資料，例如：推薦商品、廣告、未讀文章等等。</p><table><thead><tr><th>優點</th><th>缺點</th></tr></thead><tbody><tr><td>個人資料庫</td><td>必須學習 Git, GitHub</td></tr><tr><td>個人化版面設計</td><td>必須學習 HTML, CSS, JS</td></tr><tr><td>可以個人化網域<br>(需支付網域費用，513up&#x2F;年)</td><td>可能要花費個人網域費用</td></tr></tbody></table><h2 id="建立-user-name-github-io-的-repo"><a href="#建立-user-name-github-io-的-repo" class="headerlink" title="建立 user-name.github.io 的 repo"></a>建立 <code>user-name.github.io</code> 的 repo</h2><p>GitHub 是基於 Git 工具而設立的網路服務，其中 repo (repository) 就是儲存資料的倉庫。在一個 GitHub 中可以建立多個 repo，分別儲存不同的專案，並且依照個人習慣隨意命名。不過我們這次使用的是 GitHub 特別提供的 GitHub Pages 服務，在符合 GitHub Pages 的命名規則下才能順利運作。因此用於建立個人網域的專案名稱，必須是 <code>user-name.github.io</code>——以 GitHub 帳號起頭，並且以 <code>.github.io</code> 結尾。由此，個人網站的網域空間就已建立完畢，可以開始編寫個人網站的程式碼了。(個人網站網址即 <code>https://user-name.github.io</code>)</p><h2 id="影片完整教學"><a href="#影片完整教學" class="headerlink" title="影片完整教學"></a>影片完整教學</h2><p><a href="https://www.youtube.com/watch?v=erKYtw4Rfhk&ab_channel=CodeSheep%E7%A8%8B%E5%BA%8F%E7%BE%8A">手把手教你从 0 开始搭建自己的个人博客</a>，程序羊</p><iframe width="560" height="315" src="https://www.youtube.com/embed/erKYtw4Rfhk?si=HS8ni444vEcNHFnH&amp;start=886" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><hr><p>參考資料：</p><ul><li><a href="https://gitbook.tw/chapters/github/using-github-pages">使用 GitHub 免費製作個人網站</a>，高見龍</li><li><a href="https://medium.com/%E9%80%B2%E6%93%8A%E7%9A%84-git-git-git/%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B-%E7%94%A8github-pages-%E4%B8%8A%E5%82%B3%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99-fa2ae83e6276">從零開始: 用 github pages 上傳靜態網站</a>，sexyoung</li><li><a href="https://pages.github.com/">GitHub Pages</a></li></ul>]]></content>
       
+      
+      <categories>
+          
+          <category> 個人部落格架設 </category>
+          
+      </categories>
       
       
         <tags>
             
             <tag> software </tag>
             
-            <tag> git </tag>
-            
-            <tag> github </tag>
-            
             <tag> back-end </tag>
             
             <tag> full-end </tag>
             
+            <tag> front-end </tag>
+            
             <tag> github-pages </tag>
             
-            <tag> front-end </tag>
+            <tag> git </tag>
+            
+            <tag> github </tag>
             
         </tags>
       

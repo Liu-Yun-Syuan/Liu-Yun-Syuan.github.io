@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-10-30T00:05:52.641Z</updated>
+  <updated>2023-10-31T04:56:07.312Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2023/10/29/github-pages/"/>
     <id>http://example.com/2023/10/29/github-pages/</id>
     <published>2023-10-29T10:19:00.000Z</published>
-    <updated>2023-10-30T00:05:52.641Z</updated>
+    <updated>2023-10-31T04:56:07.312Z</updated>
     
     
       
@@ -35,20 +35,22 @@
     
     
     
+    <category term="個人部落格架設" scheme="http://example.com/categories/%E5%80%8B%E4%BA%BA%E9%83%A8%E8%90%BD%E6%A0%BC%E6%9E%B6%E8%A8%AD/"/>
+    
     
     <category term="software" scheme="http://example.com/tags/software/"/>
-    
-    <category term="git" scheme="http://example.com/tags/git/"/>
-    
-    <category term="github" scheme="http://example.com/tags/github/"/>
     
     <category term="back-end" scheme="http://example.com/tags/back-end/"/>
     
     <category term="full-end" scheme="http://example.com/tags/full-end/"/>
     
+    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
+    
     <category term="github-pages" scheme="http://example.com/tags/github-pages/"/>
     
-    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
+    <category term="git" scheme="http://example.com/tags/git/"/>
+    
+    <category term="github" scheme="http://example.com/tags/github/"/>
     
   </entry>
   
