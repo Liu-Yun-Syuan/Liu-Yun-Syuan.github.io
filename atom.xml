@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-11-13T12:52:23.859Z</updated>
+  <updated>2023-11-13T13:54:07.160Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTML | 標籤結構 &amp; 切版設計</title>
+    <link href="http://example.com/2023/11/13/html-structure/"/>
+    <id>http://example.com/2023/11/13/html-structure/</id>
+    <published>2023-11-13T13:35:00.000Z</published>
+    <updated>2023-11-13T13:54:07.160Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-TW/docs/Web/HTML&quot;&gt;HTML&lt;/a&gt; （HyperText Markup Language，超文本標記語言）是前端三大語言之一，是網頁內容的主體。它的語意結構將關係到</summary>
+        
+      
+    
+    
+    
+    
+    <category term="layout" scheme="http://example.com/tags/layout/"/>
+    
+    <category term="html" scheme="http://example.com/tags/html/"/>
+    
+    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
+    
+  </entry>
   
   <entry>
     <title>JS | JEST 測試驅動開發 (TDD)</title>
@@ -72,13 +99,13 @@
     
     <category term="full-end" scheme="http://example.com/tags/full-end/"/>
     
+    <category term="github-pages" scheme="http://example.com/tags/github-pages/"/>
+    
     <category term="front-end" scheme="http://example.com/tags/front-end/"/>
     
     <category term="git" scheme="http://example.com/tags/git/"/>
     
     <category term="github" scheme="http://example.com/tags/github/"/>
-    
-    <category term="github-pages" scheme="http://example.com/tags/github-pages/"/>
     
   </entry>
   

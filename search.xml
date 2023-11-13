@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>HTML | 標籤結構 &amp; 切版設計</title>
+      <link href="/2023/11/13/html-structure/"/>
+      <url>/2023/11/13/html-structure/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://developer.mozilla.org/zh-TW/docs/Web/HTML">HTML</a> （HyperText Markup Language，超文本標記語言）是前端三大語言之一，是網頁內容的主體。它的語意結構將關係到 SEO 搜尋結果，是改善「搜尋引擎最佳化」的關鍵。同時，也是設計「<a href="https://accessibility.moda.gov.tw/Download/Detail/1419?Category=28">無障礙網站</a>」時需要精心安排的重點。透過 <a href="https://pagespeed.web.dev/">PageSpeed Insight</a> 可以了解特定網站的優劣，檢測「效能、無障礙功能、最佳做法、搜尋引擎最佳化」四個指標，更可以查找<a href="https://developers.google.com/speed/docs/insights/v5/about?hl=zh-tw">文件</a>了解改善方向。</p><h2 id="建構-HTML-的步驟"><a href="#建構-HTML-的步驟" class="headerlink" title="建構 HTML 的步驟"></a>建構 HTML 的步驟</h2><p>為了提升 HTML 的建構效率，建議將 HTML 結構模組化，避免檢查結構時可能的混亂。首先，設定容器時，建議將每個章節分為 header 、 .content 以及 footer。(如果沒有相關內容，可以省略)其次，才依照功能及內容，選擇相符的標籤，填入先前建立的容器中。</p><ol><li>設定容器<ol><li>語意結構標籤</li><li>無語意結構標籤</li></ol></li><li>設定功能與內容<ol><li>功能</li><li>內容</li></ol></li></ol><h3 id="1-設定容器"><a href="#1-設定容器" class="headerlink" title="1. 設定容器"></a>1. 設定容器</h3><p>結構標籤沒有特殊功能，主要是將有關連的內容群組化，並且幫助 SEO 分辨內容類別。</p><ul><li>語意容器<ul><li>結構<ul><li>header 頂端，大多放作者名稱、LOGO、搜尋欄</li><li>footer 末端，大多放作者、版權、文件相關連結</li></ul></li><li>內容<ul><li>main 主要，沒有和其他頁面重複的內容</li><li>aside 另外，和主要內容無關 &#x2F; 間接相關的內容</li><li>nav: navigation 選單，設置多個連結，大多放側邊欄、頁面導覽、麵包屑</li></ul></li><li>內容類型<ul><li>article 文章，獨立結構的 post 或新聞文章</li><li>section 章節，通用的分段結構，多用在搜尋結果、地圖顯示、控制項等。</li></ul></li></ul></li><li>無語意容器<ul><li>div: division，群組標籤用的工具</li><li>span，用於內文重要性的視覺化外觀控制</li></ul></li></ul><h3 id="2-設定功能與內容"><a href="#2-設定功能與內容" class="headerlink" title="2. 設定功能與內容"></a>2. 設定功能與內容</h3><p>除了幫助 SEO 更好的了解網頁內容，許多標籤也有特殊的功能。細節繁多，不及備載，就帶著耐心查看文件吧！</p><ul><li>功能<ul><li>連結<ul><li>a</li></ul></li><li>表單<ul><li>form</li></ul></li></ul></li><li>內容<ul><li>媒體<ul><li>img</li><li>video</li><li>radio</li></ul></li><li>文字<ul><li>標題<ul><li>title</li><li>h1 ~ h6</li></ul></li><li>內文<ul><li>p 段落</li><li>blockquote 引言</li><li>figure 獨立內容，像是雜誌圖片搭配文字說明<ul><li>figcaption 獨立內容說明</li></ul></li></ul></li><li>重要性<ul><li>strong (b)</li><li>em (i)</li><li>del: delete 刪除線 (s) ，常用在特價</li><li>ins: inserted 更新</li></ul></li></ul></li><li>表格 (table)<ul><li>結構<ul><li>caption 標題，表格外說明標題</li><li>thead</li><li>tbody</li><li>tfoot</li></ul></li><li>內容<ul><li>tr: table row，就算沒分欄，裡面也必須有 <code>&lt;td&gt;</code></li><li>td: table definition</li><li>th: table heading</li></ul></li></ul></li></ul></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> layout </tag>
+            
+            <tag> html </tag>
+            
+            <tag> front-end </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JS | JEST 測試驅動開發 (TDD)</title>
       <link href="/2023/11/13/js-TDD/"/>
       <url>/2023/11/13/js-TDD/</url>
@@ -49,13 +72,13 @@
             
             <tag> full-end </tag>
             
+            <tag> github-pages </tag>
+            
             <tag> front-end </tag>
             
             <tag> git </tag>
             
             <tag> github </tag>
-            
-            <tag> github-pages </tag>
             
         </tags>
       
