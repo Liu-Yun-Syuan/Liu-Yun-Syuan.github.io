@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-10-31T04:56:07.312Z</updated>
+  <updated>2023-11-13T12:52:23.859Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS | JEST 測試驅動開發 (TDD)</title>
+    <link href="http://example.com/2023/11/13/js-TDD/"/>
+    <id>http://example.com/2023/11/13/js-TDD/</id>
+    <published>2023-11-13T11:42:42.000Z</published>
+    <updated>2023-11-13T12:52:23.859Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;TDD (Test-Driven Development) 測試驅動開發，是一種以規格測試起稿，再藉此完善功能的開發方式。老師教學使用的是 npm 套件 jest，不知道還有沒有其他類似功能的套件呢？&lt;/p&gt;
+&lt;h2 id=&quot;理論&quot;&gt;&lt;a href=&quot;#理論&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
+    
+    <category term="java-script" scheme="http://example.com/tags/java-script/"/>
+    
+    <category term="testing" scheme="http://example.com/tags/testing/"/>
+    
+  </entry>
   
   <entry>
     <title>個人部落格架設-1 | GitHub Pages 建立個人網域</title>
@@ -44,13 +72,13 @@
     
     <category term="full-end" scheme="http://example.com/tags/full-end/"/>
     
-    <category term="github-pages" scheme="http://example.com/tags/github-pages/"/>
-    
     <category term="front-end" scheme="http://example.com/tags/front-end/"/>
     
     <category term="git" scheme="http://example.com/tags/git/"/>
     
     <category term="github" scheme="http://example.com/tags/github/"/>
+    
+    <category term="github-pages" scheme="http://example.com/tags/github-pages/"/>
     
   </entry>
   

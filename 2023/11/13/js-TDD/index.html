@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="zh-TW" color-mode="light">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <meta name="author" content="Yun-Syuan, Liu" />
+  <meta name="description" content="" />
+  
+  
+  <title>
+    
+      JS | JEST 測試驅動開發 (TDD) 
+      
+      
+      |
+    
+     Yun-Syuan, Liu site
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
+  
+
+  <!-- jquery3.3.1 -->
+  
+    <script defer type="text/javascript" src="/plugins/jquery.min.js"></script>
+  
+
+  <!-- fancybox -->
+  
+    <link href="/plugins/jquery.fancybox.min.css" rel="stylesheet">
+    <script defer type="text/javascript" src="/plugins/jquery.fancybox.min.js"></script>
+  
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+
+  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Yun-Syuan, Liu site" type="application/atom+xml">
+</head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img no-lazy src="/images/avatar.png" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">劉昀瑄<br>(Yun-Syuan, Liu)</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">首頁</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">年表</a>
+        </li>
+      
+        <li class="nav-item" data-path="/categories/">
+          <a href="/categories/">系列</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">標籤</a>
+        </li>
+      
+        <li class="nav-item" data-path="/friends/">
+          <a href="/friends/">感謝</a>
+        </li>
+      
+        <li class="nav-item" data-path="/about/">
+          <a href="/about/">關於</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">JS | JEST 測試驅動開發 (TDD)</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
+          2023-11-13 20:52:23
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="標籤"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/front-end/" title="front-end">
+                    #front-end
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/java-script/" title="java-script">
+                    #java-script
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/testing/" title="testing">
+                    #testing
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <p>TDD (Test-Driven Development) 測試驅動開發，是一種以規格測試起稿，再藉此完善功能的開發方式。老師教學使用的是 npm 套件 jest，不知道還有沒有其他類似功能的套件呢？</p>
+<h2 id="理論"><a href="#理論" class="headerlink" title="理論"></a>理論</h2><ul>
+<li><p>為什麼要先寫測試？</p>
+<ul>
+<li>依據測試規格開發，可避免開發過程中的疏漏。</li>
+<li>撰寫程式碼的過程中，開發人員將保有信心。</li>
+<li>階段性開發，清楚知道錯誤範圍。</li>
+<li>確保重購程式碼的過程順利，在外部條件不改變的情況下，調整內部程式碼。</li>
+</ul>
+</li>
+<li><p>3 A 開發步驟：</p>
+<ul>
+<li>Arrange 設置</li>
+<li>Act 執行</li>
+<li>Assert 斷言</li>
+</ul>
+</li>
+<li><p>❗ 每項測試盡量精簡，確保最小測試範圍。</p>
+</li>
+</ul>
+<h2 id="測試設計"><a href="#測試設計" class="headerlink" title="測試設計"></a>測試設計</h2><p>TDD 的過程分為兩個部分，一個是撰寫測試用的程式碼，一個是撰寫真正的專案功能開發所需要的程式碼。撰寫測試用程式碼時，只需要根據人類語言的邏輯依序寫出美行程式碼，而先不用在意程式是能順利運作。(等到專案功能實作時再修正)</p>
+<ul>
+<li>設置物件 &#x2F; 函數 &#x2F; 類別<ul>
+<li><ol>
+<li>寫出結果判斷<br>這是 JEST 獨有的語法，將比較結果是否符合預期。<br><code>expect(account.balance).toBe(7);</code><br><code>expect(動作).toBe(理想結果)</code></li>
+</ol>
+</li>
+<li><ol start="2">
+<li>寫出參數判斷<br>為了方便檢視引數導致的變化，建議也將引數作為檢查對象。<br><code>expect(amount).toBe(3);</code></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<h3 id="JEST-的安裝與使用"><a href="#JEST-的安裝與使用" class="headerlink" title="JEST 的安裝與使用"></a>JEST 的安裝與使用</h3><p>使用 npm 安裝後，將 package.json 檔案中的 script:{test: …} 的內容改為「jest」並存檔，之後就可以執行 <code>npm run test</code> 運行 jest 的測試程序了。所有小步驟，全都寫在下面囉！</p>
+<ol start="0">
+<li>記得所在專案必須先初始化為 npm 專案 <code>npm init -y</code><br><code>-y</code> 表示同意所有預設選項。</li>
+<li>安裝套件 <code>npm install --save-dev jest</code><br>可以縮寫為 <code>npm i -d</code>，表示安裝 jest，並且記錄到 package.json 檔案中的 develope 開發軟體清單中。</li>
+<li>查看套件是否有順利安裝<br>查看 package &#x2F; dependencies 的屬性是否有安裝的套件。</li>
+<li>修改 script 指令</li>
+</ol>
+<ul>
+<li><ol>
+<li>修改 <code>test</code> 指令為 <code>jest</code> &gt; <code>scripts: &#123; test: &quot;jest&quot;&#125;</code> 。</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>❗ 存檔 ❗</li>
+</ol>
+</li>
+</ul>
+<ol start="4">
+<li>新增測試檔案的專屬資料夾 <code>__tests__</code><br>如果沒有建立此資料夾，將無法順利運作。請務必記得在 tests 結尾加「s」❗</li>
+<li>新增測試用程序的檔案 <code>xxx_spec.js</code><br>spec 是 specification 的縮寫，就是「規格」的意思。</li>
+</ol>
+</blockquote>
+<h2 id="實作"><a href="#實作" class="headerlink" title="實作"></a>實作</h2><p>根據 3A 的測試理論，先從物件的宣告開始，再撰寫程式運作的順序及過程。</p>
+<ol>
+<li>宣告</li>
+</ol>
+<ul>
+<li>const &#x2F; let &#x2F; var</li>
+<li>class</li>
+<li>function</li>
+</ul>
+<ol start="2">
+<li>運作 function()</li>
+</ol>
+<blockquote>
+<h3 id="主管帶領新人測試開發"><a href="#主管帶領新人測試開發" class="headerlink" title="主管帶領新人測試開發"></a>主管帶領新人測試開發</h3><p>未來若有幸擔任主管職位，訓練新人進行測試開發時，可以先教導新人實作，而後再教導新人撰寫規格書。因為主管對於實務上需要檢查的案例有較豐富的經驗，撰寫規格書時更能確保品質，也具有將客戶需求轉換為程式規格的能力。</p>
+<ul>
+<li><ol>
+<li>主管寫規格，新人實作</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>新人寫規格，主管實作</li>
+</ol>
+</li>
+</ul>
+</blockquote>
+<h2 id="實作歷程範例"><a href="#實作歷程範例" class="headerlink" title="實作歷程範例"></a>實作歷程範例</h2><ul>
+<li>建構基本架構</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">BankAccount</span> &#123;</span><br><span class="line">  <span class="title function_">deposit</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line">  <span class="keyword">get</span> <span class="title function_">balance</span>() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">20</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">test</span>(<span class="string">&quot;可以存錢&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 3A, Arrange, Act, Assert</span></span><br><span class="line">  <span class="comment">// 1. 生帳號，開戶 10</span></span><br><span class="line">  <span class="keyword">const</span> account = <span class="keyword">new</span> <span class="title class_">BankAccount</span>(<span class="number">10</span>);</span><br><span class="line">  <span class="comment">// 2. 存 10 元</span></span><br><span class="line">  account.<span class="title function_">deposit</span>(<span class="number">10</span>);</span><br><span class="line">  <span class="comment">// 3. 餘 20 元</span></span><br><span class="line">  <span class="title function_">expect</span>(account.<span class="property">balance</span>).<span class="title function_">toBe</span>(<span class="number">20</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>完整化</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">BankAccount</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">amount</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">amount</span> = amount;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">deposit</span>(<span class="params">amount</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">amount</span> += amount;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">get</span> <span class="title function_">balance</span>() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">amount</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">test</span>(<span class="string">&quot;可以存錢 20 元&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 3A, Arrange, Act, Assert</span></span><br><span class="line">  <span class="comment">// 1. 生帳號，開戶 10</span></span><br><span class="line">  <span class="keyword">const</span> account = <span class="keyword">new</span> <span class="title class_">BankAccount</span>(<span class="number">10</span>);</span><br><span class="line">  <span class="comment">// 2. 存 20 元</span></span><br><span class="line">  account.<span class="title function_">deposit</span>(<span class="number">20</span>);</span><br><span class="line">  <span class="comment">// 3. 餘 30 元</span></span><br><span class="line">  <span class="title function_">expect</span>(account.<span class="property">balance</span>).<span class="title function_">toBe</span>(<span class="number">30</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>持續完整化，直到符合所有規格</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">test</span>(<span class="string">&quot;可以存 10 元&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> account = <span class="keyword">new</span> <span class="title class_">BankAccount</span>(<span class="number">10</span>);</span><br><span class="line">  account.<span class="title function_">deposit</span>(<span class="number">10</span>);</span><br><span class="line">  <span class="title function_">expect</span>(account.<span class="property">balance</span>).<span class="title function_">toBe</span>(<span class="number">20</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="title function_">test</span>(<span class="string">&quot;可以存 20 元&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> account = <span class="keyword">new</span> <span class="title class_">BankAccount</span>(<span class="number">10</span>);</span><br><span class="line">  account.<span class="title function_">deposit</span>(<span class="number">20</span>);</span><br><span class="line">  <span class="title function_">expect</span>(account.<span class="property">balance</span>).<span class="title function_">toBe</span>(<span class="number">30</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="title function_">test</span>(<span class="string">&quot;不可以存 0 元或是小於 0 元的金額&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> account = <span class="keyword">new</span> <span class="title class_">BankAccount</span>(<span class="number">10</span>);</span><br><span class="line">  account.<span class="title function_">deposit</span>(-<span class="number">20</span>);</span><br><span class="line">  <span class="title function_">expect</span>(account.<span class="property">balance</span>).<span class="title function_">toBe</span>(<span class="number">10</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="title function_">test</span>(<span class="string">&quot;可以領錢&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> account = <span class="keyword">new</span> <span class="title class_">BankAccount</span>(<span class="number">10</span>);</span><br><span class="line">  <span class="keyword">const</span> amount = account.<span class="title function_">withdraw</span>(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">  <span class="title function_">expect</span>(amount).<span class="title function_">toBe</span>(<span class="number">3</span>);</span><br><span class="line">  <span class="title function_">expect</span>(account.<span class="property">balance</span>).<span class="title function_">toBe</span>(<span class="number">7</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="title function_">test</span>(<span class="string">&quot;不能領 0 元或是小於 0 元的金額&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> account = <span class="keyword">new</span> <span class="title class_">BankAccount</span>(<span class="number">10</span>);</span><br><span class="line">  <span class="keyword">const</span> amount = account.<span class="title function_">withdraw</span>(-<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">  <span class="title function_">expect</span>(amount).<span class="title function_">toBe</span>(<span class="number">0</span>);</span><br><span class="line">  <span class="title function_">expect</span>(account.<span class="property">balance</span>).<span class="title function_">toBe</span>(<span class="number">10</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="title function_">test</span>(<span class="string">&quot;不能領超過本身餘額&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> account = <span class="keyword">new</span> <span class="title class_">BankAccount</span>(<span class="number">10</span>);</span><br><span class="line">  <span class="keyword">const</span> amount = account.<span class="title function_">withdraw</span>(<span class="number">20</span>);</span><br><span class="line"></span><br><span class="line">  <span class="title function_">expect</span>(amount).<span class="title function_">toBe</span>(<span class="number">0</span>);</span><br><span class="line">  <span class="title function_">expect</span>(account.<span class="property">balance</span>).<span class="title function_">toBe</span>(<span class="number">10</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2023/10/29/github-pages/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一頁</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
+              2023-11-13 20:52:23
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="標籤"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/front-end/" title="front-end">
+                        #front-end
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/java-script/" title="java-script">
+                        #java-script
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/testing/" title="testing">
+                        #testing
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目錄</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%90%86%E8%AB%96"><span class="toc-text">理論</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%AC%E8%A9%A6%E8%A8%AD%E8%A8%88"><span class="toc-text">測試設計</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JEST-%E7%9A%84%E5%AE%89%E8%A3%9D%E8%88%87%E4%BD%BF%E7%94%A8"><span class="toc-text">JEST 的安裝與使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%A6%E4%BD%9C"><span class="toc-text">實作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E7%AE%A1%E5%B8%B6%E9%A0%98%E6%96%B0%E4%BA%BA%E6%B8%AC%E8%A9%A6%E9%96%8B%E7%99%BC"><span class="toc-text">主管帶領新人測試開發</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%A6%E4%BD%9C%E6%AD%B7%E7%A8%8B%E7%AF%84%E4%BE%8B"><span class="toc-text">實作歷程範例</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
+      </div>
+    
+  </div>
+
+
+        
+<div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          <a title="github" target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">
+            <i class="iconfont icon-github"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="rss" href="/atom.xml">
+            <i class="iconfont icon-rss"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Copyright © 2023 Oranges</a>
+        
+    </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
+        
+    </div>
+  
+  
+</div>
+
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+        
+  <div class="search-icon tools-bar-item" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        
+          <input type="text" class="search-input" id="search-input" placeholder="搜索...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        // inputArea.focus()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>首次搜尋，正在載入索引文件，請稍後...<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>沒有找到内容，請嘗試更換檢索詞。<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>未找到search.xml文件，具體請參考：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>請求失敗，嘗試重新刷新頁面或稍後重試。<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
+
+
+
+
+
+        
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + JS%20%7C%20JEST%20%E6%B8%AC%E8%A9%A6%E9%A9%85%E5%8B%95%E9%96%8B%E7%99%BC%20(TDD) + '&url=' + http%3A%2F%2Fexample.com%2F2023%2F11%2F13%2Fjs-TDD%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2023/11/13/js-TDD/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
+  
+  
+<script src="/js/shares.js"></script>
+
+
+
+      </div>
+    </div>
+  
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
+</html>
