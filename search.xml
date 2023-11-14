@@ -4,21 +4,229 @@
   
     
     <entry>
+      <title>CSS selector-8 | 偽元素 (before, after, selection)</title>
+      <link href="/2023/11/14/css-pseudo-element/"/>
+      <url>/2023/11/14/css-pseudo-element/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://cdn.discordapp.com/attachments/1116009887550423102/1173781493169016882/image.png?ex=65653433&is=6552bf33&hm=85713a785cd2680bed7a8fcf2f9f18af9b1ac2b1e040ff4502a5f1e1e4d70097&"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS 選擇器 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+            <tag> front-end </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS selector-7 | 偽類別 - 語言 &amp; 段落首字母</title>
+      <link href="/2023/11/14/css-pseudo-class-language/"/>
+      <url>/2023/11/14/css-pseudo-class-language/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://cdn.discordapp.com/attachments/1116009887550423102/1173778012232233080/image.png?ex=656530f5&is=6552bbf5&hm=8b4f2d757abc7de9ccb3babe6cdc6edbc06ea09233d2c5d85d598809526dcc2a&"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS 選擇器 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+            <tag> front-end </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS selector-6 | 偽類別 - 表單</title>
+      <link href="/2023/11/14/css-pseudo-class-from/"/>
+      <url>/2023/11/14/css-pseudo-class-from/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://cdn.discordapp.com/attachments/1116009887550423102/1173779491567456326/image.png?ex=65653256&is=6552bd56&hm=a76a14967dce131b87a7877b6e06c2486c8d21bcac9346d85f96afa0bd9959bc&"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS 選擇器 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS selector-5 | 偽類別 - child &amp; type</title>
+      <link href="/2023/11/14/css-pseudo-class-child-type/"/>
+      <url>/2023/11/14/css-pseudo-class-child-type/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://cdn.discordapp.com/attachments/1116009887550423102/1173778149939630211/image.png?ex=65653116&is=6552bc16&hm=41f8f06d3cad791aa1cbe828c30e37138d422303a03a76b225aa2f9f613fd32c&"></p><h2 id="結構"><a href="#結構" class="headerlink" title="結構"></a>結構</h2><h2 id="迴圈"><a href="#迴圈" class="headerlink" title="迴圈"></a>迴圈</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS 選擇器 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+            <tag> front-end </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS selector-4 | 偽類別 - 條件 (has, not...)</title>
+      <link href="/2023/11/14/css-pseudo-class-conditional/"/>
+      <url>/2023/11/14/css-pseudo-class-conditional/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://cdn.discordapp.com/attachments/1116009887550423102/1173778046361280603/image.png?ex=656530fd&is=6552bbfd&hm=0b1d6a22503eba5e7eed4e9fc4aa8706519f4d900c9fb754e1cd018883a7ad5a&"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS 選擇器 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+            <tag> front-end </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS selector-3 | 偽類別 - 動作 / 連結</title>
+      <link href="/2023/11/14/css-pseudo-class-active/"/>
+      <url>/2023/11/14/css-pseudo-class-active/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://media.discordapp.net/attachments/1116009887550423102/1173776634579529778/image.png?ex=65652fad&is=6552baad&hm=c196df4d74d6e16daaf18728bf3c580338b78eea7b571a41eb67e1149135d412&=&width=1231&height=306"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS 選擇器 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+            <tag> front-end </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS selector-2 | 偽類別 - 親代 &amp; 子代</title>
+      <link href="/2023/11/14/css-pseudo-class-relative/"/>
+      <url>/2023/11/14/css-pseudo-class-relative/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://cdn.discordapp.com/attachments/1116009887550423102/1173777107189518466/image.png?ex=6565301e&is=6552bb1e&hm=d0d089c6eef269e812076d89fa214742b6fcbbdf0a53c27b139e89491cf60bf3&"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS 選擇器 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+            <tag> front-end </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS selector-1 | 優先權 (specificity)</title>
+      <link href="/2023/11/14/css-specificity/"/>
+      <url>/2023/11/14/css-specificity/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://media.discordapp.net/attachments/1116009887550423102/1173771288800665701/image.png?ex=65652ab2&is=6552b5b2&hm=785267c32ab2b2f5fe4c2793652f6f87c36a99b81eebf5c4f8ac9666774e639c&=&width=1186&height=656"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS 選擇器 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+            <tag> front-end </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>HTML | 標籤結構 &amp; 切版設計</title>
       <link href="/2023/11/13/html-structure/"/>
       <url>/2023/11/13/html-structure/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://developer.mozilla.org/zh-TW/docs/Web/HTML">HTML</a> （HyperText Markup Language，超文本標記語言）是前端三大語言之一，是網頁內容的主體。它的語意結構將關係到 SEO 搜尋結果，是改善「搜尋引擎最佳化」的關鍵。同時，也是設計「<a href="https://accessibility.moda.gov.tw/Download/Detail/1419?Category=28">無障礙網站</a>」時需要精心安排的重點。透過 <a href="https://pagespeed.web.dev/">PageSpeed Insight</a> 可以了解特定網站的優劣，檢測「效能、無障礙功能、最佳做法、搜尋引擎最佳化」四個指標，更可以查找<a href="https://developers.google.com/speed/docs/insights/v5/about?hl=zh-tw">文件</a>了解改善方向。</p><h2 id="建構-HTML-的步驟"><a href="#建構-HTML-的步驟" class="headerlink" title="建構 HTML 的步驟"></a>建構 HTML 的步驟</h2><p>為了提升 HTML 的建構效率，建議將 HTML 結構模組化，避免檢查結構時可能的混亂。首先，設定容器時，建議將每個章節分為 header 、 .content 以及 footer。(如果沒有相關內容，可以省略)其次，才依照功能及內容，選擇相符的標籤，填入先前建立的容器中。</p><ol><li>設定容器<ol><li>語意結構標籤</li><li>無語意結構標籤</li></ol></li><li>設定功能與內容<ol><li>功能</li><li>內容</li></ol></li></ol><h3 id="1-設定容器"><a href="#1-設定容器" class="headerlink" title="1. 設定容器"></a>1. 設定容器</h3><p>結構標籤沒有特殊功能，主要是將有關連的內容群組化，並且幫助 SEO 分辨內容類別。</p><ul><li>語意容器<ul><li>結構<ul><li>header 頂端，大多放作者名稱、LOGO、搜尋欄</li><li>footer 末端，大多放作者、版權、文件相關連結</li></ul></li><li>內容<ul><li>main 主要，沒有和其他頁面重複的內容</li><li>aside 另外，和主要內容無關 &#x2F; 間接相關的內容</li><li>nav: navigation 選單，設置多個連結，大多放側邊欄、頁面導覽、麵包屑</li></ul></li><li>內容類型<ul><li>article 文章，獨立結構的 post 或新聞文章</li><li>section 章節，通用的分段結構，多用在搜尋結果、地圖顯示、控制項等。</li></ul></li></ul></li><li>無語意容器<ul><li>div: division，群組標籤用的工具</li><li>span，用於內文重要性的視覺化外觀控制</li></ul></li></ul><h3 id="2-設定功能與內容"><a href="#2-設定功能與內容" class="headerlink" title="2. 設定功能與內容"></a>2. 設定功能與內容</h3><p>除了幫助 SEO 更好的了解網頁內容，許多標籤也有特殊的功能。細節繁多，不及備載，就帶著耐心查看文件吧！</p><ul><li>功能<ul><li>連結<ul><li>a</li></ul></li><li>表單<ul><li>form</li></ul></li></ul></li><li>內容<ul><li>媒體<ul><li>img</li><li>video</li><li>radio</li></ul></li><li>文字<ul><li>標題<ul><li>title</li><li>h1 ~ h6</li></ul></li><li>內文<ul><li>p 段落</li><li>blockquote 引言</li><li>figure 獨立內容，像是雜誌圖片搭配文字說明<ul><li>figcaption 獨立內容說明</li></ul></li></ul></li><li>重要性<ul><li>strong (b)</li><li>em (i)</li><li>del: delete 刪除線 (s) ，常用在特價</li><li>ins: inserted 更新</li></ul></li></ul></li><li>表格 (table)<ul><li>結構<ul><li>caption 標題，表格外說明標題</li><li>thead</li><li>tbody</li><li>tfoot</li></ul></li><li>內容<ul><li>tr: table row，就算沒分欄，裡面也必須有 <code>&lt;td&gt;</code></li><li>td: table definition</li><li>th: table heading</li></ul></li></ul></li></ul></li></ul>]]></content>
+        <content type="html"><![CDATA[<p><img src="https://cdn.discordapp.com/attachments/1116009887550423102/1173774265514991647/image.png?ex=65652d78&is=6552b878&hm=e797c910c2ab1375725c8df33c26f76a470d105854ba4c7fb2cdb691f8c1b633&"></p><p><a href="https://developer.mozilla.org/zh-TW/docs/Web/HTML">HTML</a> （HyperText Markup Language，超文本標記語言）是前端三大語言之一，是網頁內容的主體。它的語意結構將關係到 SEO 搜尋結果，是改善「搜尋引擎最佳化」的關鍵。同時，也是設計「<a href="https://accessibility.moda.gov.tw/Download/Detail/1419?Category=28">無障礙網站</a>」時需要精心安排的重點。透過 <a href="https://pagespeed.web.dev/">PageSpeed Insight</a> 可以了解特定網站的優劣，檢測「效能、無障礙功能、最佳做法、搜尋引擎最佳化」四個指標，更可以查找<a href="https://developers.google.com/speed/docs/insights/v5/about?hl=zh-tw">文件</a>了解改善方向。</p><h2 id="建構-HTML-的步驟"><a href="#建構-HTML-的步驟" class="headerlink" title="建構 HTML 的步驟"></a>建構 HTML 的步驟</h2><p>為了提升 HTML 的建構效率，建議將 HTML 結構模組化，避免檢查結構時可能的混亂。首先，設定容器時，建議將每個章節分為 header 、 .content 以及 footer。(如果沒有相關內容，可以省略)其次，才依照功能及內容，選擇相符的標籤，填入先前建立的容器中。</p><ol><li>設定容器<ol><li>語意結構標籤</li><li>無語意結構標籤</li></ol></li><li>設定功能與內容<ol><li>功能</li><li>內容</li></ol></li></ol><h3 id="1-設定容器"><a href="#1-設定容器" class="headerlink" title="1. 設定容器"></a>1. 設定容器</h3><p>結構標籤沒有特殊功能，主要是將有關連的內容群組化，並且幫助 SEO 分辨內容類別。</p><ul><li>語意容器<ul><li>結構<ul><li>header 頂端，大多放作者名稱、LOGO、搜尋欄</li><li>footer 末端，大多放作者、版權、文件相關連結</li></ul></li><li>內容<ul><li>main 主要，沒有和其他頁面重複的內容</li><li>aside 另外，和主要內容無關 &#x2F; 間接相關的內容</li><li>nav: navigation 選單，設置多個連結，大多放側邊欄、頁面導覽、麵包屑</li></ul></li><li>內容類型<ul><li>article 文章，獨立結構的 post 或新聞文章</li><li>section 章節，通用的分段結構，多用在搜尋結果、地圖顯示、控制項等。</li></ul></li></ul></li><li>無語意容器<ul><li>div: division，群組標籤用的工具</li><li>span，用於內文重要性的視覺化外觀控制</li></ul></li></ul><h3 id="2-設定功能與內容"><a href="#2-設定功能與內容" class="headerlink" title="2. 設定功能與內容"></a>2. 設定功能與內容</h3><p>除了幫助 SEO 更好的了解網頁內容，許多標籤也有特殊的功能。細節繁多，不及備載，就帶著耐心查看文件吧！</p><ul><li>功能<ul><li>連結<ul><li>a</li></ul></li><li>表單<ul><li>form</li></ul></li></ul></li><li>內容<ul><li>媒體<ul><li>img</li><li>video</li><li>radio</li></ul></li><li>文字<ul><li>標題<ul><li>title</li><li>h1 ~ h6</li></ul></li><li>內文<ul><li>p 段落</li><li>blockquote 引言</li><li>figure 獨立內容，像是雜誌圖片搭配文字說明<ul><li>figcaption 獨立內容說明</li></ul></li></ul></li><li>重要性<ul><li>strong (b)</li><li>em (i)</li><li>del: delete 刪除線 (s) ，常用在特價</li><li>ins: inserted 更新</li></ul></li></ul></li><li>表格 (table)<ul><li>結構<ul><li>caption 標題，表格外說明標題</li><li>thead</li><li>tbody</li><li>tfoot</li></ul></li><li>內容<ul><li>tr: table row，就算沒分欄，裡面也必須有 <code>&lt;td&gt;</code></li><li>td: table definition</li><li>th: table heading</li></ul></li></ul></li></ul></li></ul>]]></content>
       
       
       
         <tags>
             
-            <tag> layout </tag>
+            <tag> front-end </tag>
             
             <tag> html </tag>
             
-            <tag> front-end </tag>
+            <tag> layout </tag>
             
         </tags>
       
@@ -66,19 +274,19 @@
       
         <tags>
             
+            <tag> front-end </tag>
+            
             <tag> software </tag>
             
             <tag> back-end </tag>
             
             <tag> full-end </tag>
             
-            <tag> github-pages </tag>
-            
-            <tag> front-end </tag>
-            
             <tag> git </tag>
             
             <tag> github </tag>
+            
+            <tag> github-pages </tag>
             
         </tags>
       
