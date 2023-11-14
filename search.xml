@@ -72,14 +72,22 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> css </tag>
+            
+            <tag> front-end </tag>
+            
+        </tags>
+      
     </entry>
     
     
     
     <entry>
-      <title>CSS selector-5 | 偽類別 - child &amp; type</title>
-      <link href="/2023/11/14/css-pseudo-class-child-type/"/>
-      <url>/2023/11/14/css-pseudo-class-child-type/</url>
+      <title>CSS selector-5 | 偽類別 - child &amp; of-type</title>
+      <link href="/2023/11/14/css-pseudo-class-child-of-type/"/>
+      <url>/2023/11/14/css-pseudo-class-child-of-type/</url>
       
         <content type="html"><![CDATA[<p><img src="https://cdn.discordapp.com/attachments/1116009887550423102/1173778149939630211/image.png?ex=65653116&is=6552bc16&hm=41f8f06d3cad791aa1cbe828c30e37138d422303a03a76b225aa2f9f613fd32c&"></p><h2 id="結構"><a href="#結構" class="headerlink" title="結構"></a>結構</h2><h2 id="迴圈"><a href="#迴圈" class="headerlink" title="迴圈"></a>迴圈</h2>]]></content>
       

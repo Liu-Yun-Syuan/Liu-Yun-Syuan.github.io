@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-11-14T00:39:48.665Z</updated>
+  <updated>2023-11-14T00:51:29.761Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2023/11/14/css-pseudo-element/"/>
     <id>http://example.com/2023/11/14/css-pseudo-element/</id>
     <published>2023-11-14T00:29:32.000Z</published>
-    <updated>2023-11-14T00:39:48.665Z</updated>
+    <updated>2023-11-14T00:51:29.761Z</updated>
     
     
       
@@ -48,7 +48,7 @@
     <link href="http://example.com/2023/11/14/css-pseudo-class-language/"/>
     <id>http://example.com/2023/11/14/css-pseudo-class-language/</id>
     <published>2023-11-14T00:21:38.000Z</published>
-    <updated>2023-11-14T00:37:36.873Z</updated>
+    <updated>2023-11-14T00:51:44.952Z</updated>
     
     
       
@@ -75,7 +75,7 @@
     <link href="http://example.com/2023/11/14/css-pseudo-class-from/"/>
     <id>http://example.com/2023/11/14/css-pseudo-class-from/</id>
     <published>2023-11-14T00:18:11.000Z</published>
-    <updated>2023-11-14T00:38:32.553Z</updated>
+    <updated>2023-11-14T00:52:10.521Z</updated>
     
     
       
@@ -91,14 +91,18 @@
     <category term="CSS 選擇器" scheme="http://example.com/categories/CSS-%E9%81%B8%E6%93%87%E5%99%A8/"/>
     
     
+    <category term="css" scheme="http://example.com/tags/css/"/>
+    
+    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
+    
   </entry>
   
   <entry>
-    <title>CSS selector-5 | 偽類別 - child &amp; type</title>
-    <link href="http://example.com/2023/11/14/css-pseudo-class-child-type/"/>
-    <id>http://example.com/2023/11/14/css-pseudo-class-child-type/</id>
+    <title>CSS selector-5 | 偽類別 - child &amp; of-type</title>
+    <link href="http://example.com/2023/11/14/css-pseudo-class-child-of-type/"/>
+    <id>http://example.com/2023/11/14/css-pseudo-class-child-of-type/</id>
     <published>2023-11-14T00:17:36.000Z</published>
-    <updated>2023-11-14T00:38:26.151Z</updated>
+    <updated>2023-11-14T00:53:03.496Z</updated>
     
     
       
@@ -125,7 +129,7 @@
     <link href="http://example.com/2023/11/14/css-pseudo-class-conditional/"/>
     <id>http://example.com/2023/11/14/css-pseudo-class-conditional/</id>
     <published>2023-11-14T00:16:51.000Z</published>
-    <updated>2023-11-14T00:38:30.062Z</updated>
+    <updated>2023-11-14T00:51:54.019Z</updated>
     
     
       
@@ -152,7 +156,7 @@
     <link href="http://example.com/2023/11/14/css-pseudo-class-active/"/>
     <id>http://example.com/2023/11/14/css-pseudo-class-active/</id>
     <published>2023-11-14T00:12:01.000Z</published>
-    <updated>2023-11-14T00:38:22.076Z</updated>
+    <updated>2023-11-14T00:52:03.096Z</updated>
     
     
       
@@ -179,7 +183,7 @@
     <link href="http://example.com/2023/11/14/css-pseudo-class-relative/"/>
     <id>http://example.com/2023/11/14/css-pseudo-class-relative/</id>
     <published>2023-11-14T00:09:06.000Z</published>
-    <updated>2023-11-14T00:37:40.650Z</updated>
+    <updated>2023-11-14T00:51:41.358Z</updated>
     
     
       
@@ -206,7 +210,7 @@
     <link href="http://example.com/2023/11/14/css-specificity/"/>
     <id>http://example.com/2023/11/14/css-specificity/</id>
     <published>2023-11-13T23:49:41.000Z</published>
-    <updated>2023-11-14T00:38:44.081Z</updated>
+    <updated>2023-11-14T00:51:34.529Z</updated>
     
     
       
