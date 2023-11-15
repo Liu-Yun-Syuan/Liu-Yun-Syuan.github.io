@@ -11,6 +11,11 @@
   
   <title>
     
+      RUBY | 用 RVM 安裝 Ruby，用 Gem 安裝 Rails 
+      
+      
+      |
+    
      Yun-Syuan, Liu site
   </title>
 
@@ -106,149 +111,193 @@
 
 
       <div class="flex-container">
-        <div class="container index">
-  <div class="post-list">
-    <!-- 遍历渲染文章 -->
-    
-      <div class="post-item" title="RUBY | 用 RVM 安裝 Ruby，用 Gem 安裝 Rails">
-        <div class="time-m-d">2023-11-15</div>
-        <div class="title">
-          <a href="/2023/11/15/ruby-install-rvm/">
-            
-              
-                <span>RUBY | 用 RVM 安裝 Ruby，用 Gem 安裝 Rails</span>
-              
-            
-          </a>
-        </div>
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">RUBY | 用 RVM 安裝 Ruby，用 Gem 安裝 Rails</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
+          2023-11-15 20:56:18
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="標籤"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/back-end/" title="back-end">
+                    #back-end
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/ruby/" title="ruby">
+                    #ruby
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
-    
-      <div class="post-item" title="VMX | 建立 WSL (Windows subsystem Linux)">
-        <div class="time-m-d">2023-11-15</div>
-        <div class="title">
-          <a href="/2023/11/15/vmx-wsl/">
-            
-              
-                <span>VMX | 建立 WSL (Windows subsystem Linux)</span>
-              
-            
-          </a>
-        </div>
+      <div class="markdown-body">
+        <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://media.discordapp.net/attachments/1116009887550423102/1174191569235099728/image.png?ex=6566b21d&is=65543d1d&hm=7032d13536b292a619e79e146135fda756138e61320f2e91a8234dcac3635e8f&=&width=1086&height=656"></p>
+<h2 id="安裝-RVM"><a href="#安裝-RVM" class="headerlink" title="安裝 RVM"></a>安裝 RVM</h2><p>Ruby Version Manager (RVM) 是一個 Ruby 版本管理工具，能夠在管理一個環境下安裝的多個不同版本的 Ruby。操作方式簡單，只需要依照官網運作三行指令即可。</p>
+<ol>
+<li>安裝 GPG 金鑰：<code>gpg2 --keyserver keyserver.ubuntu.com --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB</code></li>
+<li>安裝 RVM：<code>\curl -sSL https://get.rvm.io | bash -s stable</code></li>
+</ol>
+<h2 id="安裝-Ruby"><a href="#安裝-Ruby" class="headerlink" title="安裝 Ruby"></a>安裝 Ruby</h2><ol>
+<li>查看已安裝的 Ruby 版本： <code>rvm list</code></li>
+<li>查看已知(可安裝)的 Ruby 版本： <code>rvm list known</code><br>(查看可安裝的最新版本)</li>
+<li>安裝 Ruby：<code>rvm install 3.0.0</code><br>(在 install 後方的數字填入版本號)<ol>
+<li>輸入 WSL 密碼</li>
+<li>檢查安裝版本：<code>ruby -v</code></li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>如果無法順利安裝 Ruby，可以試試 <code>ruby reinstall 3.2.2</code>，看看能不能順利安裝。</p>
+</blockquote>
+<h2 id="安裝-Rails"><a href="#安裝-Rails" class="headerlink" title="安裝 Rails"></a>安裝 Rails</h2><p>gem 類似於 node.js 中的 npm 的套件管理工具。</p>
+<ol>
+<li>安裝 rails：<code>gem install rails</code><ol>
+<li>也可以指定 rails 的安裝版本：<code>gem install rails -v 5.2.3</code></li>
+<li>也可以指定安裝 rails 的先行版：<code>gem install rails --pre</code></li>
+</ol>
+</li>
+<li>檢查 rails 的安裝版本，了解是否安裝成功：<code>rails -v</code></li>
+<li>建立專案<ol>
+<li>指定專案建立的檔案路徑：<code>cd /mnt/c/...</code></li>
+<li>建立 rails 專案：<code>rails new hello-rails</code><br>(在 rails new 後方填上新生成的專案名稱)</li>
+<li>查看檔案：<code>ls -al</code></li>
+<li>進入專案路徑：<code>cd hello-rails/</code></li>
+<li>查看 rails 專案 server：<code>rails s</code><br>(完整指令為：<code>rails server</code>)</li>
+</ol>
+</li>
+</ol>
+<hr>
+<p>參考資料：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://rvm.io/">RVM</a></li>
+<li><a target="_blank" rel="noopener" href="https://medium.com/lynns-dev-blog/rails-%E6%96%B0%E6%89%8B%E6%9D%91-bundle-install-%E5%92%8C-gem-install-%E7%9A%84%E5%B7%AE%E5%88%A5-bd416ee8b2eb">Rails — bundle install 和 gem install 的差別</a></li>
+</ul>
+
       </div>
-    
-      <div class="post-item" title="CSS selector-8 | 偽元素 (before, after, selection)">
-        <div class="time-m-d">2023-11-14</div>
-        <div class="title">
-          <a href="/2023/11/14/css-pseudo-element/">
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
             
-              
-                <span>CSS selector-8 | 偽元素 (before, after, selection)</span>
-              
+              <a href="/2023/11/15/vmx-wsl/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一頁</span>
+              </a>
             
-          </a>
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
+              2023-11-15 20:56:18
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="標籤"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/back-end/" title="back-end">
+                        #back-end
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/ruby/" title="ruby">
+                        #ruby
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
         </div>
-      </div>
+      
+    </div>
     
-      <div class="post-item" title="CSS selector-7 | 偽類別 - 語言 & 段落首字母">
-        <div class="time-m-d">2023-11-14</div>
-        <div class="title">
-          <a href="/2023/11/14/css-pseudo-class-language/">
-            
-              
-                <span>CSS selector-7 | 偽類別 - 語言 & 段落首字母</span>
-              
-            
-          </a>
-        </div>
-      </div>
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目錄</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%9D-RVM"><span class="toc-text">安裝 RVM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%9D-Ruby"><span class="toc-text">安裝 Ruby</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%9D-Rails"><span class="toc-text">安裝 Rails</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
     
-      <div class="post-item" title="CSS selector-6 | 偽類別 - 表單">
-        <div class="time-m-d">2023-11-14</div>
-        <div class="title">
-          <a href="/2023/11/14/css-pseudo-class-from/">
-            
-              
-                <span>CSS selector-6 | 偽類別 - 表單</span>
-              
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="CSS selector-5 | 偽類別 - child & of-type">
-        <div class="time-m-d">2023-11-14</div>
-        <div class="title">
-          <a href="/2023/11/14/css-pseudo-class-child-of-type/">
-            
-              
-                <span>CSS selector-5 | 偽類別 - child & of-type</span>
-              
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="CSS selector-4 | 偽類別 - 條件 (has, not...)">
-        <div class="time-m-d">2023-11-14</div>
-        <div class="title">
-          <a href="/2023/11/14/css-pseudo-class-conditional/">
-            
-              
-                <span>CSS selector-4 | 偽類別 - 條件 (has, not...)</span>
-              
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="CSS selector-3 | 偽類別 - 動作 / 連結">
-        <div class="time-m-d">2023-11-14</div>
-        <div class="title">
-          <a href="/2023/11/14/css-pseudo-class-active/">
-            
-              
-                <span>CSS selector-3 | 偽類別 - 動作 / 連結</span>
-              
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="CSS selector-2 | 偽類別 - 親代 & 子代">
-        <div class="time-m-d">2023-11-14</div>
-        <div class="title">
-          <a href="/2023/11/14/css-pseudo-class-relative/">
-            
-              
-                <span>CSS selector-2 | 偽類別 - 親代 & 子代</span>
-              
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="CSS selector-1 | 優先權 (specificity)">
-        <div class="time-m-d">2023-11-14</div>
-        <div class="title">
-          <a href="/2023/11/14/css-specificity/">
-            
-              
-                <span>CSS selector-1 | 優先權 (specificity)</span>
-              
-            
-          </a>
-        </div>
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
       </div>
     
   </div>
-  <nav class="post-navigation">
-    
-    <span class="page-num">1 / 2</span>
-    
-      <a href="/page/2/"><i class="iconfont icon-angleright"></i></a>
-    
-  </nav>
-</div>
+
 
         
 <div class="footer">
@@ -509,6 +558,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + RUBY%20%7C%20%E7%94%A8%20RVM%20%E5%AE%89%E8%A3%9D%20Ruby%EF%BC%8C%E7%94%A8%20Gem%20%E5%AE%89%E8%A3%9D%20Rails + '&url=' + http%3A%2F%2Fexample.com%2F2023%2F11%2F15%2Fruby-install-rvm%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2023/11/15/ruby-install-rvm/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>

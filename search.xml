@@ -4,11 +4,57 @@
   
     
     <entry>
+      <title>RUBY | 用 RVM 安裝 Ruby，用 Gem 安裝 Rails</title>
+      <link href="/2023/11/15/ruby-install-rvm/"/>
+      <url>/2023/11/15/ruby-install-rvm/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://media.discordapp.net/attachments/1116009887550423102/1174191569235099728/image.png?ex=6566b21d&is=65543d1d&hm=7032d13536b292a619e79e146135fda756138e61320f2e91a8234dcac3635e8f&=&width=1086&height=656"></p><h2 id="安裝-RVM"><a href="#安裝-RVM" class="headerlink" title="安裝 RVM"></a>安裝 RVM</h2><p>Ruby Version Manager (RVM) 是一個 Ruby 版本管理工具，能夠在管理一個環境下安裝的多個不同版本的 Ruby。操作方式簡單，只需要依照官網運作三行指令即可。</p><ol><li>安裝 GPG 金鑰：<code>gpg2 --keyserver keyserver.ubuntu.com --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB</code></li><li>安裝 RVM：<code>\curl -sSL https://get.rvm.io | bash -s stable</code></li></ol><h2 id="安裝-Ruby"><a href="#安裝-Ruby" class="headerlink" title="安裝 Ruby"></a>安裝 Ruby</h2><ol><li>查看已安裝的 Ruby 版本： <code>rvm list</code></li><li>查看已知(可安裝)的 Ruby 版本： <code>rvm list known</code><br>(查看可安裝的最新版本)</li><li>安裝 Ruby：<code>rvm install 3.0.0</code><br>(在 install 後方的數字填入版本號)<ol><li>輸入 WSL 密碼</li><li>檢查安裝版本：<code>ruby -v</code></li></ol></li></ol><blockquote><p>如果無法順利安裝 Ruby，可以試試 <code>ruby reinstall 3.2.2</code>，看看能不能順利安裝。</p></blockquote><h2 id="安裝-Rails"><a href="#安裝-Rails" class="headerlink" title="安裝 Rails"></a>安裝 Rails</h2><p>gem 類似於 node.js 中的 npm 的套件管理工具。</p><ol><li>安裝 rails：<code>gem install rails</code><ol><li>也可以指定 rails 的安裝版本：<code>gem install rails -v 5.2.3</code></li><li>也可以指定安裝 rails 的先行版：<code>gem install rails --pre</code></li></ol></li><li>檢查 rails 的安裝版本，了解是否安裝成功：<code>rails -v</code></li><li>建立專案<ol><li>指定專案建立的檔案路徑：<code>cd /mnt/c/...</code></li><li>建立 rails 專案：<code>rails new hello-rails</code><br>(在 rails new 後方填上新生成的專案名稱)</li><li>查看檔案：<code>ls -al</code></li><li>進入專案路徑：<code>cd hello-rails/</code></li><li>查看 rails 專案 server：<code>rails s</code><br>(完整指令為：<code>rails server</code>)</li></ol></li></ol><hr><p>參考資料：</p><ul><li><a href="https://rvm.io/">RVM</a></li><li><a href="https://medium.com/lynns-dev-blog/rails-%E6%96%B0%E6%89%8B%E6%9D%91-bundle-install-%E5%92%8C-gem-install-%E7%9A%84%E5%B7%AE%E5%88%A5-bd416ee8b2eb">Rails — bundle install 和 gem install 的差別</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> back-end </tag>
+            
+            <tag> ruby </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VMX | 建立 WSL (Windows subsystem Linux)</title>
+      <link href="/2023/11/15/vmx-wsl/"/>
+      <url>/2023/11/15/vmx-wsl/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://media.discordapp.net/attachments/1116009887550423102/1174309250131042364/image.png?ex=65671fb6&is=6554aab6&hm=5baf77d5e0c3a15b8b04743d0567c292ddf3484b1b27961251f0e79afd65b73b&=&width=1440&height=384"></p><p>Ubuntu 和 macOS 都是 Linux 作業系統的一種，比起 Windows，才能順利運作 Ruby on Rails。至於其他還有哪些差異，可以再多多研究。</p><blockquote><h2 id="subsystem-子系統-和-VM-虛擬機器平台-的差異？"><a href="#subsystem-子系統-和-VM-虛擬機器平台-的差異？" class="headerlink" title="subsystem (子系統) 和 VM (虛擬機器平台) 的差異？"></a>subsystem (子系統) 和 VM (虛擬機器平台) 的差異？</h2><p>子系統是在 Windows 作業系統中運行的子系統，可以利用終端機進入其他作業系統的執行環境。而虛擬機器平台是獨立於 Windows 的作業系統，無法快速切換程式碼的運作環境，但是當作另外的儲存庫非常實用。如果想要將資料連同作業環境複製給他人，就可以藉由複製虛擬機器平台實現。<br>不過現在這個用途，似乎用 Docker 技術可以更有效率的管理資料。</p></blockquote><h2 id="開啟-VMX-Windows-虛擬化設定"><a href="#開啟-VMX-Windows-虛擬化設定" class="headerlink" title="開啟 VMX (Windows 虛擬化設定)"></a>開啟 VMX (Windows 虛擬化設定)</h2><p>要開啟 VMX (Windows 虛擬化設定)，只需要兩個步驟。一個是啟用 BIOS 的 Intel virtualization，另一個是安裝 Windows 的虛擬機器平台，準備好安裝 WSL 的環境。</p><h3 id="開啟-BIOS-的-VMX-功能"><a href="#開啟-BIOS-的-VMX-功能" class="headerlink" title="開啟 BIOS 的 VMX 功能"></a>開啟 BIOS 的 VMX 功能</h3><p>其實，BIOS 的 Intel virtualization 是預設開啟的，如果過去沒有自行修改設定，可以跳過這個步驟。</p><ul><li><p>進入 BIOS (或 UEFI) 共用程式</p><ol><li>儲存並關閉所有應用程式。</li><li>設定 &gt; 進階啟動 &gt; 立即重新啟動</li><li>盡如重新啟動的藍色畫面<ol><li>疑難排解 &gt; 進階選項 &gt; UEFI 韌體設定</li><li>重新啟動以變更 UEFI 韌體設定</li></ol></li></ol></li><li><p>開啟 BIOS 的 VMX 功能</p><ol><li><code>F7</code> 切換到高階模式</li><li>advanced &gt; Intel virtualization &gt; Enabled</li></ol></li></ul><h3 id="開啟-Windows-的虛擬機器平台"><a href="#開啟-Windows-的虛擬機器平台" class="headerlink" title="開啟 Windows 的虛擬機器平台"></a>開啟 Windows 的虛擬機器平台</h3><p>在 Windows 系統的搜尋欄位查找，就可以找到這個應用程式，進行系統設定。</p><ul><li>開啟 Windows 的虛擬機器平台<ol><li>開啟「開啟或關閉 Windows 功能」<br>(也可以用系統管理員開啟 PowerShell，並且輸入 <code>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</code>)</li><li>勾選「虛擬機器平台」 &gt; 確定 &gt; 立即重新啟動</li></ol></li></ul><h2 id="安裝-Ubuntu"><a href="#安裝-Ubuntu" class="headerlink" title="安裝 Ubuntu"></a>安裝 Ubuntu</h2><ol><li>開啟 Windows store</li><li>搜尋並安裝 Ubuntu</li><li>❗ 直接開啟 Ubuntu 的終端機<br>(不要用 Windows 的 Terminal &gt; 切換 Ubuntu)</li><li>設定使用者名稱</li><li>設定使用者密碼<br>(為了安全起見，密碼不會顯示，字還是有打喔！)</li></ol><blockquote><h3 id="使用-WSL"><a href="#使用-WSL" class="headerlink" title="使用 WSL"></a>使用 WSL</h3><p>Ubuntu 安裝完成後，子系統並非獨立於 Windows 的資料儲存空間，而是藉由「鏡射」的方式，查看 Windows 系統中的資料儲存。開啟 Ubuntu 之後，檔案路徑中的 <code>mut/c</code> 就是鏡射到 Windows 系統中的 <code>C:</code>。</p></blockquote><hr><p>參考資料：</p><ul><li><a href="https://support.microsoft.com/zh-tw/windows/%E5%9C%A8-windows-11-%E9%9B%BB%E8%85%A6%E4%B8%8A%E5%95%9F%E7%94%A8%E8%99%9B%E6%93%AC%E5%8C%96-c5578302-6e43-4b4b-a449-8ced115f58e1">在 Windows 11 電腦上啟用虛擬化</a></li><li><a href="https://learn.microsoft.com/zh-tw/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package">舊版 WSL 的手動安裝步驟</a></li><li>五倍紅寶石學院 ASTRO Camp 線上課程</li><li><a href="https://aws.amazon.com/tw/compare/the-difference-between-docker-vm/">Docker 與 VM 之間有何區別？</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> back-end </tag>
+            
+            <tag> vm </tag>
+            
+            <tag> linux </tag>
+            
+            <tag> wsl </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CSS selector-8 | 偽元素 (before, after, selection)</title>
       <link href="/2023/11/14/css-pseudo-element/"/>
       <url>/2023/11/14/css-pseudo-element/</url>
       
-        <content type="html"><![CDATA[<p><img src="https://cdn.discordapp.com/attachments/1116009887550423102/1173781493169016882/image.png?ex=65653433&is=6552bf33&hm=85713a785cd2680bed7a8fcf2f9f18af9b1ac2b1e040ff4502a5f1e1e4d70097&"></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="https://cdn.discordapp.com/attachments/1116009887550423102/1173781493169016882/image.png?ex=65653433&is=6552bf33&hm=85713a785cd2680bed7a8fcf2f9f18af9b1ac2b1e040ff4502a5f1e1e4d70097&"></p><blockquote><h2 id="first-line-不實用"><a href="#first-line-不實用" class="headerlink" title="::first-line 不實用"></a>::first-line 不實用</h2></blockquote><hr><p>參考資料：</p><ul><li><a href="https://flukeout.github.io/">CSS Diner</a>，學習 CSS 選擇器的小遊戲。</li><li><a href="https://www.tenlong.com.tw/products/9789864348824">金魚都能懂的 CSS 必學屬性：網頁設計必備寶典（iT 邦幫忙鐵人賽系列書）</a>，天瓏書局</li><li><a href="https://ithelp.ithome.com.tw/users/20112550/ironman/2799">金魚都能懂的 CSS 選取器 - 金魚都能懂了你還怕學不會嗎</a>，CSScoke</li></ul>]]></content>
       
       
       <categories>
@@ -35,7 +81,7 @@
       <link href="/2023/11/14/css-pseudo-class-language/"/>
       <url>/2023/11/14/css-pseudo-class-language/</url>
       
-        <content type="html"><![CDATA[<p><img src="https://cdn.discordapp.com/attachments/1116009887550423102/1173778012232233080/image.png?ex=656530f5&is=6552bbf5&hm=8b4f2d757abc7de9ccb3babe6cdc6edbc06ea09233d2c5d85d598809526dcc2a&"></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="https://cdn.discordapp.com/attachments/1116009887550423102/1173778012232233080/image.png?ex=656530f5&is=6552bbf5&hm=8b4f2d757abc7de9ccb3babe6cdc6edbc06ea09233d2c5d85d598809526dcc2a&"></p><hr><p>參考資料：</p><ul><li><a href="https://flukeout.github.io/">CSS Diner</a>，學習 CSS 選擇器的小遊戲。</li><li><a href="https://www.tenlong.com.tw/products/9789864348824">金魚都能懂的 CSS 必學屬性：網頁設計必備寶典（iT 邦幫忙鐵人賽系列書）</a>，天瓏書局</li><li><a href="https://ithelp.ithome.com.tw/users/20112550/ironman/2799">金魚都能懂的 CSS 選取器 - 金魚都能懂了你還怕學不會嗎</a>，CSScoke</li></ul>]]></content>
       
       
       <categories>
@@ -62,7 +108,7 @@
       <link href="/2023/11/14/css-pseudo-class-from/"/>
       <url>/2023/11/14/css-pseudo-class-from/</url>
       
-        <content type="html"><![CDATA[<p><img src="https://cdn.discordapp.com/attachments/1116009887550423102/1173779491567456326/image.png?ex=65653256&is=6552bd56&hm=a76a14967dce131b87a7877b6e06c2486c8d21bcac9346d85f96afa0bd9959bc&"></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="https://cdn.discordapp.com/attachments/1116009887550423102/1173779491567456326/image.png?ex=65653256&is=6552bd56&hm=a76a14967dce131b87a7877b6e06c2486c8d21bcac9346d85f96afa0bd9959bc&"></p><hr><p>參考資料：</p><ul><li><a href="https://flukeout.github.io/">CSS Diner</a>，學習 CSS 選擇器的小遊戲。</li><li><a href="https://www.tenlong.com.tw/products/9789864348824">金魚都能懂的 CSS 必學屬性：網頁設計必備寶典（iT 邦幫忙鐵人賽系列書）</a>，天瓏書局</li><li><a href="https://ithelp.ithome.com.tw/users/20112550/ironman/2799">金魚都能懂的 CSS 選取器 - 金魚都能懂了你還怕學不會嗎</a>，CSScoke</li></ul>]]></content>
       
       
       <categories>
@@ -89,7 +135,7 @@
       <link href="/2023/11/14/css-pseudo-class-child-of-type/"/>
       <url>/2023/11/14/css-pseudo-class-child-of-type/</url>
       
-        <content type="html"><![CDATA[<p><img src="https://cdn.discordapp.com/attachments/1116009887550423102/1173778149939630211/image.png?ex=65653116&is=6552bc16&hm=41f8f06d3cad791aa1cbe828c30e37138d422303a03a76b225aa2f9f613fd32c&"></p><h2 id="結構"><a href="#結構" class="headerlink" title="結構"></a>結構</h2><h2 id="迴圈"><a href="#迴圈" class="headerlink" title="迴圈"></a>迴圈</h2>]]></content>
+        <content type="html"><![CDATA[<p><img src="https://cdn.discordapp.com/attachments/1116009887550423102/1173778149939630211/image.png?ex=65653116&is=6552bc16&hm=41f8f06d3cad791aa1cbe828c30e37138d422303a03a76b225aa2f9f613fd32c&"></p><h2 id="結構"><a href="#結構" class="headerlink" title="結構"></a>結構</h2><h2 id="迴圈"><a href="#迴圈" class="headerlink" title="迴圈"></a>迴圈</h2><h3 id="奇數-偶數"><a href="#奇數-偶數" class="headerlink" title="奇數 &amp; 偶數"></a>奇數 &amp; 偶數</h3><ul><li>奇數為 1, 3, 5, 7, 9 …</li><li>偶數為 2, 4, 6, 8, 10…</li></ul><blockquote><p>JS 的奇數 &amp; 偶數從 0 開始<br>奇數為 0, 2, 4, 6, 8, 10…<br>偶數為 1, 3, 5, 7, 9 …</p></blockquote><h3 id="正負數"><a href="#正負數" class="headerlink" title="正負數"></a>正負數</h3><p>雖然計算結果可以為負數，但負數沒有作用，因為無法沒有負數位置的元素可供選擇。</p><p><code>a * n + b</code></p><ul><li>a 沒有被指定，可以當作 1。</li><li>n 作為變數，</li><li>b 沒有指定也可以當作 1。</li></ul><ol><li>an：每 a 個。</li><li>an + b：每 a 個中，第 b 個。</li><li>an - b：每 a 個中，倒數第 b 個。</li><li>-n + b：選到前 b 個。</li><li>n + b：選到 n 個 (含) 以後所有的。</li></ol><hr><p>參考資料：</p><ul><li><a href="https://flukeout.github.io/">CSS Diner</a>，學習 CSS 選擇器的小遊戲。</li><li><a href="https://www.tenlong.com.tw/products/9789864348824">金魚都能懂的 CSS 必學屬性：網頁設計必備寶典（iT 邦幫忙鐵人賽系列書）</a>，天瓏書局</li><li><a href="https://ithelp.ithome.com.tw/users/20112550/ironman/2799">金魚都能懂的 CSS 選取器 - 金魚都能懂了你還怕學不會嗎</a>，CSScoke</li></ul>]]></content>
       
       
       <categories>
@@ -116,7 +162,7 @@
       <link href="/2023/11/14/css-pseudo-class-conditional/"/>
       <url>/2023/11/14/css-pseudo-class-conditional/</url>
       
-        <content type="html"><![CDATA[<p><img src="https://cdn.discordapp.com/attachments/1116009887550423102/1173778046361280603/image.png?ex=656530fd&is=6552bbfd&hm=0b1d6a22503eba5e7eed4e9fc4aa8706519f4d900c9fb754e1cd018883a7ad5a&"></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="https://cdn.discordapp.com/attachments/1116009887550423102/1173778046361280603/image.png?ex=656530fd&is=6552bbfd&hm=0b1d6a22503eba5e7eed4e9fc4aa8706519f4d900c9fb754e1cd018883a7ad5a&"></p><hr><p>參考資料：</p><ul><li><a href="https://flukeout.github.io/">CSS Diner</a>，學習 CSS 選擇器的小遊戲。</li><li><a href="https://www.tenlong.com.tw/products/9789864348824">金魚都能懂的 CSS 必學屬性：網頁設計必備寶典（iT 邦幫忙鐵人賽系列書）</a>，天瓏書局</li><li><a href="https://ithelp.ithome.com.tw/users/20112550/ironman/2799">金魚都能懂的 CSS 選取器 - 金魚都能懂了你還怕學不會嗎</a>，CSScoke</li></ul>]]></content>
       
       
       <categories>
@@ -143,7 +189,7 @@
       <link href="/2023/11/14/css-pseudo-class-active/"/>
       <url>/2023/11/14/css-pseudo-class-active/</url>
       
-        <content type="html"><![CDATA[<p><img src="https://media.discordapp.net/attachments/1116009887550423102/1173776634579529778/image.png?ex=65652fad&is=6552baad&hm=c196df4d74d6e16daaf18728bf3c580338b78eea7b571a41eb67e1149135d412&=&width=1231&height=306"></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="https://media.discordapp.net/attachments/1116009887550423102/1173776634579529778/image.png?ex=65652fad&is=6552baad&hm=c196df4d74d6e16daaf18728bf3c580338b78eea7b571a41eb67e1149135d412&=&width=1231&height=306"></p><hr><p>參考資料：</p><ul><li><a href="https://flukeout.github.io/">CSS Diner</a>，學習 CSS 選擇器的小遊戲。</li><li><a href="https://www.tenlong.com.tw/products/9789864348824">金魚都能懂的 CSS 必學屬性：網頁設計必備寶典（iT 邦幫忙鐵人賽系列書）</a>，天瓏書局</li><li><a href="https://ithelp.ithome.com.tw/users/20112550/ironman/2799">金魚都能懂的 CSS 選取器 - 金魚都能懂了你還怕學不會嗎</a>，CSScoke</li></ul>]]></content>
       
       
       <categories>
@@ -170,7 +216,7 @@
       <link href="/2023/11/14/css-pseudo-class-relative/"/>
       <url>/2023/11/14/css-pseudo-class-relative/</url>
       
-        <content type="html"><![CDATA[<p><img src="https://cdn.discordapp.com/attachments/1116009887550423102/1173777107189518466/image.png?ex=6565301e&is=6552bb1e&hm=d0d089c6eef269e812076d89fa214742b6fcbbdf0a53c27b139e89491cf60bf3&"></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="https://cdn.discordapp.com/attachments/1116009887550423102/1173777107189518466/image.png?ex=6565301e&is=6552bb1e&hm=d0d089c6eef269e812076d89fa214742b6fcbbdf0a53c27b139e89491cf60bf3&"></p><hr><p>參考資料：</p><ul><li><a href="https://flukeout.github.io/">CSS Diner</a>，學習 CSS 選擇器的小遊戲。</li><li><a href="https://www.tenlong.com.tw/products/9789864348824">金魚都能懂的 CSS 必學屬性：網頁設計必備寶典（iT 邦幫忙鐵人賽系列書）</a>，天瓏書局</li><li><a href="https://ithelp.ithome.com.tw/users/20112550/ironman/2799">金魚都能懂的 CSS 選取器 - 金魚都能懂了你還怕學不會嗎</a>，CSScoke</li></ul>]]></content>
       
       
       <categories>
@@ -197,7 +243,7 @@
       <link href="/2023/11/14/css-specificity/"/>
       <url>/2023/11/14/css-specificity/</url>
       
-        <content type="html"><![CDATA[<p><img src="https://media.discordapp.net/attachments/1116009887550423102/1173771288800665701/image.png?ex=65652ab2&is=6552b5b2&hm=785267c32ab2b2f5fe4c2793652f6f87c36a99b81eebf5c4f8ac9666774e639c&=&width=1186&height=656"></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="https://media.discordapp.net/attachments/1116009887550423102/1173771288800665701/image.png?ex=65652ab2&is=6552b5b2&hm=785267c32ab2b2f5fe4c2793652f6f87c36a99b81eebf5c4f8ac9666774e639c&=&width=1186&height=656"></p><hr><p>參考資料：</p><ul><li><a href="https://flukeout.github.io/">CSS Diner</a>，學習 CSS 選擇器的小遊戲。</li><li><a href="https://www.tenlong.com.tw/products/9789864348824">金魚都能懂的 CSS 必學屬性：網頁設計必備寶典（iT 邦幫忙鐵人賽系列書）</a>，天瓏書局</li><li><a href="https://ithelp.ithome.com.tw/users/20112550/ironman/2799">金魚都能懂的 CSS 選取器 - 金魚都能懂了你還怕學不會嗎</a>，CSScoke</li></ul>]]></content>
       
       
       <categories>
@@ -230,11 +276,11 @@
       
         <tags>
             
-            <tag> front-end </tag>
+            <tag> layout </tag>
             
             <tag> html </tag>
             
-            <tag> layout </tag>
+            <tag> front-end </tag>
             
         </tags>
       
@@ -282,19 +328,19 @@
       
         <tags>
             
-            <tag> front-end </tag>
-            
             <tag> software </tag>
             
             <tag> back-end </tag>
             
             <tag> full-end </tag>
             
+            <tag> front-end </tag>
+            
+            <tag> github-pages </tag>
+            
             <tag> git </tag>
             
             <tag> github </tag>
-            
-            <tag> github-pages </tag>
             
         </tags>
       
