@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-11-15T12:56:18.043Z</updated>
+  <updated>2023-11-17T15:13:54.861Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,36 +17,70 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>RUBY | 用 RVM 安裝 Ruby，用 Gem 安裝 Rails</title>
-    <link href="http://example.com/2023/11/15/ruby-install-rvm/"/>
-    <id>http://example.com/2023/11/15/ruby-install-rvm/</id>
-    <published>2023-11-15T11:46:18.000Z</published>
-    <updated>2023-11-15T12:56:18.043Z</updated>
+    <title>RWD | iframe 的等比例縮放</title>
+    <link href="http://example.com/2023/11/17/rwd-iframe-scale/"/>
+    <id>http://example.com/2023/11/17/rwd-iframe-scale/</id>
+    <published>2023-11-17T07:59:23.000Z</published>
+    <updated>2023-11-17T15:13:54.861Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img</summary>
+    <summary type="html">&lt;blockquote&gt;
+&lt;h2 id=&quot;去除-iframe-或-img-空白間隙&quot;&gt;&lt;a href=&quot;#去除-iframe-或-img-空白間隙&quot; class=&quot;headerlink&quot; title=&quot;去除 iframe 或 img 空白間隙&quot;&gt;&lt;/a&gt;去除 iframe 或</summary>
         
       
     
     
     
     
-    <category term="back-end" scheme="http://example.com/tags/back-end/"/>
+    <category term="layout" scheme="http://example.com/tags/layout/"/>
     
-    <category term="ruby" scheme="http://example.com/tags/ruby/"/>
+    <category term="css" scheme="http://example.com/tags/css/"/>
+    
+    <category term="rwd" scheme="http://example.com/tags/rwd/"/>
     
   </entry>
   
   <entry>
-    <title>VMX | 建立 WSL (Windows subsystem Linux)</title>
-    <link href="http://example.com/2023/11/15/vmx-wsl/"/>
-    <id>http://example.com/2023/11/15/vmx-wsl/</id>
-    <published>2023-11-15T04:12:47.000Z</published>
-    <updated>2023-11-15T12:00:02.098Z</updated>
+    <title>RoR | rails 專案的建立 &amp; 設置</title>
+    <link href="http://example.com/2023/11/17/ruby-on-rails-new-project/"/>
+    <id>http://example.com/2023/11/17/ruby-on-rails-new-project/</id>
+    <published>2023-11-16T16:41:37.000Z</published>
+    <updated>2023-11-18T02:44:24.843Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;rails 專案中，有幾個必須認識的檔案名稱，以及需要了解的用途。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;config 設定檔&lt;/li&gt;
+&lt;li&gt;lib 函式庫&lt;/li&gt;
+&lt;li&gt;app</summary>
+        
+      
+    
+    
+    
+    
+    <category term="ruby" scheme="http://example.com/tags/ruby/"/>
+    
+    <category term="rails" scheme="http://example.com/tags/rails/"/>
+    
+    <category term="mvc" scheme="http://example.com/tags/mvc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RoR | 用 RVM 安裝 Ruby，用 Gem 安裝 Rails</title>
+    <link href="http://example.com/2023/11/15/ruby-on-rails-install-rvm/"/>
+    <id>http://example.com/2023/11/15/ruby-on-rails-install-rvm/</id>
+    <published>2023-11-15T11:46:18.000Z</published>
+    <updated>2023-11-18T01:23:05.225Z</updated>
     
     
       
@@ -60,9 +94,9 @@
     
     
     
-    <category term="back-end" scheme="http://example.com/tags/back-end/"/>
+    <category term="ruby" scheme="http://example.com/tags/ruby/"/>
     
-    <category term="vm" scheme="http://example.com/tags/vm/"/>
+    <category term="rails" scheme="http://example.com/tags/rails/"/>
     
     <category term="linux" scheme="http://example.com/tags/linux/"/>
     
@@ -71,11 +105,38 @@
   </entry>
   
   <entry>
+    <title>VMX | 建立 WSL (Windows subsystem Linux)</title>
+    <link href="http://example.com/2023/11/15/vmx-wsl/"/>
+    <id>http://example.com/2023/11/15/vmx-wsl/</id>
+    <published>2023-11-15T04:12:47.000Z</published>
+    <updated>2023-11-16T16:35:56.830Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+    <category term="linux" scheme="http://example.com/tags/linux/"/>
+    
+    <category term="wsl" scheme="http://example.com/tags/wsl/"/>
+    
+    <category term="vm" scheme="http://example.com/tags/vm/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CSS selector-8 | 偽元素 (before, after, selection)</title>
     <link href="http://example.com/2023/11/14/css-pseudo-element/"/>
     <id>http://example.com/2023/11/14/css-pseudo-element/</id>
     <published>2023-11-14T00:29:32.000Z</published>
-    <updated>2023-11-14T01:09:07.014Z</updated>
+    <updated>2023-11-16T16:36:44.365Z</updated>
     
     
       
@@ -92,8 +153,6 @@
     
     
     <category term="css" scheme="http://example.com/tags/css/"/>
-    
-    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
     
   </entry>
   
@@ -102,7 +161,7 @@
     <link href="http://example.com/2023/11/14/css-pseudo-class-language/"/>
     <id>http://example.com/2023/11/14/css-pseudo-class-language/</id>
     <published>2023-11-14T00:21:38.000Z</published>
-    <updated>2023-11-14T01:08:59.605Z</updated>
+    <updated>2023-11-16T16:36:53.546Z</updated>
     
     
       
@@ -119,8 +178,6 @@
     
     
     <category term="css" scheme="http://example.com/tags/css/"/>
-    
-    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
     
   </entry>
   
@@ -129,7 +186,7 @@
     <link href="http://example.com/2023/11/14/css-pseudo-class-from/"/>
     <id>http://example.com/2023/11/14/css-pseudo-class-from/</id>
     <published>2023-11-14T00:18:11.000Z</published>
-    <updated>2023-11-14T01:08:56.662Z</updated>
+    <updated>2023-11-16T16:36:58.104Z</updated>
     
     
       
@@ -146,8 +203,6 @@
     
     
     <category term="css" scheme="http://example.com/tags/css/"/>
-    
-    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
     
   </entry>
   
@@ -156,7 +211,7 @@
     <link href="http://example.com/2023/11/14/css-pseudo-class-child-of-type/"/>
     <id>http://example.com/2023/11/14/css-pseudo-class-child-of-type/</id>
     <published>2023-11-14T00:17:36.000Z</published>
-    <updated>2023-11-14T08:40:12.071Z</updated>
+    <updated>2023-11-16T16:37:11.175Z</updated>
     
     
       
@@ -173,8 +228,6 @@
     
     
     <category term="css" scheme="http://example.com/tags/css/"/>
-    
-    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
     
   </entry>
   
@@ -183,7 +236,7 @@
     <link href="http://example.com/2023/11/14/css-pseudo-class-conditional/"/>
     <id>http://example.com/2023/11/14/css-pseudo-class-conditional/</id>
     <published>2023-11-14T00:16:51.000Z</published>
-    <updated>2023-11-14T01:08:53.510Z</updated>
+    <updated>2023-11-17T09:52:28.909Z</updated>
     
     
       
@@ -200,8 +253,6 @@
     
     
     <category term="css" scheme="http://example.com/tags/css/"/>
-    
-    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
     
   </entry>
   
@@ -210,7 +261,7 @@
     <link href="http://example.com/2023/11/14/css-pseudo-class-active/"/>
     <id>http://example.com/2023/11/14/css-pseudo-class-active/</id>
     <published>2023-11-14T00:12:01.000Z</published>
-    <updated>2023-11-14T01:09:15.424Z</updated>
+    <updated>2023-11-16T16:37:15.421Z</updated>
     
     
       
@@ -227,8 +278,6 @@
     
     
     <category term="css" scheme="http://example.com/tags/css/"/>
-    
-    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
     
   </entry>
   
@@ -237,7 +286,7 @@
     <link href="http://example.com/2023/11/14/css-pseudo-class-relative/"/>
     <id>http://example.com/2023/11/14/css-pseudo-class-relative/</id>
     <published>2023-11-14T00:09:06.000Z</published>
-    <updated>2023-11-14T01:09:02.781Z</updated>
+    <updated>2023-11-16T16:36:49.237Z</updated>
     
     
       
@@ -254,8 +303,6 @@
     
     
     <category term="css" scheme="http://example.com/tags/css/"/>
-    
-    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
     
   </entry>
   
@@ -264,7 +311,7 @@
     <link href="http://example.com/2023/11/14/css-specificity/"/>
     <id>http://example.com/2023/11/14/css-specificity/</id>
     <published>2023-11-13T23:49:41.000Z</published>
-    <updated>2023-11-14T01:09:10.171Z</updated>
+    <updated>2023-11-16T16:36:39.846Z</updated>
     
     
       
@@ -282,8 +329,6 @@
     
     <category term="css" scheme="http://example.com/tags/css/"/>
     
-    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
-    
   </entry>
   
   <entry>
@@ -291,7 +336,7 @@
     <link href="http://example.com/2023/11/13/html-structure/"/>
     <id>http://example.com/2023/11/13/html-structure/</id>
     <published>2023-11-13T13:35:00.000Z</published>
-    <updated>2023-11-14T00:00:15.610Z</updated>
+    <updated>2023-11-16T16:36:22.127Z</updated>
     
     
       
@@ -309,8 +354,6 @@
     
     <category term="html" scheme="http://example.com/tags/html/"/>
     
-    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
-    
   </entry>
   
   <entry>
@@ -318,7 +361,7 @@
     <link href="http://example.com/2023/11/13/js-TDD/"/>
     <id>http://example.com/2023/11/13/js-TDD/</id>
     <published>2023-11-13T11:42:42.000Z</published>
-    <updated>2023-11-13T12:52:23.859Z</updated>
+    <updated>2023-11-18T01:49:38.801Z</updated>
     
     
       
@@ -333,8 +376,6 @@
     
     
     
-    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
-    
     <category term="java-script" scheme="http://example.com/tags/java-script/"/>
     
     <category term="testing" scheme="http://example.com/tags/testing/"/>
@@ -346,7 +387,7 @@
     <link href="http://example.com/2023/10/29/github-pages/"/>
     <id>http://example.com/2023/10/29/github-pages/</id>
     <published>2023-10-29T10:19:00.000Z</published>
-    <updated>2023-10-31T04:56:07.312Z</updated>
+    <updated>2023-11-16T16:36:33.754Z</updated>
     
     
       
@@ -363,19 +404,11 @@
     <category term="個人部落格架設" scheme="http://example.com/categories/%E5%80%8B%E4%BA%BA%E9%83%A8%E8%90%BD%E6%A0%BC%E6%9E%B6%E8%A8%AD/"/>
     
     
-    <category term="software" scheme="http://example.com/tags/software/"/>
-    
-    <category term="back-end" scheme="http://example.com/tags/back-end/"/>
-    
-    <category term="full-end" scheme="http://example.com/tags/full-end/"/>
-    
-    <category term="front-end" scheme="http://example.com/tags/front-end/"/>
-    
-    <category term="github-pages" scheme="http://example.com/tags/github-pages/"/>
-    
     <category term="git" scheme="http://example.com/tags/git/"/>
     
     <category term="github" scheme="http://example.com/tags/github/"/>
+    
+    <category term="github-pages" scheme="http://example.com/tags/github-pages/"/>
     
   </entry>
   
