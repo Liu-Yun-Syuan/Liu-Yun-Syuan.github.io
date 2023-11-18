@@ -11,7 +11,7 @@
   
   <title>
     
-      CSS selector-1 | 優先權 (specificity) 
+      RoR | 用 RVM 安裝 Ruby，用 Gem 安裝 Rails 
       
       
       |
@@ -156,30 +156,37 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">CSS selector-1 | 優先權 (specificity)</div>
+      <div class="post-title">RoR | 用 RVM 安裝 Ruby，用 Gem 安裝 Rails</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
-          2023-11-17 00:36:39
+          2023-11-18 09:23:05
         </span>
         
-              <span class="post-categories">
-                <i class="iconfont icon-bookmark" title="分類"></i>
-                
-                <span class="span--category">
-                  <a href="/categories/CSS-%E9%81%B8%E6%93%87%E5%99%A8/" title="CSS 選擇器">
-                    <b>#</b> CSS 選擇器
-                  </a>
-                </span>
-                
-              </span>
-          
               <span class="post-tags">
                 <i class="iconfont icon-tags mr-10" title="標籤"></i>
                 
                 <span class="span--tag mr-8">
-                  <a href="/tags/css/" title="css">
-                    #css
+                  <a href="/tags/ruby/" title="ruby">
+                    #ruby
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/rails/" title="rails">
+                    #rails
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/linux/" title="linux">
+                    #linux
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/wsl/" title="wsl">
+                    #wsl
                   </a>
                 </span>
                 
@@ -187,13 +194,85 @@
           
       </div>
       <div class="markdown-body">
-        <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://media.discordapp.net/attachments/1116009887550423102/1173771288800665701/image.png?ex=65652ab2&is=6552b5b2&hm=785267c32ab2b2f5fe4c2793652f6f87c36a99b81eebf5c4f8ac9666774e639c&=&width=1186&height=656"></p>
+        <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://media.discordapp.net/attachments/1116009887550423102/1174191569235099728/image.png?ex=6566b21d&is=65543d1d&hm=7032d13536b292a619e79e146135fda756138e61320f2e91a8234dcac3635e8f&=&width=1086&height=656"></p>
+<p>RVM 是一個針對 Ruby 的版本管理工具，而 Gem 是 Ruby 套件的管理工具。就像 NVM 之於 Node.js，npm 之於 Node.js。利用這兩個工具，可以更加快速地完成 Ruby on rails (RoR) 的執行與開發環境建立。</p>
+<h2 id="使用-macOS-順利安裝"><a href="#使用-macOS-順利安裝" class="headerlink" title="使用 macOS 順利安裝"></a>使用 macOS 順利安裝</h2><p>使用蘋果電腦進行 RoR 的環境建置時，相比 Windows Subsystem Linux (WSL) 要簡單許多。而如果你像我一樣，使用的是 WSL 環境使用 RoR，就需要了解下一章如何處理子系統的細節。</p>
+<h3 id="安裝-RVM"><a href="#安裝-RVM" class="headerlink" title="安裝 RVM"></a>安裝 RVM</h3><p>Ruby Version Manager (RVM) 是一個 Ruby 版本管理工具，能夠在管理一個環境下安裝的多個不同版本的 Ruby。操作方式簡單，只需要依照官網運作三行指令即可。</p>
+<ol>
+<li>安裝 GPG 金鑰：<code>gpg2 --keyserver keyserver.ubuntu.com --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB</code></li>
+<li>安裝 RVM：<code>\curl -sSL https://get.rvm.io | bash -s stable</code></li>
+</ol>
+<h3 id="安裝-Ruby"><a href="#安裝-Ruby" class="headerlink" title="安裝 Ruby"></a>安裝 Ruby</h3><ol>
+<li>查看已安裝的 Ruby 版本： <code>rvm list</code></li>
+<li>查看已知(可安裝)的 Ruby 版本： <code>rvm list known</code><br>(查看可安裝的最新版本)</li>
+<li>安裝 Ruby：<code>rvm install 3.0.0</code><br>(在 install 後方的數字填入版本號)<ol>
+<li>輸入 WSL 密碼</li>
+<li>檢查安裝版本：<code>ruby -v</code></li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>如果無法順利安裝 Ruby，可以試試 <code>ruby reinstall 3.2.2</code>，看看能不能順利安裝。</p>
+</blockquote>
+<h3 id="安裝-Rails"><a href="#安裝-Rails" class="headerlink" title="安裝 Rails"></a>安裝 Rails</h3><p><a target="_blank" rel="noopener" href="https://rubygems.org/?locale=zh-TW">RubyGems</a>類似於 node.js 中的 npm 的套件管理工具。</p>
+<ol>
+<li>安裝 rails：<code>gem install rails</code><ol>
+<li>也可以指定 rails 的安裝版本：<code>gem install rails -v 5.2.3</code></li>
+<li>也可以指定安裝 rails 的先行版：<code>gem install rails --pre</code></li>
+</ol>
+</li>
+<li>檢查 rails 的安裝版本，了解是否安裝成功：<code>rails -v</code></li>
+<li>建立專案<ol>
+<li>指定專案建立的檔案路徑：<code>cd /mnt/c/...</code></li>
+<li>建立 rails 專案：<code>rails new hello-rails</code><br>(在 rails new 後方填上新生成的專案名稱)</li>
+<li>查看檔案：<code>ls -al</code></li>
+<li>進入專案路徑：<code>cd hello-rails/</code></li>
+<li>查看 rails 專案 server：<code>rails s</code><br>(完整指令為：<code>rails server</code>)</li>
+</ol>
+</li>
+</ol>
+<h2 id="處理-WSL-環境問題"><a href="#處理-WSL-環境問題" class="headerlink" title="處理 WSL 環境問題"></a>處理 WSL 環境問題</h2><p>使用 WSL 環境時，必須注意子系統中是否安裝 Node.js 以及 npm。如果 npm 的版本過舊，就需要安裝 nvm 用以將 npm 更新到最新版本。另外，建立 rails 專案時，必須使用 esbuild 作為 js 打包工具，才能順利運作 rails 的伺服器。</p>
+<ul>
+<li>Rails 專案建置指令： <code>rails new project-name -j esbuild -c tailwind</code><br>(rails 預設的 js 打包工具為 importmap)</li>
+</ul>
+<h3 id="檢查及安裝-Node-js-nvm-npm-yarn"><a href="#檢查及安裝-Node-js-nvm-npm-yarn" class="headerlink" title="檢查及安裝 Node.js &amp; nvm &amp; npm &amp; yarn"></a>檢查及安裝 Node.js &amp; nvm &amp; npm &amp; yarn</h3><p>首先，檢查環境中目前的軟體版本，包刮 Node.js、nvm、npm 和 yarn。傳新安裝完成後，也要用 <code>-v</code> 或 <code>--version</code> 查看目前環境中的版本，重新檢查是否安裝成功。</p>
+<ul>
+<li><p>檢查環境中既有版本</p>
+<ol>
+<li><code>node -v</code></li>
+<li><code>npm -v</code></li>
+<li><code>nvm -v</code><ol>
+<li><code>nvm list</code></li>
+</ol>
+</li>
+<li><code>yarn -v</code></li>
+</ol>
+</li>
+<li><p>安裝缺失軟體 &amp; 更新軟體</p>
+<ol>
+<li>從 <a target="_blank" rel="noopener" href="https://nodejs.org/en/">Node.js 官網</a> 下載 node.js<br>(npm 會跟著 node.js 一起被安裝)</li>
+<li>從 <a target="_blank" rel="noopener" href="https://github.com/nvm-sh/nvm">nvm</a> 下載並安裝 nvm</li>
+<li>用 nvm 更新 npm 版本： <code>nvm install 16.20.0</code></li>
+<li>用 npm 安裝 yarn： <code>npm install --global yarn</code></li>
+</ol>
+</li>
+</ul>
+<h3 id="rails-專案的建置與刪除"><a href="#rails-專案的建置與刪除" class="headerlink" title="rails 專案的建置與刪除"></a>rails 專案的建置與刪除</h3><p>在處理 RoR 環境時，因為需要重複建立專案以確認環境是否安全，所以會重複建立專案。過程中，如果將既有專案刪除，並且建立同名檔案，可能會出現錯誤並且建立失敗。如果藉由 Windows 檔案管理直接刪除檔案，可能因為快取殘留，而無法建立同名專案。但如果是在終端機以 <code>rm -r project-name</code> 刪除專案，將不會出現因此在建立專案時出現錯誤。</p>
+<ul>
+<li>確認 application 系列檔案安裝成功<ol>
+<li>application.js</li>
+<li>application.tailwind.css</li>
+</ol>
+</li>
+</ul>
 <hr>
 <p>參考資料：</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://flukeout.github.io/">CSS Diner</a>，學習 CSS 選擇器的小遊戲。</li>
-<li><a target="_blank" rel="noopener" href="https://www.tenlong.com.tw/products/9789864348824">金魚都能懂的 CSS 必學屬性：網頁設計必備寶典（iT 邦幫忙鐵人賽系列書）</a>，天瓏書局</li>
-<li><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/users/20112550/ironman/2799">金魚都能懂的 CSS 選取器 - 金魚都能懂了你還怕學不會嗎</a>，CSScoke</li>
+<li><a target="_blank" rel="noopener" href="https://rvm.io/">RVM</a></li>
+<li><a target="_blank" rel="noopener" href="https://medium.com/lynns-dev-blog/rails-%E6%96%B0%E6%89%8B%E6%9D%91-bundle-install-%E5%92%8C-gem-install-%E7%9A%84%E5%B7%AE%E5%88%A5-bd416ee8b2eb">Rails — bundle install 和 gem install 的差別</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/rubocop/ruby-style-guide">Ruby Style Guide</a></li>
+<li><a target="_blank" rel="noopener" href="https://replit.com/">replit</a></li>
+<li><a target="_blank" rel="noopener" href="https://yarn.bootcss.com/docs/install/index.html#windows-stable">yarn 的安裝</a></li>
 </ul>
 
       </div>
@@ -201,7 +280,7 @@
         <div class="prev-or-next">
           <div class="post-foot-next">
             
-              <a href="/2023/11/13/html-structure/" target="_self">
+              <a href="/posts/vmx-wsl/" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span>上一頁</span>
               </a>
@@ -210,26 +289,33 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
-              2023-11-17 00:36:39
+              2023-11-18 09:23:05
             </span>
             
-                  <span class="post-categories">
-                    <i class="iconfont icon-bookmark" title="分類"></i>
-                    
-                    <span class="span--category">
-                      <a href="/categories/CSS-%E9%81%B8%E6%93%87%E5%99%A8/" title="CSS 選擇器">
-                        <b>#</b> CSS 選擇器
-                      </a>
-                    </span>
-                    
-                  </span>
-              
                   <span class="post-tags">
                     <i class="iconfont icon-tags mr-10" title="標籤"></i>
                     
                     <span class="span--tag mr-8">
-                      <a href="/tags/css/" title="css">
-                        #css
+                      <a href="/tags/ruby/" title="ruby">
+                        #ruby
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/rails/" title="rails">
+                        #rails
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/linux/" title="linux">
+                        #linux
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/wsl/" title="wsl">
+                        #wsl
                       </a>
                     </span>
                     
@@ -238,7 +324,7 @@
           </div>
           <div class="post-foot-prev">
             
-              <a href="/2023/11/14/css-pseudo-class-relative/" target="_self">
+              <a href="/posts/ruby-on-rails-new-project/" target="_self">
                 <span>下一頁</span>
                 <i class="iconfont icon-chevronright"></i>
               </a>
@@ -248,6 +334,23 @@
       
     </div>
     
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目錄</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-macOS-%E9%A0%86%E5%88%A9%E5%AE%89%E8%A3%9D"><span class="toc-text">使用 macOS 順利安裝</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%9D-RVM"><span class="toc-text">安裝 RVM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%9D-Ruby"><span class="toc-text">安裝 Ruby</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%9D-Rails"><span class="toc-text">安裝 Rails</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%99%95%E7%90%86-WSL-%E7%92%B0%E5%A2%83%E5%95%8F%E9%A1%8C"><span class="toc-text">處理 WSL 環境問題</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AA%A2%E6%9F%A5%E5%8F%8A%E5%AE%89%E8%A3%9D-Node-js-nvm-npm-yarn"><span class="toc-text">檢查及安裝 Node.js &amp; nvm &amp; npm &amp; yarn</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rails-%E5%B0%88%E6%A1%88%E7%9A%84%E5%BB%BA%E7%BD%AE%E8%88%87%E5%88%AA%E9%99%A4"><span class="toc-text">rails 專案的建置與刪除</span></a></li></ol></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
 
     
       <div class="comments-container">
@@ -530,12 +633,12 @@
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + CSS%20selector-1%20%7C%20%E5%84%AA%E5%85%88%E6%AC%8A%20(specificity) + '&url=' + http%3A%2F%2Fexample.com%2F2023%2F11%2F14%2Fcss-specificity%2F + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + RoR%20%7C%20%E7%94%A8%20RVM%20%E5%AE%89%E8%A3%9D%20Ruby%EF%BC%8C%E7%94%A8%20Gem%20%E5%AE%89%E8%A3%9D%20Rails + '&url=' + http%3A%2F%2Fexample.com%2Fposts%2Fruby-on-rails-install-rvm%2F + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
         
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2023/11/14/css-specificity/" target="_blank" title="Facebook">
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/posts/ruby-on-rails-install-rvm/" target="_blank" title="Facebook">
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         

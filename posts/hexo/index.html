@@ -11,7 +11,7 @@
   
   <title>
     
-      RWD | iframe 的等比例縮放 
+      個人部落格架設-2 | Hexo 管理 markdown 文章 
       
       
       |
@@ -156,31 +156,48 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">RWD | iframe 的等比例縮放</div>
+      <div class="post-title">個人部落格架設-2 | Hexo 管理 markdown 文章</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
-          2023-11-17 23:13:54
+          2023-11-18 14:42:48
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="分類"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/%E5%80%8B%E4%BA%BA%E9%83%A8%E8%90%BD%E6%A0%BC%E6%9E%B6%E8%A8%AD/" title="個人部落格架設">
+                    <b>#</b> 個人部落格架設
+                  </a>
+                </span>
+                
+              </span>
+          
               <span class="post-tags">
                 <i class="iconfont icon-tags mr-10" title="標籤"></i>
                 
                 <span class="span--tag mr-8">
-                  <a href="/tags/layout/" title="layout">
-                    #layout
+                  <a href="/tags/git/" title="git">
+                    #git
                   </a>
                 </span>
                 
                 <span class="span--tag mr-8">
-                  <a href="/tags/css/" title="css">
-                    #css
+                  <a href="/tags/github/" title="github">
+                    #github
                   </a>
                 </span>
                 
                 <span class="span--tag mr-8">
-                  <a href="/tags/rwd/" title="rwd">
-                    #rwd
+                  <a href="/tags/github-pages/" title="github-pages">
+                    #github-pages
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/markdown/" title="markdown">
+                    #markdown
                   </a>
                 </span>
                 
@@ -188,24 +205,168 @@
           
       </div>
       <div class="markdown-body">
-        <blockquote>
-<h2 id="去除-iframe-或-img-空白間隙"><a href="#去除-iframe-或-img-空白間隙" class="headerlink" title="去除 iframe 或 img 空白間隙"></a>去除 iframe 或 img 空白間隙</h2><p>由於 iframe 以及 img 在瀏覽器預設中，屬於 <code>display: inline;</code>，位置將會預設對其文字基線，因此出現底線間隙。</p>
-<ol>
-<li>加入 <code>vertical-align:top</code>，讓行內元素對其頂端線。</li>
-<li>改為 <code>display:block;</code>，將元素改為區塊元素。</li>
+        <p>使用 Hexo 可以自動套用主題樣式並部屬靜態網頁到 GitHub Pages，搭配 markdown 語法撰寫文章，能夠節省許多網頁製作的時間。</p>
+<table>
+<thead>
+<tr>
+<th>優點</th>
+<th>缺點</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>更新快速</td>
+<td>必須學習 markdown。</td>
+</tr>
+<tr>
+<td>版面簡單乾淨</td>
+<td>風格單調、制式化。<br>或是必須勤於撰寫 CSS。</td>
+</tr>
+</tbody></table>
+<h2 id="用-markdown-撰寫文章"><a href="#用-markdown-撰寫文章" class="headerlink" title="用 markdown 撰寫文章"></a>用 markdown 撰寫文章</h2><p><a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/emphasis.html">markdown</a>語法是一種語法規格，可以使用任何編輯器編寫。而我是使用 vscode 搭配 markdown 的擴充套件，因為可以省去學習新工具的時間，以及省去下達 Hexo 指令時需要切換工具的時間。</p>
+<table>
+<thead>
+<tr>
+<th>VScode 擴充工具推薦</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Markdown All in One</td>
+<td>綜合的 markdown 語法工具，功能繁多不及備載。</td>
+</tr>
+<tr>
+<td>Markdown Paste</td>
+<td>將複製的資料，以 markdown 語法貼上。</td>
+</tr>
+<tr>
+<td>Markdown Preview Enhanced</td>
+<td>預覽 markdown 語法檔案的效果。</td>
+</tr>
+<tr>
+<td>Markdown Preview Github Styling</td>
+<td>以 GitHub 樣式預覽 markdown 語法檔案的效果。</td>
+</tr>
+<tr>
+<td>Markdown Table Prettifier</td>
+<td>在編寫 markdown 語法中的表格時，依據表格內容對齊欄位寬度。</td>
+</tr>
+</tbody></table>
+<h2 id="用-Hexo-管理與維護網站"><a href="#用-Hexo-管理與維護網站" class="headerlink" title="用 Hexo 管理與維護網站"></a>用 Hexo 管理與維護網站</h2><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/index.html">Hexo</a>是我在 Windows 系統下唯一順利安裝的 GitHub Pages 部屬工具，相關的教學文章即影片也更豐富。其他的管理工具大多建議搭配 MacOS 使用，並不符合我的作業環境。</p>
+<blockquote>
+<p><strong>挑選文章管理輔助工具：</strong><br>管理的工具有非常多種，而我最後選擇的是 Hexo，因為他是我找到唯一技術文件有簡體中文版本的文章管理輔助工具。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://jekyllrb.com/">Jekyll</a>：搭配 Ruby。<ul>
+<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=5z7_qp0CWBY">教學影片–Jekyll on Windows - And Github Pages Hosting</a></li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="http://octopress.org/">Octopress</a></li>
+<li><a target="_blank" rel="noopener" href="https://gohugo.io/">Hugo</a>：搭配 Go。</li>
+<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=s1O-8zhPQmU">教學影片–Building a custom site with Hugo on GitHub</a><ul>
+<li>推薦主題：<ol>
+<li><a target="_blank" rel="noopener" href="https://themes.gohugo.io/themes/lotusdocs/">Lotus Docs</a></li>
+<li><a target="_blank" rel="noopener" href="https://themes.gohugo.io/themes/hugo-theme-relearn/">Relearn</a></li>
 </ol>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://bitsofco.de/img/Y-pVYtJVt8-1611.avif"></p>
+</li>
+</ul>
+</li>
+</ul>
 </blockquote>
-<h2 id="使用-aspect-ratio"><a href="#使用-aspect-ratio" class="headerlink" title="使用 aspect-ratio"></a>使用 aspect-ratio</h2><h2 id="使用-padding-bottom"><a href="#使用-padding-bottom" class="headerlink" title="使用 padding-bottom"></a>使用 padding-bottom</h2><hr>
+<h3 id="安裝-Hexo"><a href="#安裝-Hexo" class="headerlink" title="安裝 Hexo"></a>安裝 Hexo</h3><p>依照官方文件進行<a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/">安裝</a>。</p>
+<ol>
+<li>在確保環境中已安裝 node.js 和 git 的情況下，安裝 hexo：<code>$ npm install -g hexo-cli</code></li>
+<li>新建專案資料夾，並讓終端機進入路徑。</li>
+<li>初始化 hexo 專案：<code>$ hexo init</code></li>
+<li>安裝 hexo 必要套件：<code>$ npm install</code></li>
+<li>開啟 server，確認專案是否順利建立：<code>$ hexo s</code></li>
+</ol>
+<h3 id="將-Hexo-專案部署到-GitHub-Pages"><a href="#將-Hexo-專案部署到-GitHub-Pages" class="headerlink" title="將 Hexo 專案部署到 GitHub Pages"></a>將 Hexo 專案部署到 GitHub Pages</h3><p>根據<a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/github-pages#%E4%B8%80%E9%8D%B5%E9%83%A8%E5%B1%AC">官方文件</a>，使用一鍵部屬。</p>
+<ol>
+<li>安裝<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-deployer-git">hexo-deployer-git</a>：<code>$ npm install hexo-deployer-git --save</code></li>
+<li>設定 <code>\_config.yml</code> 檔案中的部屬設定：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#x27;git&#x27;</span><br><span class="line">  repo: https://github.com/&lt;username&gt;/&lt;project&gt;</span><br><span class="line">  # example, https://github.com/hexojs/hexojs.github.io</span><br><span class="line">  branch: gh-pages</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>清空發布的檔案： <code>$ hexo clean</code></li>
+<li>建置要發布的檔案： <code>$ hexo deploy</code></li>
+<li>瀏覽自己的 Github Pages 頁面 <code>&lt;GitHub 用戶名&gt;.github.io</code>，檢查網站是否順利部屬。</li>
+</ol>
+<blockquote>
+<h4 id="修改文章永久連結-Permalink"><a href="#修改文章永久連結-Permalink" class="headerlink" title="修改文章永久連結 (Permalink)"></a>修改文章<a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/permalinks.html">永久連結</a> (Permalink)</h4><p>在 Hexo 的 <code>_config.yml</code> 中，預設的文章路徑 <code>permalink</code> 為 <code>:year/:month/:day/:title/</code>，會將文章的 url 設定為類似 <code>2013/07/14/hello-world/</code> 的結果。但是我希望路徑能夠固定，所以我將 permalink 設定為 <code>permalink: &quot;posts/:name/&quot;</code>，就會在每篇文章的路徑前加上 <code>post/</code>，並且以檔案名稱作為最後路徑。搭配<a target="_blank" rel="noopener" href="https://hexo.io/docs/tag-plugins#Include-Assets">標籤外掛</a> (Tag Plugins)，能將網頁設定的資料作為變數自動更新，有利於未來更換網域時的轉換，也能快速連結自己的相關文章。</p>
+</blockquote>
+<h3 id="使用-Hexo-管理與更新文章"><a href="#使用-Hexo-管理與更新文章" class="headerlink" title="使用 Hexo 管理與更新文章"></a>使用 Hexo 管理與更新文章</h3><p>每次的更新流程：</p>
+<ol>
+<li><code>hexo cl</code>： clean，清除所建立的靜態檔案。</li>
+<li><code>hexo g</code>： generate，建立 public folder 中的靜態檔案。<br>(可省略的步驟，執行 <code>hexo d</code> 將會自動執行 <code>hexo g</code>)</li>
+<li><code>hexo s</code>： server，本機端查看渲染效果。</li>
+<li><code>hexo d</code>： deploy，部署到 Github Pages。</li>
+</ol>
+<p>每次更新到後，需要等待約 1 分鐘，Github Pages 才會更新。</p>
+<h3 id="套用與變更-Hexo-網站主題"><a href="#套用與變更-Hexo-網站主題" class="headerlink" title="套用與變更 Hexo 網站主題"></a>套用與變更 Hexo 網站主題</h3><p>在 Hexo 官網的<a target="_blank" rel="noopener" href="https://hexo.io/themes/">主題頁面</a>中，有多種開源主題可供挑選，未來有能力也可以主動分享 😊<br>找到喜歡的主題後，每個主題通常都會有安裝說明，只需要按照主題問件進行安裝即可。<br>通常的主題安裝流程：</p>
+<ol>
+<li>下載主題檔案：<code>$ git clone &#39;主題網址&#39;</code></li>
+<li>安裝主題必須的套件： <code>$ npm init</code></li>
+<li>建立主題專屬的 <code>_config.主題名稱.yml</code><ol>
+<li>進入 <code>themes</code> 資料夾，複製 <code>_config.yml</code> 到專案最外層</li>
+<li>更名為 <code>_config.主題名稱.yml</code><br>(以後要修改此樣式的專屬設定，就在這裡變更資料)</li>
+</ol>
+</li>
+<li>更改在外層的初始 <code>_config.yml</code> 中的 <code>theme: 主題樣式名稱</code>，輸入要套用的主題樣式名稱<br>(主題樣式名稱，可參考 <code>themes</code> 資料夾中安裝的主題資料夾名稱)</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>編號</th>
+<th>推薦樣式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Oranges</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/adisaktijrs/hexo-theme-minima">Minima</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid">Fluid</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/HyunSeob/hexo-theme-overdose">Overdose</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/iTimeTraveler/hexo-theme-hiero">Hiero</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/iTimeTraveler/hexo-theme-hipaper">Hipaper</a></td>
+</tr>
+</tbody></table>
+<hr>
 <p>參考資料：</p>
-<p>-<a target="_blank" rel="noopener" href="https://www.minwt.com/webdesign-dev/css/22348.html">解決網頁 img 圖片垂直堆疊時，下方出現莫名的空白間隙</a>，梅問題教學網</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=erKYtw4Rfhk&ab_channel=CodeSheep%E7%A8%8B%E5%BA%8F%E7%BE%8A">手把手教你从 0 开始搭建自己的个人博客</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/tardis/zm/art/103348449?source_id=1003">测试了 25 款 Markdown 编辑器，推荐 3 个最好用的！</a></li>
+<li><a target="_blank" rel="noopener" href="https://viiisit.com/posts/github-pages-with-custom-domain/">Custom Domain - 從零到有，成功建置 viiisit.com!</a>，viii</li>
+<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=PsXWbI2Mqu0&list=PLX5Mjj7M-ojmiOJQDUNNyPRY1xlajVEYD&index=1&ab_channel=%E5%91%A8%E4%B8%89Tech">Hexo 影片教學系列</a>，周三 Tech</li>
+<li><a target="_blank" rel="noopener" href="https://orandigo.github.io/blog/2020/03/01/20200301-hexo/">Hexo</a>，前端筆記</li>
+<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=7YDuIhDR16w&list=PLIN0r_kqXu-7_S4sg1gDkzdkCLzWXoPBf&ab_channel=%E6%88%91%E4%B8%8D%E6%98%AF%E5%92%95%E5%92%95%E9%B8%BD">文章管理輔助工具比較</a>，我不是咕咕鴿</li>
+<li><a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/emphasis.html">Markdown 官方教程</a></li>
+</ul>
 
       </div>
       
         <div class="prev-or-next">
           <div class="post-foot-next">
             
-              <a href="/2023/11/17/ruby-on-rails-new-project/" target="_self">
+              <a href="/posts/ruby-on-rails-new-project/" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span>上一頁</span>
               </a>
@@ -214,27 +375,44 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
-              2023-11-17 23:13:54
+              2023-11-18 14:42:48
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="分類"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/%E5%80%8B%E4%BA%BA%E9%83%A8%E8%90%BD%E6%A0%BC%E6%9E%B6%E8%A8%AD/" title="個人部落格架設">
+                        <b>#</b> 個人部落格架設
+                      </a>
+                    </span>
+                    
+                  </span>
+              
                   <span class="post-tags">
                     <i class="iconfont icon-tags mr-10" title="標籤"></i>
                     
                     <span class="span--tag mr-8">
-                      <a href="/tags/layout/" title="layout">
-                        #layout
+                      <a href="/tags/git/" title="git">
+                        #git
                       </a>
                     </span>
                     
                     <span class="span--tag mr-8">
-                      <a href="/tags/css/" title="css">
-                        #css
+                      <a href="/tags/github/" title="github">
+                        #github
                       </a>
                     </span>
                     
                     <span class="span--tag mr-8">
-                      <a href="/tags/rwd/" title="rwd">
-                        #rwd
+                      <a href="/tags/github-pages/" title="github-pages">
+                        #github-pages
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/markdown/" title="markdown">
+                        #markdown
                       </a>
                     </span>
                     
@@ -255,7 +433,7 @@
     <div class="title">目錄</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%BB%E9%99%A4-iframe-%E6%88%96-img-%E7%A9%BA%E7%99%BD%E9%96%93%E9%9A%99"><span class="toc-text">去除 iframe 或 img 空白間隙</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-aspect-ratio"><span class="toc-text">使用 aspect-ratio</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-padding-bottom"><span class="toc-text">使用 padding-bottom</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8-markdown-%E6%92%B0%E5%AF%AB%E6%96%87%E7%AB%A0"><span class="toc-text">用 markdown 撰寫文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8-Hexo-%E7%AE%A1%E7%90%86%E8%88%87%E7%B6%AD%E8%AD%B7%E7%B6%B2%E7%AB%99"><span class="toc-text">用 Hexo 管理與維護網站</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%9D-Hexo"><span class="toc-text">安裝 Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%87-Hexo-%E5%B0%88%E6%A1%88%E9%83%A8%E7%BD%B2%E5%88%B0-GitHub-Pages"><span class="toc-text">將 Hexo 專案部署到 GitHub Pages</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%96%87%E7%AB%A0%E6%B0%B8%E4%B9%85%E9%80%A3%E7%B5%90-Permalink"><span class="toc-text">修改文章永久連結 (Permalink)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-Hexo-%E7%AE%A1%E7%90%86%E8%88%87%E6%9B%B4%E6%96%B0%E6%96%87%E7%AB%A0"><span class="toc-text">使用 Hexo 管理與更新文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A5%97%E7%94%A8%E8%88%87%E8%AE%8A%E6%9B%B4-Hexo-%E7%B6%B2%E7%AB%99%E4%B8%BB%E9%A1%8C"><span class="toc-text">套用與變更 Hexo 網站主題</span></a></li></ol></li></ol>
       
     </div>
   </div>
@@ -547,12 +725,12 @@
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + RWD%20%7C%20iframe%20%E7%9A%84%E7%AD%89%E6%AF%94%E4%BE%8B%E7%B8%AE%E6%94%BE + '&url=' + http%3A%2F%2Fexample.com%2F2023%2F11%2F17%2Frwd-iframe-scale%2F + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + %E5%80%8B%E4%BA%BA%E9%83%A8%E8%90%BD%E6%A0%BC%E6%9E%B6%E8%A8%AD-2%20%7C%20Hexo%20%E7%AE%A1%E7%90%86%20markdown%20%E6%96%87%E7%AB%A0 + '&url=' + http%3A%2F%2Fexample.com%2Fposts%2Fhexo%2F + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
         
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2023/11/17/rwd-iframe-scale/" target="_blank" title="Facebook">
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/posts/hexo/" target="_blank" title="Facebook">
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         
