@@ -160,7 +160,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
-          2023-11-18 16:41:29
+          2023-11-20 10:54:50
         </span>
         
               <span class="post-tags">
@@ -211,6 +211,9 @@
 <ul>
 <li>Rails 專案建置指令： <code>$ rails new project-name -j esbuild -c tailwind</code><br>(rails 預設的 js 打包工具為 importmap)</li>
 </ul>
+<blockquote>
+<p>要使 tailwind 有效，必須執行指令 <code>$ bin/dev</code>，就可以看到 reset 樣式的頁面。</p>
+</blockquote>
 <h3 id="安裝-gem-bundle-rackup"><a href="#安裝-gem-bundle-rackup" class="headerlink" title="安裝 gem &amp; bundle &amp; rackup"></a>安裝 gem &amp; bundle &amp; rackup</h3><p>在前端開發中，可以使用 node http 開啟伺服器。而在 rails 專案中，可以使用 rackup 開啟伺服器。rackup 的伺服器運作時，將會回傳 request 的執行結果。結果的資料型態分別為 int 、 hash 以及 array，分別記錄 status、header 以及回應結果的 html。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 用 node http 建立伺服器</span></span><br><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&quot;http&quot;</span>);</span><br><span class="line">http</span><br><span class="line">  .<span class="title function_">createServer</span>(<span class="keyword">function</span> (<span class="params">req, res</span>) &#123;</span><br><span class="line">    res.<span class="title function_">end</span>(<span class="string">&quot;hi&quot;</span>);</span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">listem</span>(<span class="number">8888</span>);</span><br></pre></td></tr></table></figure>
 
@@ -256,7 +259,7 @@
 <li>新增路由<ol>
 <li>在 routes.rb 中，新增路由。<ul>
 <li>建立根目錄：<code>root#index</code></li>
-<li>建立頁面：<code>get &#39;page-name&#39;,to: &#39;pages#page-name</code><br>(<code>page-name</code> 即網頁路徑，<code>pages#page-name</code> 則是將對的 view html 頁面路徑)</li>
+<li>建立頁面：<code>get &#39;page-name&#39;,to: &#39;pages#page-name</code><br>(<code>page-name</code> 即網頁路徑，<code>pages#page-name</code> 則是 controller#action，通常對應到同名的 view 檔案。)</li>
 </ul>
 </li>
 </ol>
@@ -305,7 +308,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
-              2023-11-18 16:41:29
+              2023-11-20 10:54:50
             </span>
             
                   <span class="post-tags">
