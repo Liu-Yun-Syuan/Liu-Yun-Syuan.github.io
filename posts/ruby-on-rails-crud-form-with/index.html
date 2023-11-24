@@ -11,7 +11,7 @@
   
   <title>
     
-      彙整 
+      ruby-on-rails-crud-form-with 
       
       
       |
@@ -111,158 +111,101 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2023</span>
-          </h2>
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">ruby-on-rails-crud-form-with</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
+          2023-11-24 07:12:07
+        </span>
+        
+      </div>
+      <div class="markdown-body">
+        
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/posts/css-sass-scss/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一頁</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
+              2023-11-24 07:12:07
+            </span>
+            
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
         </div>
       
-      <div class="post-item" title="ruby-on-rails-crud-form-with">
-        <div class="time-m-d">11-24</div>
-        <div class="title">
-          <a href="/posts/ruby-on-rails-crud-form-with/">
-            <span>ruby-on-rails-crud-form-with</span>
-          </a>
-        </div>
-      </div>
+    </div>
     
-      <div class="post-item" title="css-sass-scss">
-        <div class="time-m-d">11-23</div>
-        <div class="title">
-          <a href="/posts/css-sass-scss/">
-            <span>css-sass-scss</span>
-          </a>
-        </div>
-      </div>
+
     
-      <div class="post-item" title="RoR | model 的資料驗證">
-        <div class="time-m-d">11-23</div>
-        <div class="title">
-          <a href="/posts/ruby-on-rails-model-validations/">
-            <span>RoR | model 的資料驗證</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="RoR | Model 的建立 & migration 機制">
-        <div class="time-m-d">11-23</div>
-        <div class="title">
-          <a href="/posts/ruby-on-rails-model-migration-sandbox/">
-            <span>RoR | Model 的建立 & migration 機制</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="RoR | 防止站內攻擊 ── Controller 中的欄位限制">
-        <div class="time-m-d">11-23</div>
-        <div class="title">
-          <a href="/posts/ruby-on-rails-form-xss-params-form-for/">
-            <span>RoR | 防止站內攻擊 ── Controller 中的欄位限制</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="PostgreSQL | Ubuntu 環境設置 & rails 專案資料庫建置">
-        <div class="time-m-d">11-21</div>
-        <div class="title">
-          <a href="/posts/pg-install/">
-            <span>PostgreSQL | Ubuntu 環境設置 & rails 專案資料庫建置</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="RoR | 防止站外攻擊 ── View 中的權限驗證">
-        <div class="time-m-d">11-20</div>
-        <div class="title">
-          <a href="/posts/ruby-on-rails-form-csrf-authenticity-token/">
-            <span>RoR | 防止站外攻擊 ── View 中的權限驗證</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="RoR | 路徑設置 & 路徑變數應用 (Path & URL)">
-        <div class="time-m-d">11-20</div>
-        <div class="title">
-          <a href="/posts/ruby-on-rails-routes-naming-link-to/">
-            <span>RoR | 路徑設置 & 路徑變數應用 (Path & URL)</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="個人部落格架設-2 | Hexo 管理 markdown 文章">
-        <div class="time-m-d">11-18</div>
-        <div class="title">
-          <a href="/posts/hexo/">
-            <span>個人部落格架設-2 | Hexo 管理 markdown 文章</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="RoR | rails 專案的建立 & 設置">
-        <div class="time-m-d">11-17</div>
-        <div class="title">
-          <a href="/posts/ruby-on-rails-new-project/">
-            <span>RoR | rails 專案的建立 & 設置</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="RoR | 用 RVM 安裝 Ruby，用 Gem 安裝 Rails">
-        <div class="time-m-d">11-15</div>
-        <div class="title">
-          <a href="/posts/ruby-on-rails-install-rvm/">
-            <span>RoR | 用 RVM 安裝 Ruby，用 Gem 安裝 Rails</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="VMX | 建立 WSL (Windows subsystem Linux)">
-        <div class="time-m-d">11-15</div>
-        <div class="title">
-          <a href="/posts/vmx-wsl/">
-            <span>VMX | 建立 WSL (Windows subsystem Linux)</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="HTML | 標籤結構 & 切版設計">
-        <div class="time-m-d">11-13</div>
-        <div class="title">
-          <a href="/posts/html-structure/">
-            <span>HTML | 標籤結構 & 切版設計</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="JS | JEST 測試驅動開發 (TDD)">
-        <div class="time-m-d">11-13</div>
-        <div class="title">
-          <a href="/posts/js-TDD/">
-            <span>JS | JEST 測試驅動開發 (TDD)</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="個人部落格架設-1 | GitHub Pages 建立個人網域">
-        <div class="time-m-d">10-29</div>
-        <div class="title">
-          <a href="/posts/github-pages/">
-            <span>個人部落格架設-1 | GitHub Pages 建立個人網域</span>
-          </a>
-        </div>
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
       </div>
     
   </div>
-</div>
+
 
         
 <div class="footer">
@@ -523,6 +466,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + ruby-on-rails-crud-form-with + '&url=' + http%3A%2F%2Fexample.com%2Fposts%2Fruby-on-rails-crud-form-with%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/posts/ruby-on-rails-crud-form-with/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>

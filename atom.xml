@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-11-18T08:37:03.433Z</updated>
+  <updated>2023-11-23T23:12:07.535Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,181 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ruby-on-rails-crud-form-with</title>
+    <link href="http://example.com/posts/ruby-on-rails-crud-form-with/"/>
+    <id>http://example.com/posts/ruby-on-rails-crud-form-with/</id>
+    <published>2023-11-23T23:12:07.000Z</published>
+    <updated>2023-11-23T23:12:07.535Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>css-sass-scss</title>
+    <link href="http://example.com/posts/css-sass-scss/"/>
+    <id>http://example.com/posts/css-sass-scss/</id>
+    <published>2023-11-23T04:47:51.000Z</published>
+    <updated>2023-11-23T10:10:00.384Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;scss 用縮排，容易出錯&lt;br&gt;sass 用大括號，比較安全&lt;/p&gt;
+&lt;h2 id=&quot;變數&quot;&gt;&lt;a href=&quot;#變數&quot; class=&quot;headerlink&quot; title=&quot;變數&quot;&gt;&lt;/a&gt;變數&lt;/h2&gt;&lt;p&gt;&lt;code&gt;$var-name:</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>RoR | model 的資料驗證</title>
+    <link href="http://example.com/posts/ruby-on-rails-model-validations/"/>
+    <id>http://example.com/posts/ruby-on-rails-model-validations/</id>
+    <published>2023-11-23T02:40:18.000Z</published>
+    <updated>2023-11-23T08:50:27.779Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;rails 設計哲學： 靠小幫手省事，但也可以手動糾正 &amp;#x2F; 修改。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DRY：Don’t Repeat Yourself 不重複&lt;/li&gt;
+&lt;li&gt;CoC：Convention over Configuration</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>RoR | Model 的建立 &amp; migration 機制</title>
+    <link href="http://example.com/posts/ruby-on-rails-model-migration-sandbox/"/>
+    <id>http://example.com/posts/ruby-on-rails-model-migration-sandbox/</id>
+    <published>2023-11-23T00:12:17.000Z</published>
+    <updated>2023-11-23T00:22:04.368Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Model-──-資料庫建置&quot;&gt;&lt;a href=&quot;#Model-──-資料庫建置&quot; class=&quot;headerlink&quot; title=&quot;Model ── 資料庫建置&quot;&gt;&lt;/a&gt;Model ── 資料庫建置&lt;/h2&gt;&lt;h3 id=&quot;建置-model&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>RoR | 防止站內攻擊 ── Controller 中的欄位限制</title>
+    <link href="http://example.com/posts/ruby-on-rails-form-xss-params-form-for/"/>
+    <id>http://example.com/posts/ruby-on-rails-form-xss-params-form-for/</id>
+    <published>2023-11-23T00:10:20.000Z</published>
+    <updated>2023-11-23T00:20:16.504Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;h3 id=&quot;「我不是機器人」驗證&quot;&gt;&lt;a href=&quot;#「我不是機器人」驗證&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>PostgreSQL | Ubuntu 環境設置 &amp; rails 專案資料庫建置</title>
+    <link href="http://example.com/posts/pg-install/"/>
+    <id>http://example.com/posts/pg-install/</id>
+    <published>2023-11-21T13:29:05.185Z</published>
+    <updated>2023-11-23T02:33:42.739Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;環境：Ubuntu 22.04&lt;br&gt;軟體：pg 1.5.4&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;推薦 DB 學習網站 &lt;a href=&quot;https://www.prisma.io/dataguide&quot;&gt;Prisma’s Data</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>RoR | 防止站外攻擊 ── View 中的權限驗證</title>
+    <link href="http://example.com/posts/ruby-on-rails-form-csrf-authenticity-token/"/>
+    <id>http://example.com/posts/ruby-on-rails-form-csrf-authenticity-token/</id>
+    <published>2023-11-20T02:59:07.000Z</published>
+    <updated>2023-11-23T02:59:35.850Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;turbo，ruby 7 更新，預設打開並且可能有奇妙現象(不好控制)。&lt;br&gt;可以將 &lt;code&gt;data-turbo=&amp;quot;false&amp;quot;&lt;/code&gt; 加入 form 的屬性中：&lt;code&gt;form</summary>
+        
+      
+    
+    
+    
+    
+    <category term="ruby" scheme="http://example.com/tags/ruby/"/>
+    
+    <category term="rails" scheme="http://example.com/tags/rails/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RoR | 路徑設置 &amp; 路徑變數應用 (Path &amp; URL)</title>
+    <link href="http://example.com/posts/ruby-on-rails-routes-naming-link-to/"/>
+    <id>http://example.com/posts/ruby-on-rails-routes-naming-link-to/</id>
+    <published>2023-11-20T02:59:07.000Z</published>
+    <updated>2023-11-24T01:07:10.934Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;路徑設定&quot;&gt;&lt;a href=&quot;#路徑設定&quot; class=&quot;headerlink&quot; title=&quot;路徑設定&quot;&gt;&lt;/a&gt;路徑設定&lt;/h2&gt;&lt;p&gt;通常 create 頁面新增資料成功後，通常會直接轉換網址到指定頁面，類似首頁，而不會特別製作 create</summary>
+        
+      
+    
+    
+    
+    
+    <category term="ruby" scheme="http://example.com/tags/ruby/"/>
+    
+    <category term="rails" scheme="http://example.com/tags/rails/"/>
+    
+  </entry>
   
   <entry>
     <title>個人部落格架設-2 | Hexo 管理 markdown 文章</title>
@@ -52,7 +227,7 @@
     <link href="http://example.com/posts/ruby-on-rails-new-project/"/>
     <id>http://example.com/posts/ruby-on-rails-new-project/</id>
     <published>2023-11-16T16:41:37.000Z</published>
-    <updated>2023-11-20T02:54:50.005Z</updated>
+    <updated>2023-11-24T01:05:05.946Z</updated>
     
     
       
@@ -83,14 +258,15 @@
     <link href="http://example.com/posts/ruby-on-rails-install-rvm/"/>
     <id>http://example.com/posts/ruby-on-rails-install-rvm/</id>
     <published>2023-11-15T11:46:18.000Z</published>
-    <updated>2023-11-18T01:23:05.225Z</updated>
+    <updated>2023-11-24T01:02:24.689Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/ruby-on-rails-install-rvm/ruby-on-rails-install-rvm_2023-11-24-09-02-16.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;RVM 是一個針對 Ruby 的版本管理工具，而 Gem 是</summary>
         
       
     
@@ -112,14 +288,15 @@
     <link href="http://example.com/posts/vmx-wsl/"/>
     <id>http://example.com/posts/vmx-wsl/</id>
     <published>2023-11-15T04:12:47.000Z</published>
-    <updated>2023-11-16T16:35:56.830Z</updated>
+    <updated>2023-11-24T01:01:09.463Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/vmx-wsl/vmx-wsl_2023-11-24-09-01-03.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Ubuntu 和 macOS 都是 Linux 作業系統的一種，比起 Windows，才能順利運作 Ruby on</summary>
         
       
     
@@ -139,14 +316,15 @@
     <link href="http://example.com/posts/html-structure/"/>
     <id>http://example.com/posts/html-structure/</id>
     <published>2023-11-13T13:35:00.000Z</published>
-    <updated>2023-11-16T16:36:22.127Z</updated>
+    <updated>2023-11-24T00:59:34.854Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/html-structure/html-structure_2023-11-24-08-59-27.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a</summary>
         
       
     
