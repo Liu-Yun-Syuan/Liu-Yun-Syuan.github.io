@@ -11,7 +11,7 @@
   
   <title>
     
-      Category 
+      個人部落格架設-3 | Hexo 圖片插入 
       
       
       |
@@ -147,19 +147,156 @@
 
 
   
-  <!-- 分类页 url形式：https://yoursite/categories/ -->
-  <div class="container category-index">
-    <div>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%80%8B%E4%BA%BA%E9%83%A8%E8%90%BD%E6%A0%BC%E6%9E%B6%E8%A8%AD/">個人部落格架設</a><span class="category-list-count">3</span></li></ul>
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">個人部落格架設-3 | Hexo 圖片插入</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
+          2023-11-27 22:13:47
+        </span>
+        
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="分類"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/%E5%80%8B%E4%BA%BA%E9%83%A8%E8%90%BD%E6%A0%BC%E6%9E%B6%E8%A8%AD/" title="個人部落格架設">
+                    <b>#</b> 個人部落格架設
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="標籤"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/markdown/" title="markdown">
+                    #markdown
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/images/hexo-embed-image-with-vscode-extension-paste-image/hexo-embed-image-with-vscode-extension-paste-image_2023-11-27-21-50-20.png"></p>
+<p>如果你也和我一樣，使用 VScode 作為編輯 Hexo 文章的主要編輯工具，建議使用 <a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image">Paste Image</a> 管理部落格圖片。</p>
+<h2 id="插入圖片的-4-種方式"><a href="#插入圖片的-4-種方式" class="headerlink" title="插入圖片的 4 種方式"></a>插入圖片的 4 種方式</h2><p>在 Hexo 的<a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/asset-folders.html">官方文件</a>中，插入圖片有三種方式。</p>
+<ol>
+<li>Global Asset Folder：在 <code>source</code> 資料夾中，建立 <code>image</code> 資料夾，其中的檔案都可以 markdown 的方式插入圖片：<code>![](/images/image.jpg)</code></li>
+<li>Post Asset Folder：<ol>
+<li>開啟 <code>_config.yml</code> 中的設定：<code>post_asset_folder: true</code></li>
+<li>以後每次建立新的文章，都會建立一個專屬的附件資料夾，用以放入該文章所用到的所有圖片。</li>
+<li>使用相對路徑引用指定圖片。</li>
+</ol>
+</li>
+<li>Tag Plugins For Relative Path Referencing 使用變數<ol>
+<li>指定圖片的插入樣式、圖片路徑以及圖片標題。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_path slug %&#125;</span><br><span class="line">&#123;% asset_img slug [title] %&#125;</span><br><span class="line">&#123;% asset_link slug [title] %&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li>Embedding an image using markdown：藉由 [hexo-renderer-marked] 套件，使用 markdown 語法插入圖片。(但是我沒有成功)</li>
+</ol>
+<h2 id="用-Paste-Image-快速插入圖片"><a href="#用-Paste-Image-快速插入圖片" class="headerlink" title="用 Paste Image 快速插入圖片"></a>用 Paste Image 快速插入圖片</h2><p>上方第 1 種方法，建立 <code>source/image</code> 資料夾，並且以 markdown 語法插入圖片，是我偏好的方式。只要貼上圖片，就在 <code>source/image</code> 中建立語文章同名的資料夾，並且以文章名稱為圖片命名再加上日期時間。為了更方便且快速的美化文章，我在 setting.json 中進行以下設定：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;pasteImage.path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;projectRoot&#125;/source/images/$&#123;currentFileNameWithoutExt&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;pasteImage.basePath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;projectRoot&#125;/source&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;pasteImage.forceUnixStyleSeparator&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;pasteImage.prefix&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;pasteImage.namePrefix&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;currentFileNameWithoutExt&#125;_&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;pasteImage.insertPattern&quot;</span><span class="punctuation">:</span> <span class="string">&quot;![](/images/$&#123;currentFileNameWithoutExt&#125;/$&#123;imageFileName&#125;)&quot;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>參考資料：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://eddieeo.github.io/2015/09/06/c7c81ce1.html">Hexo 博客 Markdown 文章插入图片方法总结</a></li>
+</ul>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/posts/ruby-on-rails-crud-form-with/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一頁</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
+              2023-11-27 22:13:47
+            </span>
+            
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="分類"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/%E5%80%8B%E4%BA%BA%E9%83%A8%E8%90%BD%E6%A0%BC%E6%9E%B6%E8%A8%AD/" title="個人部落格架設">
+                        <b>#</b> 個人部落格架設
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="標籤"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/markdown/" title="markdown">
+                        #markdown
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+              <a href="/posts/git/" target="_self">
+                <span>下一頁</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目錄</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E5%9C%96%E7%89%87%E7%9A%84-4-%E7%A8%AE%E6%96%B9%E5%BC%8F"><span class="toc-text">插入圖片的 4 種方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8-Paste-Image-%E5%BF%AB%E9%80%9F%E6%8F%92%E5%85%A5%E5%9C%96%E7%89%87"><span class="toc-text">用 Paste Image 快速插入圖片</span></a></li></ol>
+      
     </div>
   </div>
-  
 
   
+<script src="/js/catalog.js"></script>
 
-  
 
-  
+
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
+      </div>
+    
+  </div>
+
 
         
 <div class="footer">
@@ -427,12 +564,12 @@
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + categories + '&url=' + http%3A%2F%2Fexample.com%2Fcategories%2Findex.html + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + %E5%80%8B%E4%BA%BA%E9%83%A8%E8%90%BD%E6%A0%BC%E6%9E%B6%E8%A8%AD-3%20%7C%20Hexo%20%E5%9C%96%E7%89%87%E6%8F%92%E5%85%A5 + '&url=' + http%3A%2F%2Fexample.com%2Fposts%2Fhexo-embed-image-with-vscode-extension-paste-image%2F + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
         
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/categories/index.html" target="_blank" title="Facebook">
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/posts/hexo-embed-image-with-vscode-extension-paste-image/" target="_blank" title="Facebook">
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         

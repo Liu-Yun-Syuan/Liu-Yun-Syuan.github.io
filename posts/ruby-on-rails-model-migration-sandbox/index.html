@@ -160,12 +160,24 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
-          2023-11-23 08:22:04
+          2023-11-27 15:09:55
         </span>
         
       </div>
       <div class="markdown-body">
-        <h2 id="Model-──-資料庫建置"><a href="#Model-──-資料庫建置" class="headerlink" title="Model ── 資料庫建置"></a>Model ── 資料庫建置</h2><h3 id="建置-model"><a href="#建置-model" class="headerlink" title="建置 model"></a>建置 model</h3><p>資料庫名稱會自動以大寫開頭，儘管建置時使用小寫。<br>❗ 表格名稱是小寫開頭、複數，model 名稱是大寫、單數。</p>
+        <p>model 驗證 和 DB 驗證不同，所以可以做兩層驗證。</p>
+<ol>
+<li>model validate<ul>
+<li>在轉換網站系統時，與其他程式共用資料庫，不符合的資料將可能進入資料庫。</li>
+</ul>
+</li>
+<li>DB validate</li>
+</ol>
+<p><strong>Fat Model, Thin Controller</strong><br>重複度：model &gt; view &gt; controller<br>驗證邏輯都寫在 model，因為 controller 會重複操作 model 和 view (render)<br>驗證流程可能會用在不同的 controller</p>
+<h2 id="Model-──-資料庫建置"><a href="#Model-──-資料庫建置" class="headerlink" title="Model ── 資料庫建置"></a>Model ── 資料庫建置</h2><h3 id="建置-model"><a href="#建置-model" class="headerlink" title="建置 model"></a>建置 model</h3><p>資料庫名稱會自動以大寫開頭，儘管建置時使用小寫。<br>❗ 表格名稱是小寫開頭、複數，model 名稱是大寫、單數。</p>
+<ul>
+<li>model 的名稱為單數，如果取名為複數，會自動報錯，並且更名為單數檔名。<br><code>[WARNING] The model name &#39;books&#39; was recognized as a plural, using the singular &#39;book&#39; instead. Override with --force-plural or setup custom inflection rules for this noun before running the generator.</code></li>
+</ul>
 <ol>
 <li>建立 model： <code>$ rails g model Product title:string description:text price:decimal</code><ul>
 <li>active_record 紀錄<ul>
@@ -186,8 +198,29 @@
 </ul>
 </li>
 </ol>
+<p>可以用<code>:references</code> 用外來鍵取得 id，形成 <code>..._ID</code> 的流水編號指向 <code>...</code></p>
 <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.discordapp.com/attachments/1116009887550423102/1176152717530505256/image.png?ex=656dd493&is=655b5f93&hm=a9e8a8213f3b49c7a5988793b41464578766a981cd3531acb0fc86083a8188eb&"></p>
-<h3 id="紀錄-migration"><a href="#紀錄-migration" class="headerlink" title="紀錄 migration"></a>紀錄 migration</h3><p>每個設定的欄位，會在 migration 中紛紛留下紀錄。如果有需要，也可以在每個項目後方加上預設值：<code>, default: 0</code> 等等。</p>
+<h3 id="紀錄-migration"><a href="#紀錄-migration" class="headerlink" title="紀錄 migration"></a>紀錄 migration</h3><p>增減欄位時，需要調整的區塊：<br>M - migration (刪減欄位時，不建議調整，以後資料還在)<br>V - form<br>C - permit</p>
+<ul>
+<li><p>在紀錄 <code>migration</code> 後，可以<code>$ rails db:rollback</code>，反悔 <code>db:migration</code>。(可能會刪除資料庫檔案，無法救回資料)</p>
+<ul>
+<li>假如運作錯誤修改資料庫，應該用新的 migration 修改，而不要 rollback。</li>
+</ul>
+</li>
+<li><p>可以查看 <code>/db/schema.rb</code>，觀看 ruby 自動生成在其中的資料庫紀錄。</p>
+</li>
+<li><p>新建 migration，修改 model 欄位：<code>$ rails g migration 紀錄名稱</code></p>
+<ul>
+<li>新增 db 欄位：<code>add_column :table_name, :column_name, :data-type</code><ul>
+<li>可以增加預設值：<code>, default: false</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>刪除 migration：<code>$ rails d migration 紀錄名稱</code></p>
+</li>
+</ul>
+<p>每個設定的欄位，會在 migration 中紛紛留下紀錄。如果有需要，也可以在每個項目後方加上預設值：<code>, default: 0</code> 等等。</p>
 <p>migration 遷息、遷移，DB 的成長紀錄。<br>每次變動 DB，都會新增一個 migration。</p>
 <ul>
 <li>Product.count 檢視資料總筆數</li>
@@ -252,7 +285,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
-              2023-11-23 08:22:04
+              2023-11-27 15:09:55
             </span>
             
           </div>

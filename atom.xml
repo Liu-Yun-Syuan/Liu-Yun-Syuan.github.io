@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-11-23T23:12:07.535Z</updated>
+  <updated>2023-11-27T08:55:48.967Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,12 +17,90 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>ruby-on-rails-crud-form-with</title>
+    <title>ruby-on-rails-helper</title>
+    <link href="http://example.com/posts/ruby-on-rails-helper/"/>
+    <id>http://example.com/posts/ruby-on-rails-helper/</id>
+    <published>2023-11-27T08:30:23.000Z</published>
+    <updated>2023-11-27T08:55:48.967Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在建立 controller 時，就會建立 helper。&lt;br&gt;用於 view 調用資料，而不用透過 controller。&lt;br&gt;&lt;strong&gt;其實不管放哪個 controller 都可以全域取得，不需要放在用到的 view</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>git</title>
+    <link href="http://example.com/posts/git/"/>
+    <id>http://example.com/posts/git/</id>
+    <published>2023-11-27T04:44:55.000Z</published>
+    <updated>2023-11-27T04:45:11.929Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;commit&quot;&gt;&lt;a href=&quot;#commit&quot; class=&quot;headerlink&quot; title=&quot;commit&quot;&gt;&lt;/a&gt;commit&lt;/h2&gt;&lt;p&gt;WIP&lt;br&gt;work in</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>個人部落格架設-3 | Hexo 圖片插入</title>
+    <link href="http://example.com/posts/hexo-embed-image-with-vscode-extension-paste-image/"/>
+    <id>http://example.com/posts/hexo-embed-image-with-vscode-extension-paste-image/</id>
+    <published>2023-11-24T01:57:35.000Z</published>
+    <updated>2023-11-27T14:13:47.306Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="個人部落格架設" scheme="http://example.com/categories/%E5%80%8B%E4%BA%BA%E9%83%A8%E8%90%BD%E6%A0%BC%E6%9E%B6%E8%A8%AD/"/>
+    
+    
+    <category term="markdown" scheme="http://example.com/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RoR | 用 form_with 快速建立 CRUD</title>
     <link href="http://example.com/posts/ruby-on-rails-crud-form-with/"/>
     <id>http://example.com/posts/ruby-on-rails-crud-form-with/</id>
     <published>2023-11-23T23:12:07.000Z</published>
-    <updated>2023-11-23T23:12:07.535Z</updated>
+    <updated>2023-11-27T06:48:57.606Z</updated>
     
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;rails 設計哲學： 靠小幫手省事，但也可以手動糾正 &amp;#x2F; 修改。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DRY：Don’t Repeat Yourself 不重複&lt;/li&gt;
+&lt;li&gt;CoC：Convention over Configuration</summary>
+        
+      
     
     
     
@@ -56,17 +134,14 @@
     <link href="http://example.com/posts/ruby-on-rails-model-validations/"/>
     <id>http://example.com/posts/ruby-on-rails-model-validations/</id>
     <published>2023-11-23T02:40:18.000Z</published>
-    <updated>2023-11-23T08:50:27.779Z</updated>
+    <updated>2023-11-27T09:09:50.035Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;rails 設計哲學： 靠小幫手省事，但也可以手動糾正 &amp;#x2F; 修改。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;DRY：Don’t Repeat Yourself 不重複&lt;/li&gt;
-&lt;li&gt;CoC：Convention over Configuration</summary>
+    <summary type="html">&lt;h2 id=&quot;model-的資料驗證&quot;&gt;&lt;a href=&quot;#model-的資料驗證&quot; class=&quot;headerlink&quot; title=&quot;model 的資料驗證&quot;&gt;&lt;/a&gt;model 的資料驗證&lt;/h2&gt;&lt;p&gt;model 是 DB 的 manager &amp;#x2F;</summary>
         
       
     
@@ -80,14 +155,20 @@
     <link href="http://example.com/posts/ruby-on-rails-model-migration-sandbox/"/>
     <id>http://example.com/posts/ruby-on-rails-model-migration-sandbox/</id>
     <published>2023-11-23T00:12:17.000Z</published>
-    <updated>2023-11-23T00:22:04.368Z</updated>
+    <updated>2023-11-27T07:09:55.375Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;Model-──-資料庫建置&quot;&gt;&lt;a href=&quot;#Model-──-資料庫建置&quot; class=&quot;headerlink&quot; title=&quot;Model ── 資料庫建置&quot;&gt;&lt;/a&gt;Model ── 資料庫建置&lt;/h2&gt;&lt;h3 id=&quot;建置-model&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;p&gt;model 驗證 和 DB 驗證不同，所以可以做兩層驗證。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;model validate&lt;ul&gt;
+&lt;li&gt;在轉換網站系統時，與其他程式共用資料庫，不符合的資料將可能進入資料庫。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DB</summary>
         
       
     
@@ -123,21 +204,30 @@
     <link href="http://example.com/posts/pg-install/"/>
     <id>http://example.com/posts/pg-install/</id>
     <published>2023-11-21T13:29:05.185Z</published>
-    <updated>2023-11-23T02:33:42.739Z</updated>
+    <updated>2023-11-27T13:47:00.354Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;環境：Ubuntu 22.04&lt;br&gt;軟體：pg 1.5.4&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;推薦 DB 學習網站 &lt;a href=&quot;https://www.prisma.io/dataguide&quot;&gt;Prisma’s Data</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://www.vnewin.com/wp-content/uploads/2021/06/postgreSQL-1.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;PostgreSQL 是一個開源的關聯式資料庫，比起使用 rails 專案預設使用的</summary>
         
       
     
     
     
+    
+    <category term="rails" scheme="http://example.com/tags/rails/"/>
+    
+    <category term="linux" scheme="http://example.com/tags/linux/"/>
+    
+    <category term="postgresql" scheme="http://example.com/tags/postgresql/"/>
+    
+    <category term="db" scheme="http://example.com/tags/db/"/>
+    
+    <category term="vmx" scheme="http://example.com/tags/vmx/"/>
     
   </entry>
   
@@ -167,18 +257,19 @@
   </entry>
   
   <entry>
-    <title>RoR | 路徑設置 &amp; 路徑變數應用 (Path &amp; URL)</title>
+    <title>RoR | 路由設置 &amp; 路徑變數應用 (Path &amp; URL)</title>
     <link href="http://example.com/posts/ruby-on-rails-routes-naming-link-to/"/>
     <id>http://example.com/posts/ruby-on-rails-routes-naming-link-to/</id>
     <published>2023-11-20T02:59:07.000Z</published>
-    <updated>2023-11-24T01:07:10.934Z</updated>
+    <updated>2023-11-27T13:42:36.599Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;路徑設定&quot;&gt;&lt;a href=&quot;#路徑設定&quot; class=&quot;headerlink&quot; title=&quot;路徑設定&quot;&gt;&lt;/a&gt;路徑設定&lt;/h2&gt;&lt;p&gt;通常 create 頁面新增資料成功後，通常會直接轉換網址到指定頁面，類似首頁，而不會特別製作 create</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/ruby-on-rails-routes-naming-link-to/ruby-on-rails-routes-naming-link-to_2023-11-24-09-07-08.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;在 Rails</summary>
         
       
     
@@ -188,6 +279,12 @@
     <category term="ruby" scheme="http://example.com/tags/ruby/"/>
     
     <category term="rails" scheme="http://example.com/tags/rails/"/>
+    
+    <category term="restful api" scheme="http://example.com/tags/restful-api/"/>
+    
+    <category term="routes" scheme="http://example.com/tags/routes/"/>
+    
+    <category term="http verb" scheme="http://example.com/tags/http-verb/"/>
     
   </entry>
   

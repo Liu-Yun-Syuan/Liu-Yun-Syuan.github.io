@@ -11,7 +11,7 @@
   
   <title>
     
-      RoR | 路徑設置 &amp; 路徑變數應用 (Path &amp; URL) 
+      RoR | 路由設置 &amp; 路徑變數應用 (Path &amp; URL) 
       
       
       |
@@ -156,11 +156,11 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">RoR | 路徑設置 & 路徑變數應用 (Path & URL)</div>
+      <div class="post-title">RoR | 路由設置 & 路徑變數應用 (Path & URL)</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
-          2023-11-24 09:07:10
+          2023-11-27 21:42:36
         </span>
         
               <span class="post-tags">
@@ -178,29 +178,112 @@
                   </a>
                 </span>
                 
+                <span class="span--tag mr-8">
+                  <a href="/tags/restful-api/" title="restful api">
+                    #restful api
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/routes/" title="routes">
+                    #routes
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/http-verb/" title="http verb">
+                    #http verb
+                  </a>
+                </span>
+                
               </span>
           
       </div>
       <div class="markdown-body">
-        <h2 id="路徑設定"><a href="#路徑設定" class="headerlink" title="路徑設定"></a>路徑設定</h2><p>通常 create 頁面新增資料成功後，通常會直接轉換網址到指定頁面，類似首頁，而不會特別製作 create 頁面。<br>因為如果使用者重新整理，將會路徑錯誤。因為 post 送出時網址不會變動。</p>
-<p>可以使用 <code>$ rails routes</code> 查看路徑對照表，得知專案中所有的路徑。</p>
-<p>路由設定：<code>get &#39;resources/new&#39;, to: &#39;resources#action&#39;</code></p>
-<blockquote>
-<h3 id="路徑設置順序"><a href="#路徑設置順序" class="headerlink" title="路徑設置順序"></a>路徑設置順序</h3><ol>
+        <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/images/ruby-on-rails-routes-naming-link-to/ruby-on-rails-routes-naming-link-to_2023-11-24-09-07-08.png"></p>
+<p>在 Rails 建立後，第一件要做的事就是建立 routes (路由)。routes 用於映射 URL 到 <code>controller#action</code>，當使用者通過瀏覽器發出 HTTP request，routes 將根據 URL 和 HTTP verb 執行相應的 controller action。一個 routes 可以用作 web page routes 或是 api routes，也可以兩個都是。通常是會做為 web page routes，請見以下：</p>
+<table>
+<thead>
+<tr>
+<th>依照 rails routes 預設排序</th>
+<th>依照 CRUD 排序</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1. 🖼️ index：所有資料的呈現。<br>2. 🖼️ new：填寫新增資料的表單。<br>3. ❌ create：<code>else render :new</code><br>4. 🖼️ show：單一筆資料的呈現。<br>5. 🖼️ edit：修改單一筆資料的表單。<br>6. ❌ update：<code>else ender :edit</code><br>　　- patch<br>　　- put<br>7. ❌ destroy：<code>redirect_to resource_path</code></td>
+<td>1. Create<br>　　- 🖼️ new：填寫新增資料的表單。<br>　　- ❌ create：<code>else render :new</code><br>2. Read<br>　　- 🖼️ index：所有資料的呈現。<br>　　- 🖼️ show：單一筆資料的呈現。<br>3. Update<br>　　- 🖼️ edit：修改單一筆資料的表單。<br>　　- ❌ update：<code>else ender :edit</code><br>4. Delete<br>　　- ❌ destroy：<code>redirect_to resource_path</code><br></td>
+</tr>
+</tbody></table>
+<h2 id="routes-設定"><a href="#routes-設定" class="headerlink" title="routes 設定"></a>routes 設定</h2><p>routes 設定存在先後順序，如果有多個 routes 符合查找的內容，先解析的 routes 將會被優先存取，都不符合的話則會進入 404 頁面。也因此，將較常使用的 route 優先解析、優先撰寫，把較不常用的 route 延後解析、謝在下方，可以稍微提升效能。想要建立單一路徑可以使用 <code>get &#39;resources/http-verb&#39;, to: &#39;resources#action&#39;</code> 的方式，分別設定 HTTP verb、routes 和映射的 controller action。建立完成後，藉由 <code>$ rails routes</code> 能夠查看路徑對照表，得知專案中所有的路徑。</p>
+<ul>
+<li>路由書寫順率<ol>
 <li>常用的 controller 在前，不常用的 controller 在後。</li>
 <li>同一個 controller<ul>
-<li>不是 id 的在前面</li>
-<li>是 id 的在後面<br>(因為會覆蓋非 id 系列的 action)</li>
+<li>沒有 id 的在前面</li>
+<li>有 id 的在後面<br>(因為會覆蓋非 id 系列的 action)</li>
 </ul>
 </li>
 </ol>
-</blockquote>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>路由</th>
+<th><a href="https://example.com/resources">https://example.com/resources</a></th>
+<th><a href="https://example.com/resources/142">https://example.com/resources/142</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>八條</td>
+<td><code>resource :products, except: [:destroy]</code></td>
+<td><code>resources :products, only: [:index, :show]</code></td>
+</tr>
+<tr>
+<td>追加</td>
+<td><code>collection do post :action end</code></td>
+<td><code>member do post :action end</code></td>
+</tr>
+<tr>
+<td>說明</td>
+<td>member 在 resource 中使用，並不會錯誤，只是也不會有 ID。</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="Path-變數-URL-變數"><a href="#Path-變數-URL-變數" class="headerlink" title="Path 變數 &amp; URL 變數"></a>Path 變數 &amp; URL 變數</h3><p>在 <code>routes.rb</code> 中建立路由後，rails 的 Helper 就會自動生成 Path 和 URL 兩個變數，方便網站架設時使用。Path 通常做為站內的引用路徑，URL 則大多用在外部分享按鈕，或是做為電子郵件中連結站內的引用網址。</p>
+<p>相比使用字串填入引用來源，使用 Helper 生成的 Path 變數以及 URL 變數，可以在路由統一管理路徑，而不用更動 html 中的路徑設定。否則，當你要更動路徑時就必須變更所有引用相同來源的 html 檔案。另外，當前頁面中指定了不存在的 Path 或 URL 變數，將會直接出現錯誤 NameError，而不用等到進入錯誤路徑連結並顯示 404。</p>
+<table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>說明</th>
+<th>用途</th>
+<th>範例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Path</td>
+<td>除了網域的站內連結相對路徑。</td>
+<td>站內連結</td>
+<td>&#x2F;index</td>
+</tr>
+<tr>
+<td>URL</td>
+<td>包括網域名稱的完整網址。</td>
+<td>1. 向外分享資訊<br>2. 外部信件連到站內</td>
+<td><a href="https://example.com/index">https://example.com/index</a></td>
+</tr>
+</tbody></table>
 <blockquote>
-<h3 id="回到首頁：redirect-to-root-path"><a href="#回到首頁：redirect-to-root-path" class="headerlink" title="回到首頁：redirect_to root_path"></a>回到首頁：<code>redirect_to root_path</code></h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">create</span></span><br><span class="line">    redirect_to root_path</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h4 id="路徑變數的別名設定"><a href="#路徑變數的別名設定" class="headerlink" title="路徑變數的別名設定"></a>路徑變數的別名設定</h4><p>在 <code>routes.rb</code> 中設定的路由，可以設定「別名」利於引用時識別。透過 <code>get &#39;page-name&#39;,to: &#39;pages#page-name, as: :my-page-name</code>，就可以將 rails Helper 生成的路徑變數固定為自訂的變數名稱 <code>my-page-name_path</code>。最常見的引用方式，就是以 view helper 中的 <code>link_to</code> 的建立連結：</p>
+<ul>
+<li><code>&lt;%= link_to (&quot;連結顯示文字&quot;, &quot;連結路徑&quot;, &#123;method: &#125;) %&gt;</code></li>
+<li><code>&lt;%= link_to &quot;About&quot;, &quot;/about&quot; %&gt;</code></li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 以「關於我們」的路徑為例：</span></span><br><span class="line">&lt;a href=<span class="string">&quot;/about&quot;</span>&gt;about&lt;<span class="regexp">/a&gt;</span></span><br><span class="line"><span class="regexp">&lt;a href=&quot;&lt;%= about_path %&gt;&quot;&gt;about&lt;/a</span>&gt;</span><br><span class="line">&lt;%= link_to <span class="string">&quot;About&quot;</span>, <span class="string">&quot;/about&quot;</span> %&gt;</span><br><span class="line">&lt;%= link_to <span class="string">&quot;About&quot;</span>, about_path %&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <h3 id="命名規律"><a href="#命名規律" class="headerlink" title="命名規律"></a>命名規律</h3><p>統一網頁路徑的命名規則，可以避免造成檔案的識別混亂，也能避免因此建置重複功能。如果沒有遵守命名規則，將可能需要打開所有混淆的檔案進行確認資料，或是只能靠檔案最後更新時間來識別可能的正確檔案。</p>
-<h4 id="RESTful-API"><a href="#RESTful-API" class="headerlink" title="RESTful API"></a>RESTful API</h4><p>REST (Representational State Transfer) 是 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Roy_Fielding">Roy Thomas Fielding</a> 博士在 2000 年在論文中提出的網址設計風格。</p>
-<p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/%E8%A1%A8%E7%8E%B0%E5%B1%82%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2">維基百科</a>的範例：</p>
+<h4 id="RESTful-API"><a href="#RESTful-API" class="headerlink" title="RESTful API"></a>RESTful API</h4><p>REST (Representational State Transfer) 是 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Roy_Fielding">Roy Thomas Fielding</a> 博士在 2000 年在論文中提出的網址設計風格。<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/%E8%A1%A8%E7%8E%B0%E5%B1%82%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2">維基百科</a>的範例如下：</p>
 <table>
 <thead>
 <tr>
@@ -211,28 +294,27 @@
 </thead>
 <tbody><tr>
 <td>GET</td>
-<td>列出 URI，以及該資源組中每個資源的詳細資訊</td>
-<td>取得指定的資源的詳細資訊，格式可以自選一個合適的網路媒體類型（比如：XML、JSON 等）</td>
+<td>列出 URI，以及該資源組中每個資源的詳細資訊。</td>
+<td>取得指定的資源的詳細資訊，格式可以自選一個合適的網路媒體類型。<br>（比如：XML、JSON 等）</td>
 </tr>
 <tr>
 <td>PUT</td>
-<td>使用給定的一組資源替換當前整組資源</td>
-<td>替換&#x2F;建立指定的資源。並將其追加到相應的資源組中</td>
+<td>使用給定的一組資源替換當前整組資源。</td>
+<td>替換&#x2F;建立指定的資源。並將其追加到相應的資源組中。</td>
 </tr>
 <tr>
 <td>POST</td>
-<td>在本組資源中建立&#x2F;追加一個新的資源。該操作往往返回新資源的 URL</td>
-<td>把指定的資源當做一個資源組，並在其下建立&#x2F;追加一個新的元素，使其隸屬於當前資源</td>
+<td>在本組資源中建立&#x2F;追加一個新的資源。該操作往往返回新資源的 URL。</td>
+<td>把指定的資源當做一個資源組，並在其下建立&#x2F;追加一個新的元素，使其隸屬於當前資源。</td>
 </tr>
 <tr>
 <td>DELETE</td>
-<td>刪除整組資源</td>
+<td>刪除整組資源。</td>
 <td>刪除指定的元素。</td>
 </tr>
 </tbody></table>
 <blockquote>
-<h4 id="HTTP-verb"><a href="#HTTP-verb" class="headerlink" title="HTTP verb"></a>HTTP verb</h4><p>瀏覽器只有支援 get &amp; post，所以 form_for 自動建立 Auth_token 的隱藏輸入欄時，將建立 <code>&lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;patch&quot; /&gt;</code> 的形式，告知 rails 應該使用的 HTTP verb，並且找取所設定的對應方法。如果 form_for 的引數為實體變數 <code>@resource</code>，就會自動判定為 update，而非 new。(new 的物件，就會動應到 new API)</p>
-<p>CRUD<br>表單方法動作 http verb<br>form 的 method 中預設 get，</p>
+<h4 id="HTTP-verb"><a href="#HTTP-verb" class="headerlink" title="HTTP verb"></a>HTTP verb</h4><p>HTML5 的書寫格式只支援 get 和 post，而其他動詞只有藉由瀏覽器被 JS 以指定方式傳輸資料。rails 中的 form helper 會自動生成用讀取 http verb 類型的隱藏欄位，在建立表單時自動加入 authentication_token 的隱藏輸入欄，以 <code>&lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;patch&quot; /&gt;</code> 的形式告知 rails 應該使用的 HTTP verb。</p>
 <ul>
 <li>讀取資源：get resource，通常用於查詢。<ul>
 <li>❗ 有資料長度限制，即網址長度上限。<br>(輸入的資料將會顯示在網址中，資料內容過於明顯。)</li>
@@ -251,19 +333,6 @@
 </ul>
 </blockquote>
 <h4 id="Ruby-中的路徑命名常規"><a href="#Ruby-中的路徑命名常規" class="headerlink" title="Ruby 中的路徑命名常規"></a>Ruby 中的路徑命名常規</h4><p>在 <code>routes.rb</code> 中，可以在 <code>Rails.application.routes.draw do ... end</code> 內加入 <code>resources: my-resources-name</code>，會自動依照 REST 規則生成 8 條路徑 (對應到 7 個 action)。如果想要只生成部分路徑，可以在後方加上 only，限制生成的路徑：<code>resources: my-resources-name, only [:index, :show]</code>。</p>
-<ol>
-<li>🖼️ index：所有資料的呈現。</li>
-<li>🖼️ new：填寫新增資料的表單。</li>
-<li>❌ create：<code>else render :new</code></li>
-<li>🖼️ show：單一筆資料的呈現。</li>
-<li>🖼️ edit：修改單一筆資料的表單。</li>
-<li>❌ update：<code>else render :edit</code><ul>
-<li>patch</li>
-<li>put</li>
-</ul>
-</li>
-<li>❌ destroy：<code>redirect_to resource_path</code></li>
-</ol>
 <table>
 <thead>
 <tr>
@@ -298,6 +367,7 @@
 <td>resources#destroy</td>
 </tr>
 </tbody></table>
+<p>在路徑中有使用到 id 的話，controller 中的 action 大多要先依照 id 撈取當前物件的資料。所以，通常會在 controller 中預先處理 <code>before_action :find_product, only: [:show, :edit, :update, :destroy]</code>，或是 <code>before_action :find_product, except: [:index, :new, :create]</code>。兩者相比，會更建議使用 <code>before... ,only...</code>，後續再新增方法時才不用另外剃除，此方式更為保守且安全。</p>
 <table>
 <thead>
 <tr>
@@ -358,43 +428,6 @@
 </tbody></table>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 命名規則</span></span><br><span class="line">/resources</span><br><span class="line">/resources/action</span><br><span class="line">/resources/<span class="symbol">:id</span></span><br><span class="line">/resources/<span class="symbol">:id/action</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 命名範例</span></span><br><span class="line">/products</span><br><span class="line">/products/new</span><br><span class="line">/products/<span class="number">123</span></span><br><span class="line">/products/<span class="number">123</span>/edit</span><br></pre></td></tr></table></figure>
 
-<h3 id="Ruby-中-View-的路徑跳轉"><a href="#Ruby-中-View-的路徑跳轉" class="headerlink" title="Ruby 中 View 的路徑跳轉"></a>Ruby 中 View 的路徑跳轉</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 以「關於我們」的路徑為例：</span></span><br><span class="line">&lt;a href=<span class="string">&quot;/about&quot;</span>&gt;about&lt;<span class="regexp">/a&gt;</span></span><br><span class="line"><span class="regexp">&lt;a href=&quot;&lt;%= about_path %&gt;&quot;&gt;about&lt;/a</span>&gt;</span><br><span class="line">&lt;%= link_to <span class="string">&quot;About&quot;</span>, <span class="string">&quot;/about&quot;</span> %&gt;</span><br><span class="line">&lt;%= link_to <span class="string">&quot;About&quot;</span>, about_path %&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="Path-變數-URL-變數"><a href="#Path-變數-URL-變數" class="headerlink" title="Path 變數 &amp; URL 變數"></a>Path 變數 &amp; URL 變數</h4><p>在 <code>routes.rb</code> 中建立路由後，rails 的 Helper 就會自動生成 Path 和 URL 兩個變數，方便網站架設時使用。Path 通常做為站內的引用路徑，URL 則大多用在外部分享按鈕，或是做為電子郵件中連結站內的引用網址。</p>
-<p>相比使用字串填入引用來源，使用 Helper 生成的 Path 變數以及 URL 變數，可以在路由統一管理路徑，而不用更動 html 中的路徑設定。否則，當你要更動路徑時就必須變更所有引用相同來源的 html 檔案。另外，當前頁面中指定了不存在的 Path 或 URL 變數，將會直接出現錯誤 NameError，而不用等到進入錯誤路徑連結並顯示 404。</p>
-<table>
-<thead>
-<tr>
-<th>名稱</th>
-<th>說明</th>
-<th>用途</th>
-<th>範例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Path</td>
-<td>除了網域的站內連結相對路徑。</td>
-<td>站內連結</td>
-<td>&#x2F;index</td>
-</tr>
-<tr>
-<td>URL</td>
-<td>包括網域名稱的完整網址。</td>
-<td>1. 向外分享資訊<br>2. 外部信件連到站內</td>
-<td><a href="https://example.com/index">https://example.com/index</a></td>
-</tr>
-</tbody></table>
-<blockquote>
-<h5 id="Helper"><a href="#Helper" class="headerlink" title="Helper"></a>Helper</h5></blockquote>
-<h5 id="路徑變數的別名設定與使用"><a href="#路徑變數的別名設定與使用" class="headerlink" title="路徑變數的別名設定與使用"></a>路徑變數的別名設定與使用</h5><p>在 view 中，可以藉由取用變數 <code>&lt;%= page-name_path %&gt;</code> 的方式，取得路由中所設定的路徑資料。藉由 rails Helper 自動建立的 Path 和 URL 變數，會自動符合 <code>routes.rb</code> 檔案中設定的路由： <code>get &#39;page-name&#39;,to: &#39;pages#page-name</code> 中的 <code>page-name</code>。</p>
-<p>另外，在 <code>routes.rb</code> 中設定的路由，可以設定「別名」利於引用時識別。透過 <code>get &#39;page-name&#39;,to: &#39;pages#page-name, as: :my-page-name</code>，就可以將 rails Helper 生成的路徑變數固定為自訂的變數名稱 <code>my-page-name_path</code>。</p>
-<blockquote>
-<h5 id="其他連結設置方式"><a href="#其他連結設置方式" class="headerlink" title="其他連結設置方式"></a>其他連結設置方式</h5><p>view helper<br>link_to 有三個引數。第三引數中的 hash 沒有順序問題。</p>
-<p><code>&lt;%= link_to (&quot;連結顯示文字&quot;, &quot;連結路徑&quot;, &#123;method: &#125;) %&gt;</code></p>
-<p><code>&lt;%= link_to &quot;About&quot;, &quot;/about&quot; %&gt;</code></p>
-</blockquote>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/images/ruby-on-rails-routes-naming-link-to/ruby-on-rails-routes-naming-link-to_2023-11-24-09-07-00.png"></p>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/images/ruby-on-rails-routes-naming-link-to/ruby-on-rails-routes-naming-link-to_2023-11-24-09-07-08.png"></p>
 <hr>
 <p>參考資料：</p>
 <ul>
@@ -415,7 +448,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
-              2023-11-24 09:07:10
+              2023-11-27 21:42:36
             </span>
             
                   <span class="post-tags">
@@ -430,6 +463,24 @@
                     <span class="span--tag mr-8">
                       <a href="/tags/rails/" title="rails">
                         #rails
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/restful-api/" title="restful api">
+                        #restful api
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/routes/" title="routes">
+                        #routes
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/http-verb/" title="http verb">
+                        #http verb
                       </a>
                     </span>
                     
@@ -455,7 +506,7 @@
     <div class="title">目錄</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E5%BE%91%E8%A8%AD%E5%AE%9A"><span class="toc-text">路徑設定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%AF%E5%BE%91%E8%A8%AD%E7%BD%AE%E9%A0%86%E5%BA%8F"><span class="toc-text">路徑設置順序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9E%E5%88%B0%E9%A6%96%E9%A0%81%EF%BC%9Aredirect-to-root-path"><span class="toc-text">回到首頁：redirect_to root_path</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E8%A6%8F%E5%BE%8B"><span class="toc-text">命名規律</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#RESTful-API"><span class="toc-text">RESTful API</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HTTP-verb"><span class="toc-text">HTTP verb</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Ruby-%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%91%E5%91%BD%E5%90%8D%E5%B8%B8%E8%A6%8F"><span class="toc-text">Ruby 中的路徑命名常規</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ruby-%E4%B8%AD-View-%E7%9A%84%E8%B7%AF%E5%BE%91%E8%B7%B3%E8%BD%89"><span class="toc-text">Ruby 中 View 的路徑跳轉</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Path-%E8%AE%8A%E6%95%B8-URL-%E8%AE%8A%E6%95%B8"><span class="toc-text">Path 變數 &amp; URL 變數</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Helper"><span class="toc-text">Helper</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B7%AF%E5%BE%91%E8%AE%8A%E6%95%B8%E7%9A%84%E5%88%A5%E5%90%8D%E8%A8%AD%E5%AE%9A%E8%88%87%E4%BD%BF%E7%94%A8"><span class="toc-text">路徑變數的別名設定與使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E9%80%A3%E7%B5%90%E8%A8%AD%E7%BD%AE%E6%96%B9%E5%BC%8F"><span class="toc-text">其他連結設置方式</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#routes-%E8%A8%AD%E5%AE%9A"><span class="toc-text">routes 設定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Path-%E8%AE%8A%E6%95%B8-URL-%E8%AE%8A%E6%95%B8"><span class="toc-text">Path 變數 &amp; URL 變數</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B7%AF%E5%BE%91%E8%AE%8A%E6%95%B8%E7%9A%84%E5%88%A5%E5%90%8D%E8%A8%AD%E5%AE%9A"><span class="toc-text">路徑變數的別名設定</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E8%A6%8F%E5%BE%8B"><span class="toc-text">命名規律</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#RESTful-API"><span class="toc-text">RESTful API</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HTTP-verb"><span class="toc-text">HTTP verb</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Ruby-%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%91%E5%91%BD%E5%90%8D%E5%B8%B8%E8%A6%8F"><span class="toc-text">Ruby 中的路徑命名常規</span></a></li></ol></li></ol></li></ol>
       
     </div>
   </div>
@@ -747,7 +798,7 @@
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + RoR%20%7C%20%E8%B7%AF%E5%BE%91%E8%A8%AD%E7%BD%AE%20%26%20%E8%B7%AF%E5%BE%91%E8%AE%8A%E6%95%B8%E6%87%89%E7%94%A8%20(Path%20%26%20URL) + '&url=' + http%3A%2F%2Fexample.com%2Fposts%2Fruby-on-rails-routes-naming-link-to%2F + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + RoR%20%7C%20%E8%B7%AF%E7%94%B1%E8%A8%AD%E7%BD%AE%20%26%20%E8%B7%AF%E5%BE%91%E8%AE%8A%E6%95%B8%E6%87%89%E7%94%A8%20(Path%20%26%20URL) + '&url=' + http%3A%2F%2Fexample.com%2Fposts%2Fruby-on-rails-routes-naming-link-to%2F + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         

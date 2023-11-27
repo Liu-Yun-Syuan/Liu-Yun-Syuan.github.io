@@ -160,70 +160,71 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
-          2023-11-23 16:50:27
+          2023-11-27 17:09:50
         </span>
         
       </div>
       <div class="markdown-body">
-        <p>rails 設計哲學： 靠小幫手省事，但也可以手動糾正 &#x2F; 修改。</p>
-<ul>
-<li>DRY：Don’t Repeat Yourself 不重複</li>
-<li>CoC：Convention over Configuration 慣例優於設定</li>
-</ul>
-<h2 id="model-的資料驗證"><a href="#model-的資料驗證" class="headerlink" title="model 的資料驗證"></a>model 的資料驗證</h2><p>model 是 DB 的 manager &#x2F; 代理人。</p>
+        <h2 id="model-的資料驗證"><a href="#model-的資料驗證" class="headerlink" title="model 的資料驗證"></a>model 的資料驗證</h2><p>model 是 DB 的 manager &#x2F; 代理人。</p>
 <p>validates 是個 action，有兩個引數，最後的是 hash：<code>validates (:title, &#123;presence: true, length: 2&#125;)</code>。<br>rails 4 以前的寫法：<code>validate_presence_of :title</code>。</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Product</span> &lt; <span class="title class_ inherited__">ApplicationRecord</span></span><br><span class="line">    <span class="comment"># 欄位資料不可為空</span></span><br><span class="line">    validates <span class="symbol">:title</span>, <span class="symbol">presence:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># 欄位資料不可為空</span></span><br><span class="line">    validates <span class="symbol">:title</span>, <span class="symbol">numericality:</span> &#123; <span class="symbol">greater_than:</span> <span class="number">0</span> &#125;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Product</span> &lt; <span class="title class_ inherited__">ApplicationRecord</span></span><br><span class="line">    <span class="comment"># 欄位資料不可為空</span></span><br><span class="line">    validates <span class="symbol">:title</span>, <span class="symbol">presence:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># 欄位資料不可為空</span></span><br><span class="line">    validates <span class="symbol">:price</span>, <span class="symbol">numericality:</span> &#123; <span class="symbol">greater_than:</span> <span class="number">0</span> &#125;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="error-any"><a href="#error-any" class="headerlink" title="error.any?"></a>error.any?</h3><p>剛出生沒有錯。<br>要經過 save ，觸發驗證之後，才會有錯誤結果存入物件的 errors 字串陣列。</p>
-<p>save：存取成功，回傳 true；存取失敗，回傳 false。(其他資料庫操作的說明，只是 console.log)</p>
-<h2 id="controller-render-提升使用者體驗"><a href="#controller-render-提升使用者體驗" class="headerlink" title="controller render 提升使用者體驗"></a>controller render 提升使用者體驗</h2><p>借用 view，帶入本來頁面的資料</p>
-<ul>
-<li>form helper (一種 view helper)<ol>
-<li>form_with：建立表格，三個引數，用以更快速的生成欄位。(裡面要生成表單欄位，可以引用 model 的實體變數中的 key)<ol>
-<li>預設 action (url)　指向自己，method post。</li>
-<li>自動建立 token。(如果指定 method 為 get，就不會建立 token)<br>(因為要新增資料 post，才需要驗證站內操作，資料傳入資料庫。)</li>
-</ol>
-<ul>
-<li>用以取代 form_for，</li>
-</ul>
-</li>
-<li>form_for</li>
-<li>form_tag</li>
-</ol>
-</li>
-</ul>
-<p>可在 new 的當下新增預設值：<code>Product.new(amount: 100)</code>？因為會覆蓋 model 的預設值？html 中的 value。</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;%= form_with <span class="symbol">model:</span> <span class="variable">@product</span>, <span class="symbol">data:</span> &#123;<span class="symbol">turbo:</span> <span class="literal">false</span>&#125; <span class="keyword">do</span> |<span class="params">form</span>| %&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;%= form.label <span class="symbol">:title</span>, <span class="string">&#x27;標題：&#x27;</span> %&gt;</span><br><span class="line">        &lt;%= form.text_field <span class="symbol">:title</span>, <span class="symbol">class:</span> <span class="string">&#x27;border-2-block&#x27;</span> %&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;%= form.label :description, &#x27;描述：&#x27; %&gt;</span></span><br><span class="line"><span class="regexp">        &lt;%= form.text_area :description, class: &#x27;border-2 border-block&#x27; %&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/div</span>&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;%= form.label <span class="symbol">:amount</span>, <span class="string">&#x27;價格：&#x27;</span> %&gt;</span><br><span class="line">        &lt;%= form.number_field <span class="symbol">:amount</span>, <span class="symbol">min:</span> <span class="number">0</span>, <span class="symbol">class:</span> <span class="string">&#x27;border-2 border-block&#x27;</span> %&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;%= form.submit &#x27;送出&#x27;, class: &#x27;bg-rose-700 text-white px-3 py-2&#x27; %&gt;</span></span><br><span class="line"><span class="regexp">&lt;% end %&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br></pre></td></tr></table></figure>
+<h3 id="重複驗證"><a href="#重複驗證" class="headerlink" title="重複驗證"></a>重複驗證</h3><p>model 會生成虛擬的欄位，在資料庫中則沒有。</p>
+<p><code>validates: :password, confirmation: true</code></p>
+<h3 id="雜湊-hashed"><a href="#雜湊-hashed" class="headerlink" title="雜湊 hashed"></a>雜湊 hashed</h3><p>其實也不是加密，是「單向編碼」。消極抵抗。</p>
+<p>密碼加密，叫做「雜湊」</p>
+<p>不建議用 before_save，因為這樣修改資料時也會重新加密，增加耗能。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">before_create <span class="symbol">:encrypt_password</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">encrypt_password</span></span><br><span class="line">    <span class="variable language_">self</span>.password = <span class="title class_">Digest</span><span class="symbol">:</span><span class="symbol">:SHA1</span>.hexdigest(<span class="variable language_">self</span>.password)</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>加密和解密不同，會有 key 才能解密，用碰撞攻擊是無法解碼的</strong></p>
+<blockquote>
+<h4 id="我的密碼沒加密"><a href="#我的密碼沒加密" class="headerlink" title="我的密碼沒加密"></a>我的密碼沒加密</h4><p><a target="_blank" rel="noopener" href="https://plainpass.com/">https://plainpass.com/</a></p>
+</blockquote>
+<p><code>Digest::MD5.hexdigest(&#39;123&#39;)</code> 可測試查看加密結果。<br>MD5 加密機制已經被破解，可解密。否則應該無法被反推。</p>
+<p>目前普遍已經不用 MD5，改用 SHA1。<br><code>Digest::SHA1.hexdigest(&#39;123&#39;)</code> 可測試查看加密結果。<br>更安全一點，用 16 進位。也可以被解密，只是破解時間較長。</p>
+<p><code>Digest::SHA256.hexdigest(&#39;123&#39;)</code> 時間更長。</p>
+<h4 id="密碼學中的-salt：雜湊演算法"><a href="#密碼學中的-salt：雜湊演算法" class="headerlink" title="密碼學中的 salt：雜湊演算法"></a>密碼學中的 salt：雜湊演算法</h4><p>Salt<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/%E7%9B%90_(%E5%AF%86%E7%A0%81%E5%AD%A6)">鹽</a><br>鹽巴的複雜度，決定破解時間長度。</p>
+<p>碰撞攻擊 (暴力破解法) &#x2F; 生日攻擊法：為什麼公車一次來三班，數學謎題書</p>
+<p>在雜湊之前，複雜化使用者輸入的密碼，延長破解時間、增加額外安全性。<br>(密碼一定可以被破解，用迴圈跑所有文字組合)</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">before_create <span class="symbol">:encrypt_password</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">encrypt_password</span></span><br><span class="line">    salted_password = <span class="string">&quot;*xx<span class="subst">#&#123;&#123;<span class="variable language_">self</span>.password&#125;</span>yy-&#125;&quot;</span></span><br><span class="line">    <span class="variable language_">self</span>.password = <span class="title class_">Digest</span><span class="symbol">:</span><span class="symbol">:SHA1</span>.hexdigest(salted_password)</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p>登入</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">self</span>.login(user_params)</span><br><span class="line">    email = user_params[<span class="symbol">:email</span>]</span><br><span class="line">    password = <span class="title class_">Digest</span><span class="symbol">:</span><span class="symbol">:SHA256</span>.hexdigest(<span class="string">&quot;*xx<span class="subst">#&#123;user_params[<span class="symbol">:password</span>]&#125;</span>yy-&#125;&quot;</span>)</span><br><span class="line">    <span class="comment"># ruby 3 以後才可簡寫，否則必須寫成 find_by(email: email, password: password)</span></span><br><span class="line">    find_by(<span class="symbol">email:</span>, <span class="symbol">password:</span> )</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<h3 id="刻意的巧合"><a href="#刻意的巧合" class="headerlink" title="刻意的巧合"></a>刻意的巧合</h3><p>因為將 new 和 create 中的實體變數取為同名，所以新增失敗時，在 create 頁面仍能取得擁有同名 key 的實體變數，並藉此塞入 new 的 view。</p>
-</blockquote>
-<h3 id="錯誤欄位提示"><a href="#錯誤欄位提示" class="headerlink" title="錯誤欄位提示"></a>錯誤欄位提示</h3><p>.field_with_errors input {border: 2px solid red} 設定錯誤框紅色</p>
-<h4 id="錯誤彈跳視窗-flash"><a href="#錯誤彈跳視窗-flash" class="headerlink" title="錯誤彈跳視窗 flash[]"></a>錯誤彈跳視窗 <code>flash[]</code></h4><p>flash 是類似 hash 的結構，有揮發性，被印出就會消失。<br>flash 是 rails 內建的預設變數，其中的屬性被印出後就會消失。<br>通常用作提示訊息，作為快閃訊息。</p>
-<ol>
-<li>在 create 中建立 flash 中的屬性：<code>flash[:notice] = &quot;請輸入名稱&quot;</code><br>key 的名稱隨意設定，但通常會取作 <code>flash[:alert] = &quot;警告&quot;</code><br><code>redirect_to root_path, notice: &#39;新增商品成功&#39;</code> 可和 redirect_to 連續使用 (僅允許 notice 和 alert)，flash 訊息將會顯示在轉往的頁面。</li>
-</ol>
-<blockquote>
-<h2 id="view-layout-application-中的公版"><a href="#view-layout-application-中的公版" class="headerlink" title="view/layout/application 中的公版"></a><code>view/layout/application</code> 中的公版</h2><p>另外開 html ，設定公版 <code>shared/_flash.erb</code> 隨意，放在 view 中。<br>然後在 <code>view/layout/application</code> 中引用：<code>&lt;%= render &#39;shared/flash&#39; if flash.any? %&gt;</code>，附檔名不用填寫。<br>在 view 中 render view 時，會被視為 partial view ，將會以底線 <code>_</code> 在檔名做區隔。所以才必須加上底線。</p>
-</blockquote>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> flash[<span class="symbol">:notice</span>] %&gt;</span><br><span class="line">    &lt;%= flash[<span class="symbol">:notice</span>] %&gt;</span><br><span class="line">&lt;% <span class="keyword">end</span> %&gt;</span><br><span class="line">&lt;% <span class="keyword">if</span> flash[<span class="symbol">:alert</span>] %&gt;</span><br><span class="line">    &lt;%= flash[<span class="symbol">:alert</span>] %&gt;</span><br><span class="line">&lt;% <span class="keyword">end</span> %&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 簡寫</span></span><br><span class="line">&lt;% <span class="keyword">if</span> notice %&gt;</span><br><span class="line">    &lt;%= notice %&gt;</span><br><span class="line">&lt;% <span class="keyword">end</span> %&gt;</span><br><span class="line">&lt;% <span class="keyword">if</span> alert %&gt;</span><br><span class="line">    &lt;%= alert %&gt;</span><br><span class="line">&lt;% <span class="keyword">end</span> %&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 程式化</span></span><br><span class="line"><span class="comment"># 14:50</span></span><br><span class="line">&lt;% [<span class="symbol">:notice</span>, <span class="symbol">:alert</span>] <span class="keyword">do</span> |<span class="params"> msg-type </span>| %&gt;</span><br><span class="line">    &lt;% <span class="keyword">if</span> flash[msg-type] %&gt;</span><br><span class="line">        &lt;div <span class="keyword">class</span>=<span class="string">&quot;flash-&lt;%= [msg-type] %&gt;&quot;</span>&gt;</span><br><span class="line">            &lt;% flash[msg-type] %&gt;</span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;% end %&gt;</span></span><br><span class="line"><span class="regexp">&lt;% end %&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="路徑"><a href="#路徑" class="headerlink" title="路徑"></a>路徑</h2><p>15:40<br><code>get &#39;resource/:id&#39;, to: &#39;resource#show&#39;</code><br>15:44<br>rails 比對路徑順序時，會由上而下比對，如果都沒有才 404。所以 new 必須在 :id 上面。(如果想要調整效能，就把最常用的放到上方，不常用的 ex:首頁，放下面。)</p>
+<h5 id="不是用開源專案，因為-salt-加密方式會直接被看到"><a href="#不是用開源專案，因為-salt-加密方式會直接被看到" class="headerlink" title="不是用開源專案，因為 salt 加密方式會直接被看到"></a>不是用開源專案，因為 salt 加密方式會直接被看到</h5></blockquote>
+<h4 id="2FA-二階段驗證"><a href="#2FA-二階段驗證" class="headerlink" title="2FA 二階段驗證"></a>2FA 二階段驗證</h4><p>可能是手機簡訊，之類的</p>
+<h3 id="暫存空間-session-cookie"><a href="#暫存空間-session-cookie" class="headerlink" title="暫存空間 session, cookie"></a>暫存空間 session, cookie</h3><p>所謂的會員系統的「登入 &#x2F; 登出」，就是比對號碼牌。<br>後端 server 發送 session，前端瀏覽器就會取得 cookie。</p>
+<p><strong>無痕視窗就是，每次關閉瀏覽器時都會清除 cookie</strong><br><strong>管理帳號對應的裝置，刪除某個設備，就是使指定設備的 session 失效。</strong></p>
+<p>每個 request 都會帶著使用者瀏覽器的 cookie，讓 server 可以藉此回應請求。<br>cookie 會根據網域，切換每個網域專屬的 cookie。</p>
+<p>session 和 flash 都是特別的 hash，而 flash 是特別版的 session、揮發性的 session。<br>session 儲存後，會一直存在到瀏覽器清除暫存。</p>
 <ul>
-<li>find 系列：只會找一個，有多筆會址顯示第一筆。<ul>
-<li>find(1)：就是找 id。(如果找不到，就會 activeRecordNotFound。)</li>
-<li>find_by(id: 1)：可以設定要找什麼。(如果找不到就 nil，不會錯誤。)</li>
-<li>find_by!(id: 1)：可以設定要找什麼。(找不到，就會 activeRecordNotFound)</li>
+<li>session：在 server 上，是網站留有的存單。</li>
+<li>cookie：在 browser 上，是使用者得到的取貨單。<br>而 cookie 預設會定期清除，需要自己設定拉長 cookie 時間。<br>清 cookie 可能造成網站登出，因為就像撕掉取貨單。</li>
 </ul>
-</li>
-<li>where(id: 1)：回傳陣列</li>
+<p>登出的可能：</p>
+<ul>
+<li>session 失效：網站重新設定，或重發、過期。</li>
+<li>cookie 失效：瀏覽器 cookie 清除，或過期。</li>
 </ul>
-<p>simple_format<br>使 textarea 中的換行有效：<code>@product.description.gsub(&#39;\n&#39;, &lt;bt /&gt;).html_safe</code></p>
 <hr>
 <p>參考資料：</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/62269539/return-an-array-using-form-with">Return an array using <code>form_with</code>?</a>，用 form_for 建立多個複合 checkbox</li>
+<li><a target="_blank" rel="noopener" href="https://api.rubyonrails.org/classes/ActiveRecord/Callbacks.html">Active Record Callbacks</a></li>
+<li><a target="_blank" rel="noopener" href="https://buzzorange.com/techorange/2017/02/24/google-sha1/">Google 攻破了最重要的加密技術！用 9 兆次演算暴力破解「SHA-1 安全加密演算法」</a></li>
+<li><a target="_blank" rel="noopener" href="https://netmag.tw/2022/12/21/nist-to-retire-sha-1-encryption-algorithm-in-2030">掰掰！27 歲的 SHA-1 加密演算法 美國宣布 8 年後淘汰 SHA-1</a></li>
 </ul>
+<blockquote>
+<h2 id="快速建立會員系統的-rails-套件"><a href="#快速建立會員系統的-rails-套件" class="headerlink" title="快速建立會員系統的 rails 套件"></a>快速建立會員系統的 rails 套件</h2><ol>
+<li>bundle install devise</li>
+<li>rails g devise:install</li>
+<li>rails g devise User：預設 email, password</li>
+<li>rails db:migrate<br><a target="_blank" rel="noopener" href="https://github.com/heartcombo/devise">drvise</a></li>
+</ol>
+</blockquote>
+<blockquote>
+<h2 id="駭客可以根據存在或不存在的反應時間有差"><a href="#駭客可以根據存在或不存在的反應時間有差" class="headerlink" title="駭客可以根據存在或不存在的反應時間有差"></a>駭客可以根據存在或不存在的反應時間有差</h2><p>因為帳號存在，查找時間就會比較長。<br>如果帳號不存在，查找時間就會比較短。<br>而 devise 有特別設計延長帳號不存在的時間！</p>
+</blockquote>
 
       </div>
       
@@ -239,7 +240,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="更新時間"></i>
-              2023-11-23 16:50:27
+              2023-11-27 17:09:50
             </span>
             
           </div>
@@ -262,7 +263,7 @@
     <div class="title">目錄</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#model-%E7%9A%84%E8%B3%87%E6%96%99%E9%A9%97%E8%AD%89"><span class="toc-text">model 的資料驗證</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#error-any"><span class="toc-text">error.any?</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#controller-render-%E6%8F%90%E5%8D%87%E4%BD%BF%E7%94%A8%E8%80%85%E9%AB%94%E9%A9%97"><span class="toc-text">controller render 提升使用者體驗</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%BB%E6%84%8F%E7%9A%84%E5%B7%A7%E5%90%88"><span class="toc-text">刻意的巧合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%8C%AF%E8%AA%A4%E6%AC%84%E4%BD%8D%E6%8F%90%E7%A4%BA"><span class="toc-text">錯誤欄位提示</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%8C%AF%E8%AA%A4%E5%BD%88%E8%B7%B3%E8%A6%96%E7%AA%97-flash"><span class="toc-text">錯誤彈跳視窗 flash[]</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#view-layout-application-%E4%B8%AD%E7%9A%84%E5%85%AC%E7%89%88"><span class="toc-text">view&#x2F;layout&#x2F;application 中的公版</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E5%BE%91"><span class="toc-text">路徑</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#model-%E7%9A%84%E8%B3%87%E6%96%99%E9%A9%97%E8%AD%89"><span class="toc-text">model 的資料驗證</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E8%A4%87%E9%A9%97%E8%AD%89"><span class="toc-text">重複驗證</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%9C%E6%B9%8A-hashed"><span class="toc-text">雜湊 hashed</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E5%AF%86%E7%A2%BC%E6%B2%92%E5%8A%A0%E5%AF%86"><span class="toc-text">我的密碼沒加密</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%86%E7%A2%BC%E5%AD%B8%E4%B8%AD%E7%9A%84-salt%EF%BC%9A%E9%9B%9C%E6%B9%8A%E6%BC%94%E7%AE%97%E6%B3%95"><span class="toc-text">密碼學中的 salt：雜湊演算法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%8D%E6%98%AF%E7%94%A8%E9%96%8B%E6%BA%90%E5%B0%88%E6%A1%88%EF%BC%8C%E5%9B%A0%E7%82%BA-salt-%E5%8A%A0%E5%AF%86%E6%96%B9%E5%BC%8F%E6%9C%83%E7%9B%B4%E6%8E%A5%E8%A2%AB%E7%9C%8B%E5%88%B0"><span class="toc-text">不是用開源專案，因為 salt 加密方式會直接被看到</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2FA-%E4%BA%8C%E9%9A%8E%E6%AE%B5%E9%A9%97%E8%AD%89"><span class="toc-text">2FA 二階段驗證</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9A%AB%E5%AD%98%E7%A9%BA%E9%96%93-session-cookie"><span class="toc-text">暫存空間 session, cookie</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E5%BB%BA%E7%AB%8B%E6%9C%83%E5%93%A1%E7%B3%BB%E7%B5%B1%E7%9A%84-rails-%E5%A5%97%E4%BB%B6"><span class="toc-text">快速建立會員系統的 rails 套件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A7%AD%E5%AE%A2%E5%8F%AF%E4%BB%A5%E6%A0%B9%E6%93%9A%E5%AD%98%E5%9C%A8%E6%88%96%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%8F%8D%E6%87%89%E6%99%82%E9%96%93%E6%9C%89%E5%B7%AE"><span class="toc-text">駭客可以根據存在或不存在的反應時間有差</span></a></li></ol>
       
     </div>
   </div>
